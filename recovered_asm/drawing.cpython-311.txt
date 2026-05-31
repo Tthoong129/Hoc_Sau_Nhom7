@@ -1,0 +1,1145 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (cv2)
+              8 STORE_NAME               0 (cv2)
+
+  2          10 LOAD_CONST               0 (0)
+             12 LOAD_CONST               1 (None)
+             14 IMPORT_NAME              1 (numpy)
+             16 STORE_NAME               2 (np)
+
+  3          18 LOAD_CONST               2 (1)
+             20 LOAD_CONST               3 (('CLASS_COLORS', 'SEV_COLOR', 'YAW_THRESHOLD', 'YAW_THRESHOLD_LOW', 'LEAN_SHIFT_RATIO'))
+             22 IMPORT_NAME              3 (config)
+             24 IMPORT_FROM              4 (CLASS_COLORS)
+             26 STORE_NAME               4 (CLASS_COLORS)
+             28 IMPORT_FROM              5 (SEV_COLOR)
+             30 STORE_NAME               5 (SEV_COLOR)
+             32 IMPORT_FROM              6 (YAW_THRESHOLD)
+             34 STORE_NAME               6 (YAW_THRESHOLD)
+             36 IMPORT_FROM              7 (YAW_THRESHOLD_LOW)
+             38 STORE_NAME               7 (YAW_THRESHOLD_LOW)
+             40 IMPORT_FROM              8 (LEAN_SHIFT_RATIO)
+             42 STORE_NAME               8 (LEAN_SHIFT_RATIO)
+             44 POP_TOP
+
+  8          46 LOAD_CONST               4 ('GIAY PHAO')
+
+  9          48 LOAD_CONST               5 ('TAI NGHE')
+
+ 10          50 LOAD_CONST               6 ('RA DAU TAY')
+
+ 11          52 LOAD_CONST               7 ('DIEN THOAI')
+
+ 12          54 LOAD_CONST               8 ('QUAY DAU')
+
+ 13          56 LOAD_CONST               9 ('NGU GAT')
+
+ 14          58 LOAD_CONST              10 ('DONG HO')
+
+ 15          60 LOAD_CONST              11 ('BINH THUONG')
+
+  7          62 LOAD_CONST              12 (('CheatingPaper', 'earphone', 'HandGestures', 'Phone', 'Rotation', 'Sleeping', 'SmartWatch', 'normal'))
+             64 BUILD_CONST_KEY_MAP      8
+             66 STORE_NAME               9 (_CLASS_LABEL_ASCII)
+
+ 18          68 LOAD_CONST               8 ('QUAY DAU')
+
+ 19          70 LOAD_CONST              13 ('NHOAI NGUOI')
+
+ 20          72 LOAD_CONST              14 ('NHIEU NGUOI')
+
+ 21          74 LOAD_CONST               4 ('GIAY PHAO')
+
+ 22          76 LOAD_CONST               5 ('TAI NGHE')
+
+ 23          78 LOAD_CONST               6 ('RA DAU TAY')
+
+ 24          80 LOAD_CONST               7 ('DIEN THOAI')
+
+ 25          82 LOAD_CONST              15 ('QUAY DAU (YOLO)')
+
+ 26          84 LOAD_CONST               9 ('NGU GAT')
+
+ 27          86 LOAD_CONST              10 ('DONG HO')
+
+ 17          88 LOAD_CONST              16 (('HEAD_TURN', 'BODY_LEAN', 'MULTI_FACE', 'CheatingPaper', 'earphone', 'HandGestures', 'Phone', 'Rotation', 'Sleeping', 'SmartWatch'))
+             90 BUILD_CONST_KEY_MAP     10
+             92 STORE_NAME              10 (_ALERT_LABEL_ASCII)
+
+ 30          94 LOAD_CONST              17 ('frame')
+             96 LOAD_NAME                2 (np)
+             98 LOAD_ATTR               11 (ndarray)
+            108 LOAD_CONST              18 ('det')
+            110 LOAD_NAME               12 (dict)
+            112 BUILD_TUPLE              4
+            114 LOAD_CONST              19 (<code object draw_yolo_box at 0x0000021658F589E0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 30>)
+            116 MAKE_FUNCTION            4 (annotations)
+            118 STORE_NAME              13 (draw_yolo_box)
+
+ 49         120 LOAD_CONST              17 ('frame')
+            122 LOAD_NAME                2 (np)
+            124 LOAD_ATTR               11 (ndarray)
+            134 LOAD_CONST              20 ('bbox')
+            136 LOAD_NAME               14 (tuple)
+            138 LOAD_CONST              21 ('tid')
+            140 LOAD_NAME               15 (int)
+            142 LOAD_CONST              22 ('violation_level')
+
+ 50         144 LOAD_NAME               16 (str)
+
+ 49         146 LOAD_CONST              23 ('label_parts')
+
+ 50         148 LOAD_NAME               17 (list)
+            150 LOAD_NAME               16 (str)
+            152 BINARY_SUBSCR
+
+ 49         162 BUILD_TUPLE             10
+            164 LOAD_CONST              24 (<code object draw_face_box at 0x0000021658CE0F60, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 49>)
+            166 MAKE_FUNCTION            4 (annotations)
+            168 STORE_NAME              18 (draw_face_box)
+
+ 65         170 LOAD_CONST              17 ('frame')
+            172 LOAD_NAME                2 (np)
+            174 LOAD_ATTR               11 (ndarray)
+            184 LOAD_CONST              25 ('idx')
+            186 LOAD_NAME               15 (int)
+            188 LOAD_CONST              26 ('yaw_r')
+            190 LOAD_NAME               19 (float)
+            192 LOAD_CONST              27 ('x_diff_ratio')
+            194 LOAD_NAME               19 (float)
+            196 BUILD_TUPLE              8
+            198 LOAD_CONST              28 (<code object draw_head_bars at 0x0000021658CD4870, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 65>)
+            200 MAKE_FUNCTION            4 (annotations)
+            202 STORE_NAME              20 (draw_head_bars)
+
+ 68         204 LOAD_CONST              17 ('frame')
+            206 LOAD_NAME                2 (np)
+            208 LOAD_ATTR               11 (ndarray)
+            218 LOAD_CONST              29 ('alerts')
+            220 LOAD_NAME               17 (list)
+            222 LOAD_NAME               12 (dict)
+            224 BINARY_SUBSCR
+            234 BUILD_TUPLE              4
+            236 LOAD_CONST              30 (<code object draw_status_overlay at 0x0000021659175EE0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 68>)
+            238 MAKE_FUNCTION            4 (annotations)
+            240 STORE_NAME              21 (draw_status_overlay)
+
+ 94         242 LOAD_CONST              17 ('frame')
+            244 LOAD_NAME                2 (np)
+            246 LOAD_ATTR               11 (ndarray)
+            256 LOAD_CONST              31 ('detections')
+            258 LOAD_NAME               17 (list)
+            260 LOAD_NAME               12 (dict)
+            262 BINARY_SUBSCR
+            272 BUILD_TUPLE              4
+            274 LOAD_CONST              32 (<code object draw_yolo_summary at 0x0000021658CD5FB0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 94>)
+            276 MAKE_FUNCTION            4 (annotations)
+            278 STORE_NAME              22 (draw_yolo_summary)
+
+ 97         280 LOAD_CONST              17 ('frame')
+            282 LOAD_NAME                2 (np)
+            284 LOAD_ATTR               11 (ndarray)
+            294 LOAD_CONST              33 ('label')
+            296 LOAD_NAME               16 (str)
+            298 LOAD_CONST              34 ('x')
+            300 LOAD_NAME               15 (int)
+            302 LOAD_CONST              35 ('y')
+            304 LOAD_NAME               15 (int)
+            306 LOAD_CONST              36 ('bg_color')
+            308 LOAD_NAME               14 (tuple)
+            310 BUILD_TUPLE             10
+            312 LOAD_CONST              37 (<code object _draw_label at 0x0000021658F58BD0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 97>)
+            314 MAKE_FUNCTION            4 (annotations)
+            316 STORE_NAME              23 (_draw_label)
+
+107         318 NOP
+
+108         320 NOP
+
+109         322 NOP
+
+106         324 LOAD_CONST              48 ((0, 0, False, False, 0.0, False))
+            326 LOAD_CONST              17 ('frame')
+            328 LOAD_NAME                2 (np)
+            330 LOAD_ATTR               11 (ndarray)
+            340 LOAD_CONST              40 ('face_data')
+            342 LOAD_NAME               12 (dict)
+            344 LOAD_CONST              41 ('right_factors')
+
+107         346 LOAD_NAME               15 (int)
+
+106         348 LOAD_CONST              42 ('left_factors')
+
+107         350 LOAD_NAME               15 (int)
+
+106         352 LOAD_CONST              43 ('yaw_bad')
+
+108         354 LOAD_NAME               24 (bool)
+
+106         356 LOAD_CONST              44 ('lean_bad')
+
+108         358 LOAD_NAME               24 (bool)
+
+106         360 LOAD_CONST              45 ('of_mag')
+
+109         362 LOAD_NAME               19 (float)
+
+106         364 LOAD_CONST              46 ('of_sudden')
+
+109         366 LOAD_NAME               24 (bool)
+
+106         368 BUILD_TUPLE             16
+            370 LOAD_CONST              47 (<code object draw_pose_debug at 0x00000216591ADF20, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 106>)
+            372 MAKE_FUNCTION            5 (defaults, annotations)
+            374 STORE_NAME              25 (draw_pose_debug)
+            376 LOAD_CONST               1 (None)
+            378 RETURN_VALUE
+
+Disassembly of <code object draw_yolo_box at 0x0000021658F589E0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 30>:
+ 30           0 RESUME                   0
+
+ 31           2 LOAD_FAST                1 (det)
+              4 LOAD_CONST               1 ('bbox')
+              6 BINARY_SUBSCR
+             16 UNPACK_SEQUENCE          4
+             20 STORE_FAST               2 (x1)
+             22 STORE_FAST               3 (y1)
+             24 STORE_FAST               4 (x2)
+             26 STORE_FAST               5 (y2)
+
+ 32          28 LOAD_FAST                1 (det)
+             30 LOAD_CONST               2 ('class_name')
+             32 BINARY_SUBSCR
+             42 STORE_FAST               6 (cls)
+
+ 33          44 LOAD_FAST                1 (det)
+             46 LOAD_CONST               3 ('confidence')
+             48 BINARY_SUBSCR
+             58 STORE_FAST               7 (conf)
+
+ 34          60 LOAD_FAST                1 (det)
+             62 LOAD_METHOD              0 (get)
+             84 LOAD_CONST               4 ('severity')
+             86 LOAD_CONST               5 ('LOW')
+             88 PRECALL                  2
+             92 CALL                     2
+            102 STORE_FAST               8 (sev)
+
+ 37         104 LOAD_FAST                8 (sev)
+            106 LOAD_CONST               6 ('HIGH')
+            108 COMPARE_OP               2 (==)
+            114 POP_JUMP_FORWARD_IF_FALSE     3 (to 122)
+
+ 38         116 LOAD_CONST               7 ((0, 0, 255))
+            118 STORE_FAST               9 (color)
+            120 JUMP_FORWARD            11 (to 144)
+
+ 39     >>  122 LOAD_FAST                8 (sev)
+            124 LOAD_CONST               8 ('MEDIUM')
+            126 COMPARE_OP               2 (==)
+            132 POP_JUMP_FORWARD_IF_FALSE     3 (to 140)
+
+ 40         134 LOAD_CONST               9 ((0, 200, 255))
+            136 STORE_FAST               9 (color)
+            138 JUMP_FORWARD             2 (to 144)
+
+ 42     >>  140 LOAD_CONST              10 ((0, 255, 0))
+            142 STORE_FAST               9 (color)
+
+ 44     >>  144 LOAD_GLOBAL              2 (_CLASS_LABEL_ASCII)
+            156 LOAD_METHOD              0 (get)
+            178 LOAD_FAST                6 (cls)
+            180 LOAD_FAST                6 (cls)
+            182 PRECALL                  2
+            186 CALL                     2
+            196 STORE_FAST              10 (label)
+
+ 45         198 LOAD_GLOBAL              5 (NULL + cv2)
+            210 LOAD_ATTR                3 (rectangle)
+            220 LOAD_FAST                0 (frame)
+            222 LOAD_FAST                2 (x1)
+            224 LOAD_FAST                3 (y1)
+            226 BUILD_TUPLE              2
+            228 LOAD_FAST                4 (x2)
+            230 LOAD_FAST                5 (y2)
+            232 BUILD_TUPLE              2
+            234 LOAD_FAST                9 (color)
+            236 LOAD_CONST              11 (2)
+            238 PRECALL                  5
+            242 CALL                     5
+            252 POP_TOP
+
+ 46         254 LOAD_FAST               10 (label)
+            256 FORMAT_VALUE             0
+            258 LOAD_CONST              12 (' ')
+            260 LOAD_FAST                7 (conf)
+            262 LOAD_CONST              13 ('.2f')
+            264 FORMAT_VALUE             4 (with format)
+            266 BUILD_STRING             3
+            268 STORE_FAST              11 (txt)
+
+ 47         270 LOAD_GLOBAL              9 (NULL + _draw_label)
+            282 LOAD_FAST                0 (frame)
+            284 LOAD_FAST               11 (txt)
+            286 LOAD_FAST                2 (x1)
+            288 LOAD_FAST                3 (y1)
+            290 LOAD_FAST                9 (color)
+            292 PRECALL                  5
+            296 CALL                     5
+            306 POP_TOP
+            308 LOAD_CONST               0 (None)
+            310 RETURN_VALUE
+
+Disassembly of <code object draw_face_box at 0x0000021658CE0F60, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 49>:
+ 49           0 RESUME                   0
+
+ 51           2 LOAD_FAST                1 (bbox)
+              4 UNPACK_SEQUENCE          4
+              8 STORE_FAST               5 (x1)
+             10 STORE_FAST               6 (y1)
+             12 STORE_FAST               7 (x2)
+             14 STORE_FAST               8 (y2)
+
+ 52          16 LOAD_FAST                3 (violation_level)
+             18 LOAD_CONST               1 ('HIGH')
+             20 COMPARE_OP               2 (==)
+             26 POP_JUMP_FORWARD_IF_FALSE     5 (to 38)
+
+ 53          28 LOAD_CONST               2 ((0, 0, 255))
+             30 STORE_FAST               9 (color)
+
+ 54          32 LOAD_CONST               3 (2)
+             34 STORE_FAST              10 (thick)
+             36 JUMP_FORWARD            15 (to 68)
+
+ 55     >>   38 LOAD_FAST                3 (violation_level)
+             40 LOAD_CONST               4 ('MEDIUM')
+             42 COMPARE_OP               2 (==)
+             48 POP_JUMP_FORWARD_IF_FALSE     5 (to 60)
+
+ 56          50 LOAD_CONST               5 ((0, 200, 255))
+             52 STORE_FAST               9 (color)
+
+ 57          54 LOAD_CONST               3 (2)
+             56 STORE_FAST              10 (thick)
+             58 JUMP_FORWARD             4 (to 68)
+
+ 59     >>   60 LOAD_CONST               6 ((0, 255, 0))
+             62 STORE_FAST               9 (color)
+
+ 60          64 LOAD_CONST               7 (1)
+             66 STORE_FAST              10 (thick)
+
+ 61     >>   68 LOAD_GLOBAL              1 (NULL + cv2)
+             80 LOAD_ATTR                1 (rectangle)
+             90 LOAD_FAST                0 (frame)
+             92 LOAD_FAST                5 (x1)
+             94 LOAD_FAST                6 (y1)
+             96 BUILD_TUPLE              2
+             98 LOAD_FAST                7 (x2)
+            100 LOAD_FAST                8 (y2)
+            102 BUILD_TUPLE              2
+            104 LOAD_FAST                9 (color)
+            106 LOAD_FAST               10 (thick)
+            108 PRECALL                  5
+            112 CALL                     5
+            122 POP_TOP
+
+ 62         124 LOAD_FAST                4 (label_parts)
+            126 POP_JUMP_FORWARD_IF_FALSE    28 (to 184)
+            128 LOAD_CONST               8 ('ID:')
+            130 LOAD_FAST                2 (tid)
+            132 FORMAT_VALUE             0
+            134 LOAD_CONST               9 (' ')
+            136 BUILD_STRING             3
+            138 LOAD_CONST              10 (' | ')
+            140 LOAD_METHOD              2 (join)
+            162 LOAD_FAST                4 (label_parts)
+            164 PRECALL                  1
+            168 CALL                     1
+            178 BINARY_OP                0 (+)
+            182 JUMP_FORWARD             5 (to 194)
+        >>  184 LOAD_CONST               8 ('ID:')
+            186 LOAD_FAST                2 (tid)
+            188 FORMAT_VALUE             0
+            190 LOAD_CONST              11 (' OK')
+            192 BUILD_STRING             3
+        >>  194 STORE_FAST              11 (label)
+
+ 63         196 LOAD_GLOBAL              7 (NULL + _draw_label)
+            208 LOAD_FAST                0 (frame)
+            210 LOAD_FAST               11 (label)
+            212 LOAD_FAST                5 (x1)
+            214 LOAD_FAST                6 (y1)
+            216 LOAD_FAST                9 (color)
+            218 PRECALL                  5
+            222 CALL                     5
+            232 POP_TOP
+            234 LOAD_CONST               0 (None)
+            236 RETURN_VALUE
+
+Disassembly of <code object draw_head_bars at 0x0000021658CD4870, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 65>:
+ 65           0 RESUME                   0
+
+ 66           2 LOAD_CONST               0 (None)
+              4 RETURN_VALUE
+
+Disassembly of <code object draw_status_overlay at 0x0000021659175EE0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 68>:
+              0 MAKE_CELL               22 (priority)
+
+ 68           2 RESUME                   0
+
+ 69           4 LOAD_FAST                1 (alerts)
+              6 POP_JUMP_FORWARD_IF_TRUE     2 (to 12)
+
+ 70           8 LOAD_CONST               0 (None)
+             10 RETURN_VALUE
+
+ 71     >>   12 LOAD_FAST                0 (frame)
+             14 LOAD_ATTR                0 (shape)
+             24 LOAD_CONST               0 (None)
+             26 LOAD_CONST               1 (2)
+             28 BUILD_SLICE              2
+             30 BINARY_SUBSCR
+             40 UNPACK_SEQUENCE          2
+             44 STORE_FAST               2 (h)
+             46 STORE_FAST               3 (w)
+
+ 72          48 LOAD_GLOBAL              2 (cv2)
+             60 LOAD_ATTR                2 (FONT_HERSHEY_SIMPLEX)
+             70 STORE_FAST               4 (font)
+
+ 73          72 LOAD_CONST               2 (0)
+             74 LOAD_CONST               3 (1)
+             76 LOAD_CONST               1 (2)
+             78 LOAD_CONST               4 (('HIGH', 'MEDIUM', 'LOW'))
+             80 BUILD_CONST_KEY_MAP      3
+             82 STORE_DEREF             22 (priority)
+
+ 74          84 LOAD_GLOBAL              7 (NULL + min)
+             96 LOAD_FAST                1 (alerts)
+             98 LOAD_CLOSURE            22 (priority)
+            100 BUILD_TUPLE              1
+            102 LOAD_CONST               5 (<code object <lambda> at 0x0000021658D16230, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 74>)
+            104 MAKE_FUNCTION            8 (closure)
+            106 KW_NAMES                 6
+            108 PRECALL                  2
+            112 CALL                     2
+            122 STORE_FAST               5 (top)
+
+ 75         124 LOAD_GLOBAL              8 (_ALERT_LABEL_ASCII)
+            136 LOAD_METHOD              5 (get)
+            158 LOAD_FAST                5 (top)
+            160 LOAD_CONST               7 ('type')
+            162 BINARY_SUBSCR
+            172 LOAD_FAST                5 (top)
+            174 LOAD_CONST               7 ('type')
+            176 BINARY_SUBSCR
+            186 PRECALL                  2
+            190 CALL                     2
+            200 STORE_FAST               6 (short)
+
+ 76         202 LOAD_GLOBAL             13 (NULL + len)
+            214 LOAD_FAST                1 (alerts)
+            216 PRECALL                  1
+            220 CALL                     1
+            230 STORE_FAST               7 (n)
+
+ 77         232 LOAD_FAST                7 (n)
+            234 LOAD_CONST               3 (1)
+            236 COMPARE_OP               2 (==)
+            242 POP_JUMP_FORWARD_IF_FALSE     5 (to 254)
+            244 LOAD_CONST               8 ('! ')
+            246 LOAD_FAST                6 (short)
+            248 FORMAT_VALUE             0
+            250 BUILD_STRING             2
+            252 JUMP_FORWARD             8 (to 270)
+        >>  254 LOAD_CONST               8 ('! ')
+            256 LOAD_FAST                7 (n)
+            258 FORMAT_VALUE             0
+            260 LOAD_CONST               9 (' VI PHAM (')
+            262 LOAD_FAST                6 (short)
+            264 FORMAT_VALUE             0
+            266 LOAD_CONST              10 ('...)')
+            268 BUILD_STRING             5
+        >>  270 STORE_FAST               8 (label)
+
+ 78         272 LOAD_GLOBAL             15 (NULL + SEV_COLOR)
+            284 LOAD_ATTR                5 (get)
+            294 LOAD_FAST                5 (top)
+            296 LOAD_METHOD              5 (get)
+            318 LOAD_CONST              11 ('severity')
+            320 LOAD_CONST              12 ('LOW')
+            322 PRECALL                  2
+            326 CALL                     2
+            336 LOAD_CONST              13 ((80, 80, 80))
+            338 PRECALL                  2
+            342 CALL                     2
+            352 STORE_FAST               9 (bg)
+
+ 79         354 LOAD_CONST              14 (0.42)
+            356 STORE_FAST              10 (scale)
+
+ 80         358 LOAD_CONST               3 (1)
+            360 STORE_FAST              11 (thick)
+
+ 81         362 LOAD_GLOBAL              3 (NULL + cv2)
+            374 LOAD_ATTR                8 (getTextSize)
+            384 LOAD_FAST                8 (label)
+            386 LOAD_FAST                4 (font)
+            388 LOAD_FAST               10 (scale)
+            390 LOAD_FAST               11 (thick)
+            392 PRECALL                  4
+            396 CALL                     4
+            406 UNPACK_SEQUENCE          2
+            410 UNPACK_SEQUENCE          2
+            414 STORE_FAST              12 (tw)
+            416 STORE_FAST              13 (th)
+            418 STORE_FAST              14 (bl)
+
+ 82         420 LOAD_CONST              15 ((8, 5))
+            422 UNPACK_SEQUENCE          2
+            426 STORE_FAST              15 (pad_x)
+            428 STORE_FAST              16 (pad_y)
+
+ 83         430 LOAD_CONST              16 (6)
+            432 STORE_FAST              17 (bx1)
+
+ 84         434 LOAD_CONST              16 (6)
+            436 STORE_FAST              18 (by1)
+
+ 85         438 LOAD_FAST               17 (bx1)
+            440 LOAD_FAST               12 (tw)
+            442 BINARY_OP                0 (+)
+            446 LOAD_FAST               15 (pad_x)
+            448 LOAD_CONST               1 (2)
+            450 BINARY_OP                5 (*)
+            454 BINARY_OP                0 (+)
+            458 STORE_FAST              19 (bx2)
+
+ 86         460 LOAD_FAST               18 (by1)
+            462 LOAD_FAST               13 (th)
+            464 BINARY_OP                0 (+)
+            468 LOAD_FAST               16 (pad_y)
+            470 LOAD_CONST               1 (2)
+            472 BINARY_OP                5 (*)
+            476 BINARY_OP                0 (+)
+            480 STORE_FAST              20 (by2)
+
+ 87         482 LOAD_FAST                0 (frame)
+            484 LOAD_METHOD              9 (copy)
+            506 PRECALL                  0
+            510 CALL                     0
+            520 STORE_FAST              21 (overlay)
+
+ 88         522 LOAD_GLOBAL              3 (NULL + cv2)
+            534 LOAD_ATTR               10 (rectangle)
+            544 LOAD_FAST               21 (overlay)
+            546 LOAD_FAST               17 (bx1)
+            548 LOAD_FAST               18 (by1)
+            550 BUILD_TUPLE              2
+            552 LOAD_FAST               19 (bx2)
+            554 LOAD_FAST               20 (by2)
+            556 BUILD_TUPLE              2
+            558 LOAD_FAST                9 (bg)
+            560 LOAD_CONST              17 (-1)
+            562 PRECALL                  5
+            566 CALL                     5
+            576 POP_TOP
+
+ 89         578 LOAD_GLOBAL              3 (NULL + cv2)
+            590 LOAD_ATTR               11 (addWeighted)
+            600 LOAD_FAST               21 (overlay)
+            602 LOAD_CONST              18 (0.65)
+            604 LOAD_FAST                0 (frame)
+            606 LOAD_CONST              19 (0.35)
+            608 LOAD_CONST               2 (0)
+            610 LOAD_FAST                0 (frame)
+            612 PRECALL                  6
+            616 CALL                     6
+            626 POP_TOP
+
+ 90         628 LOAD_GLOBAL              3 (NULL + cv2)
+            640 LOAD_ATTR               10 (rectangle)
+            650 LOAD_FAST                0 (frame)
+            652 LOAD_FAST               17 (bx1)
+            654 LOAD_FAST               18 (by1)
+            656 BUILD_TUPLE              2
+            658 LOAD_FAST               19 (bx2)
+            660 LOAD_FAST               20 (by2)
+            662 BUILD_TUPLE              2
+            664 LOAD_CONST              20 ((255, 255, 255))
+            666 LOAD_CONST               3 (1)
+            668 PRECALL                  5
+            672 CALL                     5
+            682 POP_TOP
+
+ 91         684 LOAD_GLOBAL              3 (NULL + cv2)
+            696 LOAD_ATTR               12 (putText)
+            706 LOAD_FAST                0 (frame)
+            708 LOAD_FAST                8 (label)
+            710 LOAD_FAST               17 (bx1)
+            712 LOAD_FAST               15 (pad_x)
+            714 BINARY_OP                0 (+)
+            718 LOAD_FAST               20 (by2)
+            720 LOAD_FAST               16 (pad_y)
+            722 BINARY_OP               10 (-)
+            726 LOAD_CONST               3 (1)
+            728 BINARY_OP               10 (-)
+            732 BUILD_TUPLE              2
+
+ 92         734 LOAD_FAST                4 (font)
+            736 LOAD_FAST               10 (scale)
+            738 LOAD_CONST              20 ((255, 255, 255))
+            740 LOAD_FAST               11 (thick)
+            742 LOAD_GLOBAL              2 (cv2)
+            754 LOAD_ATTR               13 (LINE_AA)
+
+ 91         764 PRECALL                  8
+            768 CALL                     8
+            778 POP_TOP
+            780 LOAD_CONST               0 (None)
+            782 RETURN_VALUE
+
+Disassembly of <code object <lambda> at 0x0000021658D16230, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 74>:
+              0 COPY_FREE_VARS           1
+
+ 74           2 RESUME                   0
+              4 LOAD_DEREF               1 (priority)
+              6 LOAD_METHOD              0 (get)
+             28 LOAD_FAST                0 (a)
+             30 LOAD_METHOD              0 (get)
+             52 LOAD_CONST               1 ('severity')
+             54 LOAD_CONST               2 ('LOW')
+             56 PRECALL                  2
+             60 CALL                     2
+             70 LOAD_CONST               3 (2)
+             72 PRECALL                  2
+             76 CALL                     2
+             86 RETURN_VALUE
+
+Disassembly of <code object draw_yolo_summary at 0x0000021658CD5FB0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 94>:
+ 94           0 RESUME                   0
+
+ 95           2 LOAD_CONST               0 (None)
+              4 RETURN_VALUE
+
+Disassembly of <code object _draw_label at 0x0000021658F58BD0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 97>:
+ 97           0 RESUME                   0
+
+ 98           2 LOAD_GLOBAL              0 (cv2)
+             14 LOAD_ATTR                1 (FONT_HERSHEY_SIMPLEX)
+             24 STORE_FAST               5 (font)
+
+ 99          26 LOAD_CONST               1 (0.5)
+             28 STORE_FAST               6 (scale)
+
+100          30 LOAD_CONST               2 (1)
+             32 STORE_FAST               7 (thick)
+
+101          34 LOAD_GLOBAL              1 (NULL + cv2)
+             46 LOAD_ATTR                2 (getTextSize)
+             56 LOAD_FAST                1 (label)
+             58 LOAD_FAST                5 (font)
+             60 LOAD_FAST                6 (scale)
+             62 LOAD_FAST                7 (thick)
+             64 PRECALL                  4
+             68 CALL                     4
+             78 UNPACK_SEQUENCE          2
+             82 UNPACK_SEQUENCE          2
+             86 STORE_FAST               8 (tw)
+             88 STORE_FAST               9 (th)
+             90 STORE_FAST              10 (bl)
+
+102          92 LOAD_GLOBAL              7 (NULL + max)
+            104 LOAD_FAST                3 (y)
+            106 LOAD_FAST                9 (th)
+            108 LOAD_CONST               3 (4)
+            110 BINARY_OP                0 (+)
+            114 PRECALL                  2
+            118 CALL                     2
+            128 STORE_FAST              11 (ly)
+
+103         130 LOAD_GLOBAL              1 (NULL + cv2)
+            142 LOAD_ATTR                4 (rectangle)
+            152 LOAD_FAST                0 (frame)
+            154 LOAD_FAST                2 (x)
+            156 LOAD_FAST               11 (ly)
+            158 LOAD_FAST                9 (th)
+            160 BINARY_OP               10 (-)
+            164 LOAD_CONST               3 (4)
+            166 BINARY_OP               10 (-)
+            170 BUILD_TUPLE              2
+            172 LOAD_FAST                2 (x)
+            174 LOAD_FAST                8 (tw)
+            176 BINARY_OP                0 (+)
+            180 LOAD_CONST               3 (4)
+            182 BINARY_OP                0 (+)
+            186 LOAD_FAST               11 (ly)
+            188 LOAD_CONST               4 (2)
+            190 BINARY_OP                0 (+)
+            194 BUILD_TUPLE              2
+            196 LOAD_FAST                4 (bg_color)
+            198 LOAD_CONST               5 (-1)
+            200 PRECALL                  5
+            204 CALL                     5
+            214 POP_TOP
+
+104         216 LOAD_GLOBAL              1 (NULL + cv2)
+            228 LOAD_ATTR                5 (putText)
+            238 LOAD_FAST                0 (frame)
+            240 LOAD_FAST                1 (label)
+            242 LOAD_FAST                2 (x)
+            244 LOAD_CONST               4 (2)
+            246 BINARY_OP                0 (+)
+            250 LOAD_FAST               11 (ly)
+            252 LOAD_CONST               4 (2)
+            254 BINARY_OP               10 (-)
+            258 BUILD_TUPLE              2
+            260 LOAD_FAST                5 (font)
+            262 LOAD_FAST                6 (scale)
+            264 LOAD_CONST               6 ((255, 255, 255))
+            266 LOAD_FAST                7 (thick)
+            268 LOAD_GLOBAL              0 (cv2)
+            280 LOAD_ATTR                6 (LINE_AA)
+            290 PRECALL                  8
+            294 CALL                     8
+            304 POP_TOP
+            306 LOAD_CONST               0 (None)
+            308 RETURN_VALUE
+
+Disassembly of <code object draw_pose_debug at 0x00000216591ADF20, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 106>:
+              0 MAKE_CELL               37 (font)
+              2 MAKE_CELL               38 (scale)
+              4 MAKE_CELL               39 (thick)
+
+106           6 RESUME                   0
+
+110           8 LOAD_FAST                1 (face_data)
+             10 LOAD_CONST               1 ('bbox')
+             12 BINARY_SUBSCR
+             22 UNPACK_SEQUENCE          4
+             26 STORE_FAST               8 (x1)
+             28 STORE_FAST               9 (y1)
+             30 STORE_FAST              10 (x2)
+             32 STORE_FAST              11 (y2)
+
+111          34 LOAD_FAST                1 (face_data)
+             36 LOAD_METHOD              0 (get)
+             58 LOAD_CONST               2 ('roll_angle')
+             60 LOAD_CONST               3 (0.0)
+             62 PRECALL                  2
+             66 CALL                     2
+             76 STORE_FAST              12 (roll)
+
+112          78 LOAD_FAST                1 (face_data)
+             80 LOAD_METHOD              0 (get)
+            102 LOAD_CONST               4 ('yaw_ratio')
+            104 LOAD_CONST               5 (1.0)
+            106 PRECALL                  2
+            110 CALL                     2
+            120 STORE_FAST              13 (yaw_r)
+
+113         122 LOAD_FAST                1 (face_data)
+            124 LOAD_METHOD              0 (get)
+            146 LOAD_CONST               6 ('arm_reach_dist')
+            148 LOAD_CONST               3 (0.0)
+            150 PRECALL                  2
+            154 CALL                     2
+            164 STORE_FAST              14 (reach)
+
+114         166 LOAD_GLOBAL              3 (NULL + abs)
+            178 LOAD_FAST                1 (face_data)
+            180 LOAD_METHOD              0 (get)
+            202 LOAD_CONST               7 ('body_twist')
+            204 LOAD_CONST               3 (0.0)
+            206 PRECALL                  2
+            210 CALL                     2
+            220 PRECALL                  1
+            224 CALL                     1
+            234 STORE_FAST              15 (twist)
+
+115         236 LOAD_FAST                1 (face_data)
+            238 LOAD_METHOD              0 (get)
+            260 LOAD_CONST               8 ('lean_forward')
+            262 LOAD_CONST               9 (False)
+            264 PRECALL                  2
+            268 CALL                     2
+            278 STORE_FAST              16 (fwd)
+
+116         280 LOAD_FAST                1 (face_data)
+            282 LOAD_METHOD              0 (get)
+            304 LOAD_CONST              10 ('pitch_down')
+            306 LOAD_CONST               9 (False)
+            308 PRECALL                  2
+            312 CALL                     2
+            322 STORE_FAST              17 (pitch)
+
+117         324 LOAD_FAST                1 (face_data)
+            326 LOAD_METHOD              0 (get)
+            348 LOAD_CONST              11 ('arm_reach_side')
+            350 LOAD_CONST              12 (0)
+            352 PRECALL                  2
+            356 CALL                     2
+            366 STORE_FAST              18 (arm_s)
+
+118         368 LOAD_FAST                1 (face_data)
+            370 LOAD_METHOD              0 (get)
+            392 LOAD_CONST              13 ('track_id')
+            394 LOAD_CONST              14 (-1)
+            396 PRECALL                  2
+            400 CALL                     2
+            410 STORE_FAST              19 (tid)
+
+119         412 LOAD_FAST                4 (yaw_bad)
+            414 POP_JUMP_FORWARD_IF_TRUE     2 (to 420)
+            416 LOAD_FAST                5 (lean_bad)
+            418 POP_JUMP_FORWARD_IF_FALSE     3 (to 426)
+
+120     >>  420 LOAD_CONST              15 ((0, 0, 160))
+            422 STORE_FAST              20 (bg)
+            424 JUMP_FORWARD            22 (to 470)
+
+121     >>  426 LOAD_FAST                7 (of_sudden)
+            428 POP_JUMP_FORWARD_IF_FALSE     3 (to 436)
+
+122         430 LOAD_CONST              16 ((0, 80, 180))
+            432 STORE_FAST              20 (bg)
+            434 JUMP_FORWARD            17 (to 470)
+
+123     >>  436 LOAD_FAST                2 (right_factors)
+            438 LOAD_CONST              17 (1)
+            440 COMPARE_OP               5 (>=)
+            446 POP_JUMP_FORWARD_IF_TRUE     6 (to 460)
+            448 LOAD_FAST                3 (left_factors)
+            450 LOAD_CONST              17 (1)
+            452 COMPARE_OP               5 (>=)
+            458 POP_JUMP_FORWARD_IF_FALSE     3 (to 466)
+
+124     >>  460 LOAD_CONST              18 ((0, 100, 160))
+            462 STORE_FAST              20 (bg)
+            464 JUMP_FORWARD             2 (to 470)
+
+126     >>  466 LOAD_CONST              19 ((30, 30, 30))
+            468 STORE_FAST              20 (bg)
+
+127     >>  470 LOAD_CONST              20 ('OF=')
+            472 LOAD_FAST                6 (of_mag)
+            474 LOAD_CONST              21 ('.1f')
+            476 FORMAT_VALUE             4 (with format)
+            478 LOAD_CONST              22 ('px')
+            480 BUILD_STRING             3
+            482 LOAD_FAST                7 (of_sudden)
+            484 POP_JUMP_FORWARD_IF_FALSE     2 (to 490)
+            486 LOAD_CONST              23 (' [SUDDEN!]')
+            488 JUMP_FORWARD             1 (to 492)
+        >>  490 LOAD_CONST              24 ('')
+        >>  492 BINARY_OP                0 (+)
+            496 STORE_FAST              21 (of_label)
+
+129         498 LOAD_CONST              25 ('ID:')
+            500 LOAD_FAST               19 (tid)
+            502 FORMAT_VALUE             0
+            504 LOAD_CONST              26 ('  R=')
+            506 LOAD_FAST                2 (right_factors)
+            508 FORMAT_VALUE             0
+            510 LOAD_CONST              27 (' L=')
+            512 LOAD_FAST                3 (left_factors)
+            514 FORMAT_VALUE             0
+            516 BUILD_STRING             6
+
+130         518 LOAD_CONST              28 ('roll=')
+            520 LOAD_FAST               12 (roll)
+            522 LOAD_CONST              29 ('+.1f')
+            524 FORMAT_VALUE             4 (with format)
+            526 LOAD_CONST              30 ('  yaw=')
+            528 LOAD_FAST               13 (yaw_r)
+            530 LOAD_CONST              31 ('.2f')
+            532 FORMAT_VALUE             4 (with format)
+            534 BUILD_STRING             4
+
+131         536 LOAD_CONST              32 ('reach=')
+            538 LOAD_FAST               14 (reach)
+            540 LOAD_CONST              31 ('.2f')
+            542 FORMAT_VALUE             4 (with format)
+            544 LOAD_CONST              33 ('(')
+            546 LOAD_FAST               18 (arm_s)
+            548 LOAD_CONST              12 (0)
+            550 COMPARE_OP               4 (>)
+            556 POP_JUMP_FORWARD_IF_FALSE     2 (to 562)
+            558 LOAD_CONST              34 ('+')
+            560 JUMP_FORWARD             9 (to 580)
+        >>  562 LOAD_FAST               18 (arm_s)
+            564 LOAD_CONST              12 (0)
+            566 COMPARE_OP               0 (<)
+            572 POP_JUMP_FORWARD_IF_FALSE     2 (to 578)
+            574 LOAD_CONST              35 ('-')
+            576 JUMP_FORWARD             1 (to 580)
+        >>  578 LOAD_CONST              36 ('0')
+        >>  580 FORMAT_VALUE             0
+            582 LOAD_CONST              37 (')  twist=')
+
+132         584 LOAD_FAST               15 (twist)
+            586 LOAD_CONST              21 ('.1f')
+
+131         588 FORMAT_VALUE             4 (with format)
+            590 BUILD_STRING             6
+
+133         592 LOAD_CONST              38 ('fwd=')
+            594 LOAD_FAST               16 (fwd)
+            596 POP_JUMP_FORWARD_IF_FALSE     2 (to 602)
+            598 LOAD_CONST              39 ('Y')
+            600 JUMP_FORWARD             1 (to 604)
+        >>  602 LOAD_CONST              40 ('N')
+        >>  604 FORMAT_VALUE             0
+            606 LOAD_CONST              41 ('  pitch=')
+            608 LOAD_FAST               17 (pitch)
+            610 POP_JUMP_FORWARD_IF_FALSE     2 (to 616)
+            612 LOAD_CONST              39 ('Y')
+            614 JUMP_FORWARD             1 (to 618)
+        >>  616 LOAD_CONST              40 ('N')
+        >>  618 FORMAT_VALUE             0
+            620 LOAD_CONST              42 ('  ')
+
+134         622 LOAD_FAST                4 (yaw_bad)
+            624 POP_JUMP_FORWARD_IF_TRUE     2 (to 630)
+            626 LOAD_FAST                5 (lean_bad)
+            628 POP_JUMP_FORWARD_IF_FALSE     2 (to 634)
+        >>  630 LOAD_CONST              43 ('!VIOLATION!')
+            632 JUMP_FORWARD             1 (to 636)
+        >>  634 LOAD_CONST              24 ('')
+
+133     >>  636 FORMAT_VALUE             0
+            638 BUILD_STRING             6
+
+135         640 LOAD_FAST               21 (of_label)
+
+128         642 BUILD_LIST               5
+            644 STORE_FAST              22 (lines)
+
+137         646 LOAD_GLOBAL              4 (cv2)
+            658 LOAD_ATTR                3 (FONT_HERSHEY_SIMPLEX)
+            668 STORE_DEREF             37 (font)
+
+138         670 LOAD_CONST              44 (0.38)
+            672 STORE_DEREF             38 (scale)
+
+139         674 LOAD_CONST              17 (1)
+            676 STORE_DEREF             39 (thick)
+
+140         678 LOAD_CONST              45 (14)
+            680 STORE_FAST              23 (line_h)
+
+141         682 LOAD_CONST              46 (4)
+            684 STORE_FAST              24 (pad)
+
+142         686 LOAD_GLOBAL              9 (NULL + max)
+            698 LOAD_CLOSURE            37 (font)
+            700 LOAD_CLOSURE            38 (scale)
+            702 LOAD_CLOSURE            39 (thick)
+            704 BUILD_TUPLE              3
+            706 LOAD_CONST              47 (<code object <genexpr> at 0x0000021658D097D0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 142>)
+            708 MAKE_FUNCTION            8 (closure)
+            710 LOAD_FAST               22 (lines)
+            712 GET_ITER
+            714 PRECALL                  0
+            718 CALL                     0
+            728 PRECALL                  1
+            732 CALL                     1
+            742 LOAD_FAST               24 (pad)
+            744 LOAD_CONST              48 (2)
+            746 BINARY_OP                5 (*)
+            750 BINARY_OP                0 (+)
+            754 STORE_FAST              25 (max_w)
+
+143         756 LOAD_FAST               23 (line_h)
+            758 LOAD_GLOBAL             11 (NULL + len)
+            770 LOAD_FAST               22 (lines)
+            772 PRECALL                  1
+            776 CALL                     1
+            786 BINARY_OP                5 (*)
+            790 LOAD_FAST               24 (pad)
+            792 LOAD_CONST              48 (2)
+            794 BINARY_OP                5 (*)
+            798 BINARY_OP                0 (+)
+            802 STORE_FAST              26 (panel_h)
+
+144         804 LOAD_FAST                8 (x1)
+            806 STORE_FAST              27 (px1)
+
+145         808 LOAD_FAST               11 (y2)
+            810 LOAD_CONST              48 (2)
+            812 BINARY_OP                0 (+)
+            816 STORE_FAST              28 (py1)
+
+146         818 LOAD_FAST               27 (px1)
+            820 LOAD_FAST               25 (max_w)
+            822 BINARY_OP                0 (+)
+            826 STORE_FAST              29 (px2)
+
+147         828 LOAD_FAST               28 (py1)
+            830 LOAD_FAST               26 (panel_h)
+            832 BINARY_OP                0 (+)
+            836 STORE_FAST              30 (py2)
+
+148         838 LOAD_FAST                0 (frame)
+            840 LOAD_ATTR                6 (shape)
+            850 LOAD_CONST               0 (None)
+            852 LOAD_CONST              48 (2)
+            854 BUILD_SLICE              2
+            856 BINARY_SUBSCR
+            866 UNPACK_SEQUENCE          2
+            870 STORE_FAST              31 (fh)
+            872 STORE_FAST              32 (fw)
+
+149         874 LOAD_FAST               30 (py2)
+            876 LOAD_FAST               31 (fh)
+            878 COMPARE_OP               4 (>)
+            884 POP_JUMP_FORWARD_IF_FALSE    13 (to 912)
+
+150         886 LOAD_FAST                9 (y1)
+            888 LOAD_FAST               26 (panel_h)
+            890 BINARY_OP               10 (-)
+            894 LOAD_CONST              48 (2)
+            896 BINARY_OP               10 (-)
+            900 STORE_FAST              28 (py1)
+
+151         902 LOAD_FAST                9 (y1)
+            904 LOAD_CONST              48 (2)
+            906 BINARY_OP               10 (-)
+            910 STORE_FAST              30 (py2)
+
+152     >>  912 LOAD_GLOBAL              5 (NULL + cv2)
+            924 LOAD_ATTR                7 (rectangle)
+            934 LOAD_FAST                0 (frame)
+            936 LOAD_FAST               27 (px1)
+            938 LOAD_FAST               28 (py1)
+            940 BUILD_TUPLE              2
+            942 LOAD_FAST               29 (px2)
+            944 LOAD_FAST               30 (py2)
+            946 BUILD_TUPLE              2
+            948 LOAD_FAST               20 (bg)
+            950 LOAD_CONST              14 (-1)
+            952 PRECALL                  5
+            956 CALL                     5
+            966 POP_TOP
+
+153         968 LOAD_GLOBAL              5 (NULL + cv2)
+            980 LOAD_ATTR                7 (rectangle)
+            990 LOAD_FAST                0 (frame)
+            992 LOAD_FAST               27 (px1)
+            994 LOAD_FAST               28 (py1)
+            996 BUILD_TUPLE              2
+            998 LOAD_FAST               29 (px2)
+           1000 LOAD_FAST               30 (py2)
+           1002 BUILD_TUPLE              2
+           1004 LOAD_CONST              49 ((80, 80, 80))
+           1006 LOAD_CONST              17 (1)
+           1008 PRECALL                  5
+           1012 CALL                     5
+           1022 POP_TOP
+
+154        1024 LOAD_GLOBAL             17 (NULL + enumerate)
+           1036 LOAD_FAST               22 (lines)
+           1038 PRECALL                  1
+           1042 CALL                     1
+           1052 GET_ITER
+        >> 1054 FOR_ITER               100 (to 1256)
+           1056 UNPACK_SEQUENCE          2
+           1060 STORE_FAST              33 (i)
+           1062 STORE_FAST              34 (line)
+
+155        1064 LOAD_FAST               28 (py1)
+           1066 LOAD_FAST               24 (pad)
+           1068 BINARY_OP                0 (+)
+           1072 LOAD_FAST               33 (i)
+           1074 LOAD_CONST              17 (1)
+           1076 BINARY_OP                0 (+)
+           1080 LOAD_FAST               23 (line_h)
+           1082 BINARY_OP                5 (*)
+           1086 BINARY_OP                0 (+)
+           1090 LOAD_CONST              48 (2)
+           1092 BINARY_OP               10 (-)
+           1096 STORE_FAST              35 (ty)
+
+156        1098 LOAD_FAST               33 (i)
+           1100 LOAD_GLOBAL             11 (NULL + len)
+           1112 LOAD_FAST               22 (lines)
+           1114 PRECALL                  1
+           1118 CALL                     1
+           1128 LOAD_CONST              17 (1)
+           1130 BINARY_OP               10 (-)
+           1134 COMPARE_OP               2 (==)
+           1140 POP_JUMP_FORWARD_IF_FALSE     5 (to 1152)
+           1142 LOAD_FAST                7 (of_sudden)
+           1144 POP_JUMP_FORWARD_IF_FALSE     3 (to 1152)
+
+157        1146 LOAD_CONST              50 ((0, 220, 255))
+           1148 STORE_FAST              36 (color)
+           1150 JUMP_FORWARD             9 (to 1170)
+
+158     >> 1152 LOAD_FAST                4 (yaw_bad)
+           1154 POP_JUMP_FORWARD_IF_TRUE     2 (to 1160)
+           1156 LOAD_FAST                5 (lean_bad)
+           1158 POP_JUMP_FORWARD_IF_FALSE     3 (to 1166)
+
+159     >> 1160 LOAD_CONST              51 ((0, 255, 100))
+           1162 STORE_FAST              36 (color)
+           1164 JUMP_FORWARD             2 (to 1170)
+
+161     >> 1166 LOAD_CONST              52 ((200, 200, 200))
+           1168 STORE_FAST              36 (color)
+
+162     >> 1170 LOAD_GLOBAL              5 (NULL + cv2)
+           1182 LOAD_ATTR                9 (putText)
+           1192 LOAD_FAST                0 (frame)
+           1194 LOAD_FAST               34 (line)
+           1196 LOAD_FAST               27 (px1)
+           1198 LOAD_FAST               24 (pad)
+           1200 BINARY_OP                0 (+)
+           1204 LOAD_FAST               35 (ty)
+           1206 BUILD_TUPLE              2
+           1208 LOAD_DEREF              37 (font)
+           1210 LOAD_DEREF              38 (scale)
+           1212 LOAD_FAST               36 (color)
+           1214 LOAD_DEREF              39 (thick)
+           1216 LOAD_GLOBAL              4 (cv2)
+           1228 LOAD_ATTR               10 (LINE_AA)
+           1238 PRECALL                  8
+           1242 CALL                     8
+           1252 POP_TOP
+           1254 JUMP_BACKWARD          101 (to 1054)
+
+154     >> 1256 LOAD_CONST               0 (None)
+           1258 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x0000021658D097D0, file "D:\Exam_cheating\Test_AI_Cheating\core\drawing.py", line 142>:
+              0 COPY_FREE_VARS           3
+
+142           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                39 (to 90)
+             12 STORE_FAST               1 (l)
+             14 LOAD_GLOBAL              1 (NULL + cv2)
+             26 LOAD_ATTR                1 (getTextSize)
+             36 LOAD_FAST                1 (l)
+             38 LOAD_DEREF               2 (font)
+             40 LOAD_DEREF               3 (scale)
+             42 LOAD_DEREF               4 (thick)
+             44 PRECALL                  4
+             48 CALL                     4
+             58 LOAD_CONST               0 (0)
+             60 BINARY_SUBSCR
+             70 LOAD_CONST               0 (0)
+             72 BINARY_SUBSCR
+             82 YIELD_VALUE
+             84 RESUME                   1
+             86 POP_TOP
+             88 JUMP_BACKWARD           40 (to 10)
+        >>   90 LOAD_CONST               1 (None)
+             92 RETURN_VALUE

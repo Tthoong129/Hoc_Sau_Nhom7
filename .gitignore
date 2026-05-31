@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Large Model Weights
+*.pt
+*.pth
+*.onnx
+models/*.pt
+
+# Video and Upload files
+uploads/*
+!uploads/.gitkeep
+VideoTest/*
+!VideoTest/.gitkeep
+
+# Screenshot and Detections history
+screenshots/history/*
+screenshots/session/*
+!screenshots/.gitkeep
+
+# Local OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

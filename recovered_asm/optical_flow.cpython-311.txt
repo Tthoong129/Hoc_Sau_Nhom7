@@ -1,0 +1,961 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (cv2)
+              8 STORE_NAME               0 (cv2)
+
+  2          10 LOAD_CONST               0 (0)
+             12 LOAD_CONST               1 (None)
+             14 IMPORT_NAME              1 (numpy)
+             16 STORE_NAME               2 (np)
+
+  3          18 LOAD_CONST               0 (0)
+             20 LOAD_CONST               2 (('Optional',))
+             22 IMPORT_NAME              3 (typing)
+             24 IMPORT_FROM              4 (Optional)
+             26 STORE_NAME               4 (Optional)
+             28 POP_TOP
+
+  4          30 PUSH_NULL
+             32 LOAD_NAME                5 (dict)
+
+  5          34 LOAD_CONST               3 ((15, 15))
+
+  6          36 LOAD_CONST               4 (2)
+
+  7          38 LOAD_NAME                0 (cv2)
+             40 LOAD_ATTR                6 (TERM_CRITERIA_EPS)
+             50 LOAD_NAME                0 (cv2)
+             52 LOAD_ATTR                7 (TERM_CRITERIA_COUNT)
+             62 BINARY_OP                7 (|)
+             66 LOAD_CONST               5 (10)
+             68 LOAD_CONST               6 (0.03)
+             70 BUILD_TUPLE              3
+
+  4          72 KW_NAMES                 7
+             74 PRECALL                  3
+             78 CALL                     3
+             88 STORE_NAME               8 (LK_PARAMS)
+
+  9          90 PUSH_NULL
+             92 LOAD_NAME                5 (dict)
+
+ 10          94 LOAD_CONST               8 (40)
+
+ 11          96 LOAD_CONST               9 (0.01)
+
+ 12          98 LOAD_CONST              10 (7)
+
+ 13         100 LOAD_CONST              10 (7)
+
+  9         102 KW_NAMES                11
+            104 PRECALL                  4
+            108 CALL                     4
+            118 STORE_NAME               9 (FEATURE_PARAMS)
+
+ 15         120 LOAD_CONST              12 (12.0)
+            122 STORE_NAME              10 (SUDDEN_MOVE_THRESH)
+
+ 16         124 LOAD_CONST              13 (6.0)
+            126 STORE_NAME              11 (HIGH_MOTION_THRESH)
+
+ 17         128 LOAD_CONST              14 (1.5)
+            130 STORE_NAME              12 (LOW_MOTION_THRESH)
+
+ 19         132 PUSH_NULL
+            134 LOAD_BUILD_CLASS
+            136 LOAD_CONST              15 (<code object PersonFlowState at 0x0000021658F311B0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 19>)
+            138 MAKE_FUNCTION            0
+            140 LOAD_CONST              16 ('PersonFlowState')
+            142 PRECALL                  2
+            146 CALL                     2
+            156 STORE_NAME              13 (PersonFlowState)
+
+ 34         158 PUSH_NULL
+            160 LOAD_BUILD_CLASS
+            162 LOAD_CONST              17 (<code object MotionTracker at 0x0000021658D48FA0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 34>)
+            164 MAKE_FUNCTION            0
+            166 LOAD_CONST              18 ('MotionTracker')
+            168 PRECALL                  2
+            172 CALL                     2
+            182 STORE_NAME              14 (MotionTracker)
+
+ 99         184 LOAD_CONST              19 ('state')
+            186 LOAD_NAME               13 (PersonFlowState)
+            188 LOAD_CONST              20 ('roi_gray')
+            190 LOAD_NAME                2 (np)
+            192 LOAD_ATTR               15 (ndarray)
+            202 LOAD_CONST              21 ('offset_x')
+
+100         204 LOAD_NAME               16 (int)
+
+ 99         206 LOAD_CONST              22 ('offset_y')
+
+100         208 LOAD_NAME               16 (int)
+
+ 99         210 LOAD_CONST              23 ('return')
+
+100         212 LOAD_NAME               17 (float)
+
+ 99         214 BUILD_TUPLE             10
+            216 LOAD_CONST              24 (<code object _compute_flow at 0x00000216591B98E0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 99>)
+            218 MAKE_FUNCTION            4 (annotations)
+            220 STORE_NAME              18 (_compute_flow)
+
+144         222 LOAD_CONST              20 ('roi_gray')
+            224 LOAD_NAME                2 (np)
+            226 LOAD_ATTR               15 (ndarray)
+            236 LOAD_CONST              23 ('return')
+            238 LOAD_NAME                4 (Optional)
+            240 LOAD_NAME                2 (np)
+            242 LOAD_ATTR               15 (ndarray)
+            252 BINARY_SUBSCR
+            262 BUILD_TUPLE              4
+            264 LOAD_CONST              25 (<code object _detect_features at 0x0000021658D097D0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 144>)
+            266 MAKE_FUNCTION            4 (annotations)
+            268 STORE_NAME              19 (_detect_features)
+
+151         270 LOAD_CONST              23 ('return')
+            272 LOAD_NAME                5 (dict)
+            274 BUILD_TUPLE              2
+            276 LOAD_CONST              26 (<code object _default_motion at 0x0000021658D99210, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 151>)
+            278 MAKE_FUNCTION            4 (annotations)
+            280 STORE_NAME              20 (_default_motion)
+            282 LOAD_CONST               1 (None)
+            284 RETURN_VALUE
+
+Disassembly of <code object PersonFlowState at 0x0000021658F311B0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 19>:
+ 19           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('PersonFlowState')
+              8 STORE_NAME               2 (__qualname__)
+
+ 20          10 LOAD_CONST               1 (('prev_gray_roi', 'prev_pts', 'motion_history', 'bbox'))
+             12 STORE_NAME               3 (__slots__)
+
+ 22          14 LOAD_CONST               2 (<code object __init__ at 0x0000021658CD2430, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 22>)
+             16 MAKE_FUNCTION            0
+             18 STORE_NAME               4 (__init__)
+
+ 28          20 LOAD_CONST               3 (<code object reset at 0x0000021658CD3130, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 28>)
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               5 (reset)
+             26 LOAD_CONST               4 (None)
+             28 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658CD2430, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 22>:
+ 22           0 RESUME                   0
+
+ 23           2 LOAD_CONST               0 (None)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (prev_gray_roi)
+
+ 24          16 LOAD_CONST               0 (None)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (prev_pts)
+
+ 25          30 BUILD_LIST               0
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               2 (motion_history)
+
+ 26          44 LOAD_CONST               0 (None)
+             46 LOAD_FAST                0 (self)
+             48 STORE_ATTR               3 (bbox)
+             58 LOAD_CONST               0 (None)
+             60 RETURN_VALUE
+
+Disassembly of <code object reset at 0x0000021658CD3130, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 28>:
+ 28           0 RESUME                   0
+
+ 29           2 LOAD_CONST               0 (None)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (prev_gray_roi)
+
+ 30          16 LOAD_CONST               0 (None)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (prev_pts)
+
+ 31          30 BUILD_LIST               0
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               2 (motion_history)
+
+ 32          44 LOAD_CONST               0 (None)
+             46 LOAD_FAST                0 (self)
+             48 STORE_ATTR               3 (bbox)
+             58 LOAD_CONST               0 (None)
+             60 RETURN_VALUE
+
+Disassembly of <code object MotionTracker at 0x0000021658D48FA0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 34>:
+ 34           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('MotionTracker')
+              8 STORE_NAME               2 (__qualname__)
+
+ 36          10 LOAD_CONST              12 ((5,))
+             12 LOAD_CONST               2 ('history_len')
+             14 LOAD_NAME                3 (int)
+             16 BUILD_TUPLE              2
+             18 LOAD_CONST               3 (<code object __init__ at 0x0000021658CD1930, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 36>)
+             20 MAKE_FUNCTION            5 (defaults, annotations)
+             22 STORE_NAME               4 (__init__)
+
+ 41          24 LOAD_CONST               4 ('frame')
+             26 LOAD_NAME                5 (np)
+             28 LOAD_ATTR                6 (ndarray)
+             38 LOAD_CONST               5 ('faces')
+             40 LOAD_NAME                7 (list)
+             42 LOAD_NAME                8 (dict)
+             44 BINARY_SUBSCR
+             54 LOAD_CONST               6 ('return')
+             56 LOAD_NAME                8 (dict)
+             58 LOAD_NAME                3 (int)
+             60 LOAD_NAME                8 (dict)
+             62 BUILD_TUPLE              2
+             64 BINARY_SUBSCR
+             74 BUILD_TUPLE              6
+             76 LOAD_CONST               7 (<code object update at 0x0000021659158E90, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 41>)
+             78 MAKE_FUNCTION            4 (annotations)
+             80 STORE_NAME               9 (update)
+
+ 82          82 LOAD_CONST               8 ('tid')
+             84 LOAD_NAME                3 (int)
+             86 LOAD_CONST               6 ('return')
+             88 LOAD_NAME                8 (dict)
+             90 BUILD_TUPLE              4
+             92 LOAD_CONST               9 (<code object get at 0x0000021658F589E0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 82>)
+             94 MAKE_FUNCTION            4 (annotations)
+             96 STORE_NAME              10 (get)
+
+ 96          98 LOAD_CONST              10 (<code object reset at 0x0000021658F7D2F0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 96>)
+            100 MAKE_FUNCTION            0
+            102 STORE_NAME              11 (reset)
+            104 LOAD_CONST              11 (None)
+            106 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658CD1930, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 36>:
+ 36           0 RESUME                   0
+
+ 37           2 BUILD_MAP                0
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (_states)
+
+ 38          16 LOAD_FAST                1 (history_len)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (_history_len)
+
+ 39          30 LOAD_GLOBAL              5 (NULL + set)
+             42 PRECALL                  0
+             46 CALL                     0
+             56 LOAD_FAST                0 (self)
+             58 STORE_ATTR               3 (_active_ids)
+             68 LOAD_CONST               0 (None)
+             70 RETURN_VALUE
+
+Disassembly of <code object update at 0x0000021659158E90, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 41>:
+ 41           0 RESUME                   0
+
+ 42           2 LOAD_GLOBAL              1 (NULL + cv2)
+             14 LOAD_ATTR                1 (cvtColor)
+             24 LOAD_FAST                1 (frame)
+             26 LOAD_GLOBAL              0 (cv2)
+             38 LOAD_ATTR                2 (COLOR_BGR2GRAY)
+             48 PRECALL                  2
+             52 CALL                     2
+             62 STORE_FAST               3 (gray)
+
+ 43          64 BUILD_MAP                0
+             66 STORE_FAST               4 (results)
+
+ 44          68 LOAD_CONST               1 (<code object <setcomp> at 0x0000021658D223D0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 44>)
+             70 MAKE_FUNCTION            0
+             72 LOAD_FAST                2 (faces)
+             74 GET_ITER
+             76 PRECALL                  0
+             80 CALL                     0
+             90 STORE_FAST               5 (current_ids)
+
+ 45          92 LOAD_GLOBAL              7 (NULL + set)
+            104 LOAD_FAST                0 (self)
+            106 LOAD_ATTR                4 (_states)
+            116 PRECALL                  1
+            120 CALL                     1
+            130 LOAD_FAST                5 (current_ids)
+            132 BINARY_OP               10 (-)
+            136 STORE_FAST               6 (stale)
+
+ 46         138 LOAD_FAST                6 (stale)
+            140 GET_ITER
+        >>  142 FOR_ITER                10 (to 164)
+            144 STORE_FAST               7 (tid)
+
+ 47         146 LOAD_FAST                0 (self)
+            148 LOAD_ATTR                4 (_states)
+            158 LOAD_FAST                7 (tid)
+            160 DELETE_SUBSCR
+            162 JUMP_BACKWARD           11 (to 142)
+
+ 48     >>  164 LOAD_FAST                2 (faces)
+            166 GET_ITER
+        >>  168 EXTENDED_ARG             1
+            170 FOR_ITER               493 (to 1158)
+            172 STORE_FAST               8 (face)
+
+ 49         174 LOAD_FAST                8 (face)
+            176 LOAD_METHOD              5 (get)
+            198 LOAD_CONST               2 ('track_id')
+            200 LOAD_CONST               3 (-1)
+            202 PRECALL                  2
+            206 CALL                     2
+            216 STORE_FAST               7 (tid)
+
+ 50         218 LOAD_FAST                7 (tid)
+            220 LOAD_CONST               4 (0)
+            222 COMPARE_OP               0 (<)
+            228 POP_JUMP_FORWARD_IF_FALSE     1 (to 232)
+
+ 51         230 JUMP_BACKWARD           32 (to 168)
+
+ 52     >>  232 LOAD_FAST                8 (face)
+            234 LOAD_METHOD              5 (get)
+            256 LOAD_CONST               5 ('bbox')
+            258 PRECALL                  1
+            262 CALL                     1
+            272 STORE_FAST               9 (bbox)
+
+ 53         274 LOAD_FAST                9 (bbox)
+            276 POP_JUMP_FORWARD_IF_NOT_NONE    18 (to 314)
+
+ 54         278 LOAD_GLOBAL             13 (NULL + _default_motion)
+            290 PRECALL                  0
+            294 CALL                     0
+            304 LOAD_FAST                4 (results)
+            306 LOAD_FAST                7 (tid)
+            308 STORE_SUBSCR
+
+ 55         312 JUMP_BACKWARD           73 (to 168)
+
+ 56     >>  314 LOAD_FAST                9 (bbox)
+            316 UNPACK_SEQUENCE          4
+            320 STORE_FAST              10 (x1)
+            322 STORE_FAST              11 (y1)
+            324 STORE_FAST              12 (x2)
+            326 STORE_FAST              13 (y2)
+
+ 57         328 LOAD_GLOBAL             15 (NULL + max)
+            340 LOAD_CONST               4 (0)
+            342 LOAD_FAST               10 (x1)
+            344 PRECALL                  2
+            348 CALL                     2
+            358 LOAD_GLOBAL             15 (NULL + max)
+            370 LOAD_CONST               4 (0)
+            372 LOAD_FAST               11 (y1)
+            374 PRECALL                  2
+            378 CALL                     2
+            388 STORE_FAST              11 (y1)
+            390 STORE_FAST              10 (x1)
+
+ 58         392 LOAD_GLOBAL             17 (NULL + min)
+            404 LOAD_FAST                3 (gray)
+            406 LOAD_ATTR                9 (shape)
+            416 LOAD_CONST               6 (1)
+            418 BINARY_SUBSCR
+            428 LOAD_FAST               12 (x2)
+            430 PRECALL                  2
+            434 CALL                     2
+            444 LOAD_GLOBAL             17 (NULL + min)
+            456 LOAD_FAST                3 (gray)
+            458 LOAD_ATTR                9 (shape)
+            468 LOAD_CONST               4 (0)
+            470 BINARY_SUBSCR
+            480 LOAD_FAST               13 (y2)
+            482 PRECALL                  2
+            486 CALL                     2
+            496 STORE_FAST              13 (y2)
+            498 STORE_FAST              12 (x2)
+
+ 59         500 LOAD_FAST               12 (x2)
+            502 LOAD_FAST               10 (x1)
+            504 BINARY_OP               10 (-)
+            508 LOAD_CONST               7 (10)
+            510 COMPARE_OP               0 (<)
+            516 POP_JUMP_FORWARD_IF_TRUE     9 (to 536)
+            518 LOAD_FAST               13 (y2)
+            520 LOAD_FAST               11 (y1)
+            522 BINARY_OP               10 (-)
+            526 LOAD_CONST               7 (10)
+            528 COMPARE_OP               0 (<)
+            534 POP_JUMP_FORWARD_IF_FALSE    18 (to 572)
+
+ 60     >>  536 LOAD_GLOBAL             13 (NULL + _default_motion)
+            548 PRECALL                  0
+            552 CALL                     0
+            562 LOAD_FAST                4 (results)
+            564 LOAD_FAST                7 (tid)
+            566 STORE_SUBSCR
+
+ 61         570 JUMP_BACKWARD          202 (to 168)
+
+ 62     >>  572 LOAD_FAST                7 (tid)
+            574 LOAD_FAST                0 (self)
+            576 LOAD_ATTR                4 (_states)
+            586 CONTAINS_OP              1
+            588 POP_JUMP_FORWARD_IF_FALSE    22 (to 634)
+
+ 63         590 LOAD_GLOBAL             21 (NULL + PersonFlowState)
+            602 PRECALL                  0
+            606 CALL                     0
+            616 LOAD_FAST                0 (self)
+            618 LOAD_ATTR                4 (_states)
+            628 LOAD_FAST                7 (tid)
+            630 STORE_SUBSCR
+
+ 64     >>  634 LOAD_FAST                0 (self)
+            636 LOAD_ATTR                4 (_states)
+            646 LOAD_FAST                7 (tid)
+            648 BINARY_SUBSCR
+            658 STORE_FAST              14 (state)
+
+ 65         660 LOAD_FAST                3 (gray)
+            662 LOAD_FAST               11 (y1)
+            664 LOAD_FAST               13 (y2)
+            666 BUILD_SLICE              2
+            668 LOAD_FAST               10 (x1)
+            670 LOAD_FAST               12 (x2)
+            672 BUILD_SLICE              2
+            674 BUILD_TUPLE              2
+            676 BINARY_SUBSCR
+            686 STORE_FAST              15 (roi_gray)
+
+ 66         688 LOAD_GLOBAL             23 (NULL + _compute_flow)
+            700 LOAD_FAST               14 (state)
+            702 LOAD_FAST               15 (roi_gray)
+            704 LOAD_FAST               10 (x1)
+            706 LOAD_FAST               11 (y1)
+            708 PRECALL                  4
+            712 CALL                     4
+            722 STORE_FAST              16 (motion)
+
+ 67         724 LOAD_FAST               14 (state)
+            726 LOAD_ATTR               12 (motion_history)
+            736 LOAD_METHOD             13 (append)
+            758 LOAD_FAST               16 (motion)
+            760 PRECALL                  1
+            764 CALL                     1
+            774 POP_TOP
+
+ 68         776 LOAD_GLOBAL             29 (NULL + len)
+            788 LOAD_FAST               14 (state)
+            790 LOAD_ATTR               12 (motion_history)
+            800 PRECALL                  1
+            804 CALL                     1
+            814 LOAD_FAST                0 (self)
+            816 LOAD_ATTR               15 (_history_len)
+            826 COMPARE_OP               4 (>)
+            832 POP_JUMP_FORWARD_IF_FALSE    26 (to 886)
+
+ 69         834 LOAD_FAST               14 (state)
+            836 LOAD_ATTR               12 (motion_history)
+            846 LOAD_METHOD             16 (pop)
+            868 LOAD_CONST               4 (0)
+            870 PRECALL                  1
+            874 CALL                     1
+            884 POP_TOP
+
+ 70     >>  886 LOAD_FAST                9 (bbox)
+            888 LOAD_FAST               14 (state)
+            890 STORE_ATTR              17 (bbox)
+
+ 71         900 LOAD_FAST               14 (state)
+            902 LOAD_ATTR               12 (motion_history)
+            912 POP_JUMP_FORWARD_IF_FALSE    38 (to 990)
+            914 LOAD_GLOBAL             37 (NULL + float)
+            926 LOAD_GLOBAL             39 (NULL + np)
+            938 LOAD_ATTR               20 (mean)
+            948 LOAD_FAST               14 (state)
+            950 LOAD_ATTR               12 (motion_history)
+            960 PRECALL                  1
+            964 CALL                     1
+            974 PRECALL                  1
+            978 CALL                     1
+            988 JUMP_FORWARD             1 (to 992)
+        >>  990 LOAD_CONST               8 (0.0)
+        >>  992 STORE_FAST              17 (avg_mag)
+
+ 72         994 LOAD_FAST               14 (state)
+            996 LOAD_ATTR               12 (motion_history)
+           1006 POP_JUMP_FORWARD_IF_FALSE    33 (to 1074)
+           1008 LOAD_GLOBAL             37 (NULL + float)
+           1020 LOAD_GLOBAL             15 (NULL + max)
+           1032 LOAD_FAST               14 (state)
+           1034 LOAD_ATTR               12 (motion_history)
+           1044 PRECALL                  1
+           1048 CALL                     1
+           1058 PRECALL                  1
+           1062 CALL                     1
+           1072 JUMP_FORWARD             1 (to 1076)
+        >> 1074 LOAD_CONST               8 (0.0)
+        >> 1076 STORE_FAST              18 (peak)
+
+ 74        1078 LOAD_FAST               17 (avg_mag)
+
+ 75        1080 LOAD_FAST               18 (peak)
+
+ 76        1082 LOAD_FAST               18 (peak)
+           1084 LOAD_GLOBAL             42 (SUDDEN_MOVE_THRESH)
+           1096 COMPARE_OP               4 (>)
+
+ 77        1102 LOAD_FAST               17 (avg_mag)
+           1104 LOAD_GLOBAL             44 (HIGH_MOTION_THRESH)
+           1116 COMPARE_OP               4 (>)
+
+ 78        1122 LOAD_FAST               17 (avg_mag)
+           1124 LOAD_GLOBAL             46 (LOW_MOTION_THRESH)
+           1136 COMPARE_OP               0 (<)
+
+ 73        1142 LOAD_CONST               9 (('magnitude', 'peak', 'sudden', 'moving', 'still'))
+           1144 BUILD_CONST_KEY_MAP      5
+           1146 LOAD_FAST                4 (results)
+           1148 LOAD_FAST                7 (tid)
+           1150 STORE_SUBSCR
+           1154 EXTENDED_ARG             1
+           1156 JUMP_BACKWARD          495 (to 168)
+
+ 80     >> 1158 LOAD_FAST                4 (results)
+           1160 RETURN_VALUE
+
+Disassembly of <code object <setcomp> at 0x0000021658D223D0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 44>:
+ 44           0 RESUME                   0
+              2 BUILD_SET                0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                22 (to 52)
+              8 STORE_FAST               1 (f)
+             10 LOAD_FAST                1 (f)
+             12 LOAD_CONST               0 ('track_id')
+             14 BINARY_SUBSCR
+             24 LOAD_CONST               1 (0)
+             26 COMPARE_OP               5 (>=)
+             32 POP_JUMP_BACKWARD_IF_FALSE    14 (to 6)
+             34 LOAD_FAST                1 (f)
+             36 LOAD_CONST               0 ('track_id')
+             38 BINARY_SUBSCR
+             48 SET_ADD                  2
+             50 JUMP_BACKWARD           23 (to 6)
+        >>   52 RETURN_VALUE
+
+Disassembly of <code object get at 0x0000021658F589E0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 82>:
+ 82           0 RESUME                   0
+
+ 83           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_states)
+             14 LOAD_METHOD              1 (get)
+             36 LOAD_FAST                1 (tid)
+             38 PRECALL                  1
+             42 CALL                     1
+             52 STORE_FAST               2 (state)
+
+ 84          54 LOAD_FAST                2 (state)
+             56 POP_JUMP_FORWARD_IF_FALSE   113 (to 284)
+             58 LOAD_FAST                2 (state)
+             60 LOAD_ATTR                2 (motion_history)
+             70 POP_JUMP_FORWARD_IF_FALSE   106 (to 284)
+
+ 85          72 LOAD_GLOBAL              7 (NULL + float)
+             84 LOAD_GLOBAL              9 (NULL + np)
+             96 LOAD_ATTR                5 (mean)
+            106 LOAD_FAST                2 (state)
+            108 LOAD_ATTR                2 (motion_history)
+            118 PRECALL                  1
+            122 CALL                     1
+            132 PRECALL                  1
+            136 CALL                     1
+            146 STORE_FAST               3 (avg_mag)
+
+ 86         148 LOAD_GLOBAL              7 (NULL + float)
+            160 LOAD_GLOBAL             13 (NULL + max)
+            172 LOAD_FAST                2 (state)
+            174 LOAD_ATTR                2 (motion_history)
+            184 PRECALL                  1
+            188 CALL                     1
+            198 PRECALL                  1
+            202 CALL                     1
+            212 STORE_FAST               4 (peak)
+
+ 88         214 LOAD_FAST                3 (avg_mag)
+
+ 89         216 LOAD_FAST                4 (peak)
+
+ 90         218 LOAD_FAST                4 (peak)
+            220 LOAD_GLOBAL             14 (SUDDEN_MOVE_THRESH)
+            232 COMPARE_OP               4 (>)
+
+ 91         238 LOAD_FAST                3 (avg_mag)
+            240 LOAD_GLOBAL             16 (HIGH_MOTION_THRESH)
+            252 COMPARE_OP               4 (>)
+
+ 92         258 LOAD_FAST                3 (avg_mag)
+            260 LOAD_GLOBAL             18 (LOW_MOTION_THRESH)
+            272 COMPARE_OP               0 (<)
+
+ 87         278 LOAD_CONST               1 (('magnitude', 'peak', 'sudden', 'moving', 'still'))
+            280 BUILD_CONST_KEY_MAP      5
+            282 RETURN_VALUE
+
+ 94     >>  284 LOAD_GLOBAL             21 (NULL + _default_motion)
+            296 PRECALL                  0
+            300 CALL                     0
+            310 RETURN_VALUE
+
+Disassembly of <code object reset at 0x0000021658F7D2F0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 96>:
+ 96           0 RESUME                   0
+
+ 97           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_states)
+             14 LOAD_METHOD              1 (clear)
+             36 PRECALL                  0
+             40 CALL                     0
+             50 POP_TOP
+             52 LOAD_CONST               0 (None)
+             54 RETURN_VALUE
+
+Disassembly of <code object _compute_flow at 0x00000216591B98E0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 99>:
+ 99           0 RESUME                   0
+
+101           2 LOAD_FAST                0 (state)
+              4 LOAD_ATTR                0 (prev_gray_roi)
+             14 POP_JUMP_FORWARD_IF_NOT_NONE    47 (to 110)
+
+102          16 LOAD_FAST                1 (roi_gray)
+             18 LOAD_METHOD              1 (copy)
+             40 PRECALL                  0
+             44 CALL                     0
+             54 LOAD_FAST                0 (state)
+             56 STORE_ATTR               0 (prev_gray_roi)
+
+103          66 LOAD_GLOBAL              5 (NULL + _detect_features)
+             78 LOAD_FAST                1 (roi_gray)
+             80 PRECALL                  1
+             84 CALL                     1
+             94 LOAD_FAST                0 (state)
+             96 STORE_ATTR               3 (prev_pts)
+
+104         106 LOAD_CONST               1 (0.0)
+            108 RETURN_VALUE
+
+105     >>  110 LOAD_FAST                0 (state)
+            112 LOAD_ATTR                0 (prev_gray_roi)
+            122 STORE_FAST               4 (prev_roi)
+
+106         124 LOAD_FAST                4 (prev_roi)
+            126 LOAD_ATTR                4 (shape)
+            136 LOAD_FAST                1 (roi_gray)
+            138 LOAD_ATTR                4 (shape)
+            148 COMPARE_OP               3 (!=)
+            154 POP_JUMP_FORWARD_IF_FALSE    47 (to 250)
+
+107         156 LOAD_FAST                1 (roi_gray)
+            158 LOAD_METHOD              1 (copy)
+            180 PRECALL                  0
+            184 CALL                     0
+            194 LOAD_FAST                0 (state)
+            196 STORE_ATTR               0 (prev_gray_roi)
+
+108         206 LOAD_GLOBAL              5 (NULL + _detect_features)
+            218 LOAD_FAST                1 (roi_gray)
+            220 PRECALL                  1
+            224 CALL                     1
+            234 LOAD_FAST                0 (state)
+            236 STORE_ATTR               3 (prev_pts)
+
+109         246 LOAD_CONST               1 (0.0)
+            248 RETURN_VALUE
+
+110     >>  250 LOAD_FAST                0 (state)
+            252 LOAD_ATTR                3 (prev_pts)
+            262 POP_JUMP_FORWARD_IF_NONE    24 (to 312)
+            264 LOAD_GLOBAL             11 (NULL + len)
+            276 LOAD_FAST                0 (state)
+            278 LOAD_ATTR                3 (prev_pts)
+            288 PRECALL                  1
+            292 CALL                     1
+            302 LOAD_CONST               2 (3)
+            304 COMPARE_OP               0 (<)
+            310 POP_JUMP_FORWARD_IF_FALSE    20 (to 352)
+
+111     >>  312 LOAD_GLOBAL              5 (NULL + _detect_features)
+            324 LOAD_FAST                4 (prev_roi)
+            326 PRECALL                  1
+            330 CALL                     1
+            340 LOAD_FAST                0 (state)
+            342 STORE_ATTR               3 (prev_pts)
+
+112     >>  352 LOAD_FAST                0 (state)
+            354 LOAD_ATTR                3 (prev_pts)
+            364 POP_JUMP_FORWARD_IF_NONE    24 (to 414)
+            366 LOAD_GLOBAL             11 (NULL + len)
+            378 LOAD_FAST                0 (state)
+            380 LOAD_ATTR                3 (prev_pts)
+            390 PRECALL                  1
+            394 CALL                     1
+            404 LOAD_CONST               2 (3)
+            406 COMPARE_OP               0 (<)
+            412 POP_JUMP_FORWARD_IF_FALSE    27 (to 468)
+
+113     >>  414 LOAD_FAST                1 (roi_gray)
+            416 LOAD_METHOD              1 (copy)
+            438 PRECALL                  0
+            442 CALL                     0
+            452 LOAD_FAST                0 (state)
+            454 STORE_ATTR               0 (prev_gray_roi)
+
+114         464 LOAD_CONST               1 (0.0)
+            466 RETURN_VALUE
+
+115     >>  468 NOP
+
+116         470 LOAD_GLOBAL             13 (NULL + cv2)
+            482 LOAD_ATTR                7 (calcOpticalFlowPyrLK)
+
+117         492 LOAD_FAST                4 (prev_roi)
+            494 LOAD_FAST                1 (roi_gray)
+            496 LOAD_FAST                0 (state)
+            498 LOAD_ATTR                3 (prev_pts)
+            508 LOAD_CONST               0 (None)
+
+116         510 BUILD_TUPLE              4
+            512 BUILD_MAP                0
+
+117         514 LOAD_GLOBAL             16 (LK_PARAMS)
+
+116         526 DICT_MERGE               1
+            528 CALL_FUNCTION_EX         1
+            530 UNPACK_SEQUENCE          3
+            534 STORE_FAST               5 (next_pts)
+            536 STORE_FAST               6 (status)
+            538 STORE_FAST               7 (_)
+            540 JUMP_FORWARD            67 (to 676)
+        >>  542 PUSH_EXC_INFO
+
+119         544 LOAD_GLOBAL             12 (cv2)
+            556 LOAD_ATTR                9 (error)
+            566 CHECK_EXC_MATCH
+            568 POP_JUMP_FORWARD_IF_FALSE    49 (to 668)
+            570 POP_TOP
+
+120         572 LOAD_FAST                1 (roi_gray)
+            574 LOAD_METHOD              1 (copy)
+            596 PRECALL                  0
+            600 CALL                     0
+            610 LOAD_FAST                0 (state)
+            612 STORE_ATTR               0 (prev_gray_roi)
+
+121         622 LOAD_GLOBAL              5 (NULL + _detect_features)
+            634 LOAD_FAST                1 (roi_gray)
+            636 PRECALL                  1
+            640 CALL                     1
+            650 LOAD_FAST                0 (state)
+            652 STORE_ATTR               3 (prev_pts)
+
+122         662 POP_EXCEPT
+            664 LOAD_CONST               1 (0.0)
+            666 RETURN_VALUE
+
+119     >>  668 RERAISE                  0
+        >>  670 COPY                     3
+            672 POP_EXCEPT
+            674 RERAISE                  1
+
+123     >>  676 LOAD_FAST                5 (next_pts)
+            678 POP_JUMP_FORWARD_IF_NONE     2 (to 684)
+            680 LOAD_FAST                6 (status)
+            682 POP_JUMP_FORWARD_IF_NOT_NONE    47 (to 778)
+
+124     >>  684 LOAD_FAST                1 (roi_gray)
+            686 LOAD_METHOD              1 (copy)
+            708 PRECALL                  0
+            712 CALL                     0
+            722 LOAD_FAST                0 (state)
+            724 STORE_ATTR               0 (prev_gray_roi)
+
+125         734 LOAD_GLOBAL              5 (NULL + _detect_features)
+            746 LOAD_FAST                1 (roi_gray)
+            748 PRECALL                  1
+            752 CALL                     1
+            762 LOAD_FAST                0 (state)
+            764 STORE_ATTR               3 (prev_pts)
+
+126         774 LOAD_CONST               1 (0.0)
+            776 RETURN_VALUE
+
+127     >>  778 LOAD_FAST                6 (status)
+            780 LOAD_METHOD             10 (ravel)
+            802 PRECALL                  0
+            806 CALL                     0
+            816 LOAD_CONST               3 (1)
+            818 COMPARE_OP               2 (==)
+            824 STORE_FAST               8 (good_mask)
+
+128         826 LOAD_FAST                0 (state)
+            828 LOAD_ATTR                3 (prev_pts)
+            838 LOAD_FAST                8 (good_mask)
+            840 BINARY_SUBSCR
+            850 STORE_FAST               9 (good_prev)
+
+129         852 LOAD_FAST                5 (next_pts)
+            854 LOAD_FAST                8 (good_mask)
+            856 BINARY_SUBSCR
+            866 STORE_FAST              10 (good_next)
+
+130         868 LOAD_CONST               1 (0.0)
+            870 STORE_FAST              11 (magnitude)
+
+131         872 LOAD_GLOBAL             11 (NULL + len)
+            884 LOAD_FAST                9 (good_prev)
+            886 PRECALL                  1
+            890 CALL                     1
+            900 LOAD_CONST               2 (3)
+            902 COMPARE_OP               5 (>=)
+            908 POP_JUMP_FORWARD_IF_FALSE   125 (to 1160)
+
+132         910 LOAD_FAST               10 (good_next)
+            912 LOAD_FAST                9 (good_prev)
+            914 BINARY_OP               10 (-)
+            918 STORE_FAST              12 (diffs)
+
+133         920 LOAD_GLOBAL             22 (np)
+            932 LOAD_ATTR               12 (linalg)
+            942 LOAD_METHOD             13 (norm)
+            964 LOAD_FAST               12 (diffs)
+            966 LOAD_CONST               3 (1)
+            968 KW_NAMES                 4
+            970 PRECALL                  2
+            974 CALL                     2
+            984 STORE_FAST              13 (magnitudes)
+
+134         986 LOAD_GLOBAL             23 (NULL + np)
+            998 LOAD_ATTR               14 (percentile)
+           1008 LOAD_FAST               13 (magnitudes)
+           1010 LOAD_CONST               5 (90)
+           1012 PRECALL                  2
+           1016 CALL                     2
+           1026 STORE_FAST              14 (cutoff)
+
+135        1028 LOAD_FAST               13 (magnitudes)
+           1030 LOAD_FAST               13 (magnitudes)
+           1032 LOAD_FAST               14 (cutoff)
+           1034 COMPARE_OP               1 (<=)
+           1040 BINARY_SUBSCR
+           1050 STORE_FAST              15 (clean)
+
+136        1052 LOAD_GLOBAL             11 (NULL + len)
+           1064 LOAD_FAST               15 (clean)
+           1066 PRECALL                  1
+           1070 CALL                     1
+           1080 LOAD_CONST               6 (0)
+           1082 COMPARE_OP               4 (>)
+           1088 POP_JUMP_FORWARD_IF_FALSE    33 (to 1156)
+           1090 LOAD_GLOBAL             31 (NULL + float)
+           1102 LOAD_GLOBAL             23 (NULL + np)
+           1114 LOAD_ATTR               16 (mean)
+           1124 LOAD_FAST               15 (clean)
+           1126 PRECALL                  1
+           1130 CALL                     1
+           1140 PRECALL                  1
+           1144 CALL                     1
+           1154 JUMP_FORWARD             1 (to 1158)
+        >> 1156 LOAD_CONST               1 (0.0)
+        >> 1158 STORE_FAST              11 (magnitude)
+
+137     >> 1160 LOAD_FAST                1 (roi_gray)
+           1162 LOAD_METHOD              1 (copy)
+           1184 PRECALL                  0
+           1188 CALL                     0
+           1198 LOAD_FAST                0 (state)
+           1200 STORE_ATTR               0 (prev_gray_roi)
+
+138        1210 LOAD_GLOBAL             11 (NULL + len)
+           1222 LOAD_FAST               10 (good_next)
+           1224 PRECALL                  1
+           1228 CALL                     1
+           1238 LOAD_CONST               7 (8)
+           1240 COMPARE_OP               0 (<)
+           1246 POP_JUMP_FORWARD_IF_FALSE    21 (to 1290)
+
+139        1248 LOAD_GLOBAL              5 (NULL + _detect_features)
+           1260 LOAD_FAST                1 (roi_gray)
+           1262 PRECALL                  1
+           1266 CALL                     1
+           1276 LOAD_FAST                0 (state)
+           1278 STORE_ATTR               3 (prev_pts)
+           1288 JUMP_FORWARD            28 (to 1346)
+
+141     >> 1290 LOAD_FAST               10 (good_next)
+           1292 LOAD_METHOD             17 (reshape)
+           1314 LOAD_CONST               8 (-1)
+           1316 LOAD_CONST               3 (1)
+           1318 LOAD_CONST               9 (2)
+           1320 PRECALL                  3
+           1324 CALL                     3
+           1334 LOAD_FAST                0 (state)
+           1336 STORE_ATTR               3 (prev_pts)
+
+142     >> 1346 LOAD_FAST               11 (magnitude)
+           1348 RETURN_VALUE
+ExceptionTable:
+  470 to 538 -> 542 [0]
+  542 to 660 -> 670 [1] lasti
+  668 to 668 -> 670 [1] lasti
+
+Disassembly of <code object _detect_features at 0x0000021658D097D0, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 144>:
+144           0 RESUME                   0
+
+145           2 NOP
+
+146           4 LOAD_GLOBAL              1 (NULL + cv2)
+             16 LOAD_ATTR                1 (goodFeaturesToTrack)
+             26 LOAD_FAST                0 (roi_gray)
+             28 BUILD_TUPLE              1
+             30 LOAD_CONST               1 ('mask')
+             32 LOAD_CONST               0 (None)
+             34 BUILD_MAP                1
+             36 LOAD_GLOBAL              4 (FEATURE_PARAMS)
+             48 DICT_MERGE               1
+             50 CALL_FUNCTION_EX         1
+             52 STORE_FAST               1 (pts)
+
+147          54 LOAD_FAST                1 (pts)
+             56 RETURN_VALUE
+        >>   58 PUSH_EXC_INFO
+
+148          60 LOAD_GLOBAL              0 (cv2)
+             72 LOAD_ATTR                3 (error)
+             82 CHECK_EXC_MATCH
+             84 POP_JUMP_FORWARD_IF_FALSE     4 (to 94)
+             86 POP_TOP
+
+149          88 POP_EXCEPT
+             90 LOAD_CONST               0 (None)
+             92 RETURN_VALUE
+
+148     >>   94 RERAISE                  0
+        >>   96 COPY                     3
+             98 POP_EXCEPT
+            100 RERAISE                  1
+ExceptionTable:
+  4 to 54 -> 58 [0]
+  58 to 86 -> 96 [1] lasti
+  94 to 94 -> 96 [1] lasti
+
+Disassembly of <code object _default_motion at 0x0000021658D99210, file "D:\Exam_cheating\Test_AI_Cheating\core\optical_flow.py", line 151>:
+151           0 RESUME                   0
+
+152           2 LOAD_CONST               1 (0.0)
+              4 LOAD_CONST               1 (0.0)
+              6 LOAD_CONST               2 (False)
+              8 LOAD_CONST               2 (False)
+             10 LOAD_CONST               2 (False)
+             12 LOAD_CONST               3 (('magnitude', 'peak', 'sudden', 'moving', 'still'))
+             14 BUILD_CONST_KEY_MAP      5
+             16 RETURN_VALUE

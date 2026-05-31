@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Giám sát Thi cử Trực tuyến</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo-dot"></div>
+            <h1>GIÁM SÁT THI CỬ TRỰC TUYẾN</h1>
+        </div>
+        <div class="header-right">
+            <span id="status-badge" class="badge offline">OFFLINE</span>
+            <span id="clock" class="clock"></span>
+        </div>
+    </header>
+    <main>
+        <section class="video-section">
+            <div class="toolbar">
+                <div class="toolbar-group">
+                    <select id="source-select">
+                        <option value="camera">📷 Camera</option>
+                        <option value="video">🎬 Tải lên Video</option>
+                    </select>
+                    <input type="file" id="video-upload-input" accept="video/*" style="display:none;">
+                    <button id="btn-browse-video" class="btn btn-outline" style="display:none;">📁 Chọn file video</button>
+                    <span id="upload-status" style="font-size: 12px; color: var(--muted); display:none;"></span>
+                </div>
+                <div class="toolbar-group">
+                    <button id="btn-start" class="btn btn-primary">▶ BẮT ĐẦU</button>
+                    <button id="btn-pause" class="btn btn-outline" disabled>⏸ TẠM DỪNG</button>
+                    <button id="btn-stop" class="btn btn-danger" disabled>⏹ DỪNG</button>
+                </div>
+                <div class="toolbar-group">
+                    <button id="btn-shot" class="btn btn-ghost">📸 Chụp</button>
+                    <button id="btn-debug" class="btn btn-ghost">🔍 Debug</button>
+                    <button id="btn-export" class="btn btn-ghost">📄 Báo cáo</button>
+                </div>
+            </div>
+            <div class="controls-bar">
+                <div class="control-item">
+                    <label>Confidence</label>
+                    <input type="range" id="conf-slider" min="5" max="95" value="75" step="1">
+                    <span id="conf-value">0.75</span>
+                </div>
+                <div class="control-item" id="seek-group" style="display:none">
+                    <label>Vị trí</label>
+                    <input type="range" id="seek-slider" min="0" max="100" value="0">
+                    <span id="time-display">00:00 / 00:00</span>
+                </div>
+                <div class="control-item">
+                    <label>Tốc độ</label>
+                    <select id="speed-select">
+                        <option value="0.5">0.5x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x</option>
+                    </select>
+                </div>
+                <div class="control-item">
+                    <label>Auto Capture</label>
+                    <button id="btn-auto-capture" class="toggle-btn active">ON</button>
+                </div>
+            </div>
+            <div class="video-container">
+                <div id="video-placeholder" class="placeholder">
+                    <div class="placeholder-icon">📹</div>
+                    <p>Chọn nguồn và nhấn BẮT ĐẦU</p>
+                </div>
+                <img id="video-feed" style="display:none" alt="Video Feed">
+            </div>
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-label">FPS</span>
+                    <span id="stat-fps" class="stat-value accent">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Vi phạm</span>
+                    <span id="stat-total" class="stat-value danger">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Nghiêm trọng</span>
+                    <span id="stat-high" class="stat-value danger">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Trung bình</span>
+                    <span id="stat-medium" class="stat-value warn">0</span>
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-tab="log">📋 Nhật ký</button>
+                <button class="tab-btn" data-tab="gallery">🖼 Ảnh chụp</button>
+            </div>
+            <div id="tab-log" class="tab-content active">
+                <div id="alert-log" class="alert-log"></div>
+                <button id="btn-clear-log" class="btn btn-ghost btn-sm">Xóa log</button>
+            </div>
+            <div id="tab-gallery" class="tab-content">
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-folder="session">📂 Phiên hiện tại</button>
+                    <button class="gallery-tab" data-folder="history">📁 Lịch sử</button>
+                </div>
+                <div id="gallery-grid" class="gallery-grid"></div>
+            </div>
+        </aside>
+    </main>
+    <div id="lightbox" class="lightbox" style="display:none">
+        <div class="lightbox-overlay"></div>
+        <img id="lightbox-img" src="" alt="Screenshot">
+        <button id="lightbox-close" class="lightbox-close">✕</button>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (numpy)
+              8 STORE_NAME               1 (np)
+
+  2          10 LOAD_CONST               2 (1)
+             12 LOAD_CONST               3 (('YOLO_CLASSES', 'CHEATING_CLASSES', 'CLASS_SEVERITY', 'CLASS_LABELS_VI', 'YOLO_INFER_SIZE', 'YOLO_CONF_DEFAULT', 'YOLO_IOU_THRESH', 'MIN_YOLO_CONF'))
+             14 IMPORT_NAME              2 (config)
+             16 IMPORT_FROM              3 (YOLO_CLASSES)
+             18 STORE_NAME               3 (YOLO_CLASSES)
+             20 IMPORT_FROM              4 (CHEATING_CLASSES)
+             22 STORE_NAME               4 (CHEATING_CLASSES)
+             24 IMPORT_FROM              5 (CLASS_SEVERITY)
+             26 STORE_NAME               5 (CLASS_SEVERITY)
+             28 IMPORT_FROM              6 (CLASS_LABELS_VI)
+             30 STORE_NAME               6 (CLASS_LABELS_VI)
+             32 IMPORT_FROM              7 (YOLO_INFER_SIZE)
+             34 STORE_NAME               7 (YOLO_INFER_SIZE)
+             36 IMPORT_FROM              8 (YOLO_CONF_DEFAULT)
+             38 STORE_NAME               8 (YOLO_CONF_DEFAULT)
+             40 IMPORT_FROM              9 (YOLO_IOU_THRESH)
+             42 STORE_NAME               9 (YOLO_IOU_THRESH)
+             44 IMPORT_FROM             10 (MIN_YOLO_CONF)
+             46 STORE_NAME              10 (MIN_YOLO_CONF)
+             48 POP_TOP
+
+  8          50 PUSH_NULL
+             52 LOAD_BUILD_CLASS
+             54 LOAD_CONST               4 (<code object YOLODetector at 0x0000021658D17550, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 8>)
+             56 MAKE_FUNCTION            0
+             58 LOAD_CONST               5 ('YOLODetector')
+             60 PRECALL                  2
+             64 CALL                     2
+             74 STORE_NAME              11 (YOLODetector)
+             76 LOAD_CONST               1 (None)
+             78 RETURN_VALUE
+
+Disassembly of <code object YOLODetector at 0x0000021658D17550, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 8>:
+  8           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('YOLODetector')
+              8 STORE_NAME               2 (__qualname__)
+
+ 10          10 LOAD_CONST               1 ('model_path')
+             12 LOAD_NAME                3 (str)
+             14 BUILD_TUPLE              2
+             16 LOAD_CONST               2 (<code object __init__ at 0x0000021658F589E0, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 10>)
+             18 MAKE_FUNCTION            4 (annotations)
+             20 STORE_NAME               4 (__init__)
+
+ 23          22 LOAD_CONST               9 ((None,))
+             24 LOAD_CONST               4 ('frame')
+             26 LOAD_NAME                5 (np)
+             28 LOAD_ATTR                6 (ndarray)
+             38 LOAD_CONST               5 ('conf')
+             40 LOAD_NAME                7 (float)
+             42 LOAD_CONST               6 ('return')
+             44 LOAD_NAME                8 (list)
+             46 LOAD_NAME                9 (dict)
+             48 BINARY_SUBSCR
+             58 BUILD_TUPLE              6
+             60 LOAD_CONST               7 (<code object detect at 0x0000021659158E90, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 23>)
+             62 MAKE_FUNCTION            5 (defaults, annotations)
+             64 STORE_NAME              10 (detect)
+
+ 66          66 LOAD_CONST               8 (<code object release at 0x0000021658F32330, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 66>)
+             68 MAKE_FUNCTION            0
+             70 STORE_NAME              11 (release)
+             72 LOAD_CONST               3 (None)
+             74 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658F589E0, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 10>:
+ 10           0 RESUME                   0
+
+ 11           2 NOP
+
+ 12           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               2 (('YOLO',))
+              8 IMPORT_NAME              0 (ultralytics)
+             10 IMPORT_FROM              1 (YOLO)
+             12 STORE_FAST               2 (YOLO)
+             14 POP_TOP
+
+ 13          16 PUSH_NULL
+             18 LOAD_FAST                2 (YOLO)
+             20 LOAD_FAST                1 (model_path)
+             22 PRECALL                  1
+             26 CALL                     1
+             36 LOAD_FAST                0 (self)
+             38 STORE_ATTR               2 (model)
+
+ 14          48 LOAD_GLOBAL              7 (NULL + np)
+             60 LOAD_ATTR                4 (zeros)
+             70 LOAD_CONST               3 ((640, 640, 3))
+             72 LOAD_GLOBAL              6 (np)
+             84 LOAD_ATTR                5 (uint8)
+             94 KW_NAMES                 4
+             96 PRECALL                  2
+            100 CALL                     2
+            110 STORE_FAST               3 (dummy)
+
+ 15         112 LOAD_FAST                0 (self)
+            114 LOAD_ATTR                2 (model)
+            124 LOAD_METHOD              6 (predict)
+            146 LOAD_FAST                3 (dummy)
+            148 LOAD_CONST               5 (False)
+            150 LOAD_GLOBAL             14 (YOLO_INFER_SIZE)
+            162 KW_NAMES                 6
+            164 PRECALL                  3
+            168 CALL                     3
+            178 POP_TOP
+
+ 16         180 LOAD_CONST               7 (True)
+            182 LOAD_FAST                0 (self)
+            184 STORE_ATTR               8 (available)
+
+ 17         194 LOAD_FAST                0 (self)
+            196 LOAD_ATTR                2 (model)
+            206 LOAD_ATTR                9 (names)
+            216 LOAD_FAST                0 (self)
+            218 STORE_ATTR              10 (class_names)
+            228 LOAD_CONST               0 (None)
+            230 RETURN_VALUE
+        >>  232 PUSH_EXC_INFO
+
+ 18         234 LOAD_GLOBAL             22 (Exception)
+            246 CHECK_EXC_MATCH
+            248 POP_JUMP_FORWARD_IF_FALSE    25 (to 300)
+            250 POP_TOP
+
+ 19         252 LOAD_CONST               0 (None)
+            254 LOAD_FAST                0 (self)
+            256 STORE_ATTR               2 (model)
+
+ 20         266 LOAD_CONST               5 (False)
+            268 LOAD_FAST                0 (self)
+            270 STORE_ATTR               8 (available)
+
+ 21         280 BUILD_MAP                0
+            282 LOAD_FAST                0 (self)
+            284 STORE_ATTR              10 (class_names)
+            294 POP_EXCEPT
+            296 LOAD_CONST               0 (None)
+            298 RETURN_VALUE
+
+ 18     >>  300 RERAISE                  0
+        >>  302 COPY                     3
+            304 POP_EXCEPT
+            306 RERAISE                  1
+ExceptionTable:
+  4 to 226 -> 232 [0]
+  232 to 292 -> 302 [1] lasti
+  300 to 300 -> 302 [1] lasti
+
+Disassembly of <code object detect at 0x0000021659158E90, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 23>:
+ 23           0 RESUME                   0
+
+ 24           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (available)
+             14 POP_JUMP_FORWARD_IF_FALSE     7 (to 30)
+             16 LOAD_FAST                0 (self)
+             18 LOAD_ATTR                1 (model)
+             28 POP_JUMP_FORWARD_IF_NOT_NONE     2 (to 34)
+
+ 25     >>   30 BUILD_LIST               0
+             32 RETURN_VALUE
+
+ 26     >>   34 LOAD_FAST                2 (conf)
+             36 POP_JUMP_FORWARD_IF_NONE     2 (to 42)
+             38 LOAD_FAST                2 (conf)
+             40 JUMP_FORWARD             6 (to 54)
+        >>   42 LOAD_GLOBAL              4 (YOLO_CONF_DEFAULT)
+        >>   54 STORE_FAST               2 (conf)
+
+ 27          56 NOP
+
+ 28          58 LOAD_FAST                0 (self)
+             60 LOAD_ATTR                1 (model)
+             70 LOAD_METHOD              3 (predict)
+
+ 29          92 LOAD_FAST                1 (frame)
+
+ 30          94 LOAD_CONST               1 (False)
+
+ 31          96 LOAD_GLOBAL              8 (YOLO_INFER_SIZE)
+
+ 32         108 LOAD_CONST               2 (0.1)
+
+ 33         110 LOAD_GLOBAL             10 (YOLO_IOU_THRESH)
+
+ 28         122 KW_NAMES                 3
+            124 PRECALL                  5
+            128 CALL                     5
+            138 STORE_FAST               3 (results)
+            140 JUMP_FORWARD            18 (to 178)
+        >>  142 PUSH_EXC_INFO
+
+ 35         144 LOAD_GLOBAL             12 (Exception)
+            156 CHECK_EXC_MATCH
+            158 POP_JUMP_FORWARD_IF_FALSE     5 (to 170)
+            160 POP_TOP
+
+ 36         162 BUILD_LIST               0
+            164 SWAP                     2
+            166 POP_EXCEPT
+            168 RETURN_VALUE
+
+ 35     >>  170 RERAISE                  0
+        >>  172 COPY                     3
+            174 POP_EXCEPT
+            176 RERAISE                  1
+
+ 37     >>  178 BUILD_LIST               0
+            180 STORE_FAST               4 (detections)
+
+ 38         182 LOAD_FAST                3 (results)
+            184 GET_ITER
+        >>  186 EXTENDED_ARG             1
+            188 FOR_ITER               383 (to 956)
+            190 STORE_FAST               5 (r)
+
+ 39         192 LOAD_FAST                5 (r)
+            194 LOAD_ATTR                7 (boxes)
+            204 POP_JUMP_FORWARD_IF_NOT_NONE     1 (to 208)
+
+ 40         206 JUMP_BACKWARD           11 (to 186)
+
+ 41     >>  208 LOAD_FAST                5 (r)
+            210 LOAD_ATTR                7 (boxes)
+            220 GET_ITER
+        >>  222 EXTENDED_ARG             1
+            224 FOR_ITER               363 (to 952)
+            226 STORE_FAST               6 (box)
+
+ 42         228 LOAD_GLOBAL             17 (NULL + int)
+            240 LOAD_FAST                6 (box)
+            242 LOAD_ATTR                9 (cls)
+            252 LOAD_CONST               4 (0)
+            254 BINARY_SUBSCR
+            264 PRECALL                  1
+            268 CALL                     1
+            278 STORE_FAST               7 (cls_id)
+
+ 43         280 LOAD_FAST                0 (self)
+            282 LOAD_ATTR               10 (class_names)
+            292 LOAD_METHOD             11 (get)
+            314 LOAD_FAST                7 (cls_id)
+            316 LOAD_CONST               5 ('class_')
+            318 LOAD_FAST                7 (cls_id)
+            320 FORMAT_VALUE             0
+            322 BUILD_STRING             2
+            324 PRECALL                  2
+            328 CALL                     2
+            338 STORE_FAST               8 (cls_name)
+
+ 44         340 LOAD_GLOBAL             25 (NULL + float)
+            352 LOAD_FAST                6 (box)
+            354 LOAD_ATTR               13 (conf)
+            364 LOAD_CONST               4 (0)
+            366 BINARY_SUBSCR
+            376 PRECALL                  1
+            380 CALL                     1
+            390 STORE_FAST               9 (conf_val)
+
+ 45         392 LOAD_GLOBAL             29 (NULL + max)
+            404 LOAD_FAST                2 (conf)
+            406 LOAD_GLOBAL             30 (MIN_YOLO_CONF)
+            418 PRECALL                  2
+            422 CALL                     2
+            432 STORE_FAST              10 (req_conf)
+
+ 46         434 LOAD_FAST                9 (conf_val)
+            436 LOAD_FAST               10 (req_conf)
+            438 COMPARE_OP               0 (<)
+            444 POP_JUMP_FORWARD_IF_FALSE     1 (to 448)
+
+ 47         446 JUMP_BACKWARD          113 (to 222)
+
+ 48     >>  448 LOAD_FAST                8 (cls_name)
+            450 LOAD_CONST               6 ('normal')
+            452 COMPARE_OP               2 (==)
+            458 POP_JUMP_FORWARD_IF_FALSE     1 (to 462)
+
+ 49         460 JUMP_BACKWARD          120 (to 222)
+
+ 50     >>  462 LOAD_FAST                6 (box)
+            464 LOAD_ATTR               16 (xyxy)
+            474 LOAD_CONST               4 (0)
+            476 BINARY_SUBSCR
+            486 LOAD_METHOD             17 (cpu)
+            508 PRECALL                  0
+            512 CALL                     0
+            522 LOAD_METHOD             18 (numpy)
+            544 PRECALL                  0
+            548 CALL                     0
+            558 LOAD_METHOD             19 (astype)
+            580 LOAD_GLOBAL             16 (int)
+            592 PRECALL                  1
+            596 CALL                     1
+            606 UNPACK_SEQUENCE          4
+            610 STORE_FAST              11 (x1)
+            612 STORE_FAST              12 (y1)
+            614 STORE_FAST              13 (x2)
+            616 STORE_FAST              14 (y2)
+
+ 51         618 LOAD_FAST               13 (x2)
+            620 LOAD_FAST               11 (x1)
+            622 BINARY_OP               10 (-)
+            626 LOAD_FAST               14 (y2)
+            628 LOAD_FAST               12 (y1)
+            630 BINARY_OP               10 (-)
+            634 STORE_FAST              16 (h)
+            636 STORE_FAST              15 (w)
+
+ 52         638 LOAD_FAST                8 (cls_name)
+            640 LOAD_CONST               7 ('Rotation')
+            642 COMPARE_OP               2 (==)
+            648 POP_JUMP_FORWARD_IF_FALSE    19 (to 688)
+
+ 53         650 LOAD_FAST               16 (h)
+            652 LOAD_FAST               15 (w)
+            654 LOAD_CONST               8 (1.5)
+            656 BINARY_OP                5 (*)
+            660 COMPARE_OP               4 (>)
+            666 POP_JUMP_FORWARD_IF_TRUE     9 (to 686)
+            668 LOAD_FAST               15 (w)
+            670 LOAD_FAST               16 (h)
+            672 LOAD_CONST               8 (1.5)
+            674 BINARY_OP                5 (*)
+            678 COMPARE_OP               4 (>)
+            684 POP_JUMP_FORWARD_IF_FALSE     1 (to 688)
+
+ 54     >>  686 JUMP_BACKWARD          233 (to 222)
+
+ 55     >>  688 LOAD_FAST                4 (detections)
+            690 LOAD_METHOD             20 (append)
+
+ 56         712 LOAD_FAST                8 (cls_name)
+
+ 57         714 LOAD_FAST                7 (cls_id)
+
+ 58         716 LOAD_FAST                9 (conf_val)
+
+ 59         718 LOAD_GLOBAL             17 (NULL + int)
+            730 LOAD_FAST               11 (x1)
+            732 PRECALL                  1
+            736 CALL                     1
+            746 LOAD_GLOBAL             17 (NULL + int)
+            758 LOAD_FAST               12 (y1)
+            760 PRECALL                  1
+            764 CALL                     1
+            774 LOAD_GLOBAL             17 (NULL + int)
+            786 LOAD_FAST               13 (x2)
+            788 PRECALL                  1
+            792 CALL                     1
+            802 LOAD_GLOBAL             17 (NULL + int)
+            814 LOAD_FAST               14 (y2)
+            816 PRECALL                  1
+            820 CALL                     1
+            830 BUILD_TUPLE              4
+
+ 60         832 LOAD_FAST                8 (cls_name)
+            834 LOAD_GLOBAL             42 (CHEATING_CLASSES)
+            846 CONTAINS_OP              0
+
+ 61         848 LOAD_GLOBAL             45 (NULL + CLASS_SEVERITY)
+            860 LOAD_ATTR               11 (get)
+            870 LOAD_FAST                8 (cls_name)
+            872 LOAD_CONST               9 ('LOW')
+            874 PRECALL                  2
+            878 CALL                     2
+
+ 62         888 LOAD_GLOBAL             47 (NULL + CLASS_LABELS_VI)
+            900 LOAD_ATTR               11 (get)
+            910 LOAD_FAST                8 (cls_name)
+            912 LOAD_FAST                8 (cls_name)
+            914 PRECALL                  2
+            918 CALL                     2
+
+ 55         928 LOAD_CONST              10 (('class_name', 'class_id', 'confidence', 'bbox', 'is_cheating', 'severity', 'label_vi'))
+            930 BUILD_CONST_KEY_MAP      7
+            932 PRECALL                  1
+            936 CALL                     1
+            946 POP_TOP
+            948 EXTENDED_ARG             1
+            950 JUMP_BACKWARD          365 (to 222)
+
+ 41     >>  952 EXTENDED_ARG             1
+            954 JUMP_BACKWARD          385 (to 186)
+
+ 64     >>  956 LOAD_FAST                4 (detections)
+            958 RETURN_VALUE
+ExceptionTable:
+  58 to 138 -> 142 [0]
+  142 to 164 -> 172 [1] lasti
+  170 to 170 -> 172 [1] lasti
+
+Disassembly of <code object release at 0x0000021658F32330, file "D:\Exam_cheating\Test_AI_Cheating\core\yolo_detector.py", line 66>:
+ 66           0 RESUME                   0
+
+ 67           2 LOAD_CONST               0 (None)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (model)
+
+ 68          16 LOAD_CONST               1 (False)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (available)
+             30 LOAD_CONST               0 (None)
+             32 RETURN_VALUE

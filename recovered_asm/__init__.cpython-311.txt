@@ -1,0 +1,47 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (1)
+              4 LOAD_CONST               1 (('CheatingDetectorEngine',))
+              6 IMPORT_NAME              0 (ai_engine)
+              8 IMPORT_FROM              1 (CheatingDetectorEngine)
+             10 STORE_NAME               1 (CheatingDetectorEngine)
+             12 POP_TOP
+
+  2          14 LOAD_CONST               0 (1)
+             16 LOAD_CONST               2 (('YOLODetector',))
+             18 IMPORT_NAME              2 (yolo_detector)
+             20 IMPORT_FROM              3 (YOLODetector)
+             22 STORE_NAME               3 (YOLODetector)
+             24 POP_TOP
+
+  3          26 LOAD_CONST               0 (1)
+             28 LOAD_CONST               3 (('PoseAnalyzer',))
+             30 IMPORT_NAME              4 (face_analyzer)
+             32 IMPORT_FROM              5 (PoseAnalyzer)
+             34 STORE_NAME               5 (PoseAnalyzer)
+             36 POP_TOP
+
+  4          38 LOAD_CONST               0 (1)
+             40 LOAD_CONST               4 (('SeatTracker', 'SustainedTimer', 'FaceTrack'))
+             42 IMPORT_NAME              6 (tracker)
+             44 IMPORT_FROM              7 (SeatTracker)
+             46 STORE_NAME               7 (SeatTracker)
+             48 IMPORT_FROM              8 (SustainedTimer)
+             50 STORE_NAME               8 (SustainedTimer)
+             52 IMPORT_FROM              9 (FaceTrack)
+             54 STORE_NAME               9 (FaceTrack)
+             56 POP_TOP
+
+  5          58 LOAD_CONST               0 (1)
+             60 LOAD_CONST               5 (('MotionTracker',))
+             62 IMPORT_NAME             10 (optical_flow)
+             64 IMPORT_FROM             11 (MotionTracker)
+             66 STORE_NAME              11 (MotionTracker)
+             68 POP_TOP
+
+  6          70 LOAD_CONST               0 (1)
+             72 LOAD_CONST               6 (('*',))
+             74 IMPORT_NAME             12 (config)
+             76 IMPORT_STAR
+             78 LOAD_CONST               7 (None)
+             80 RETURN_VALUE

@@ -1,0 +1,1414 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (math)
+              8 STORE_NAME               0 (math)
+
+  2          10 LOAD_CONST               0 (0)
+             12 LOAD_CONST               1 (None)
+             14 IMPORT_NAME              1 (numpy)
+             16 STORE_NAME               2 (np)
+
+  4          18 PUSH_NULL
+             20 LOAD_BUILD_CLASS
+             22 LOAD_CONST               2 (<code object PoseAnalyzer at 0x0000021658D09350, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 4>)
+             24 MAKE_FUNCTION            0
+             26 LOAD_CONST               3 ('PoseAnalyzer')
+             28 PRECALL                  2
+             32 CALL                     2
+             42 STORE_NAME               3 (PoseAnalyzer)
+             44 LOAD_CONST               1 (None)
+             46 RETURN_VALUE
+
+Disassembly of <code object PoseAnalyzer at 0x0000021658D09350, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 4>:
+  4           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('PoseAnalyzer')
+              8 STORE_NAME               2 (__qualname__)
+
+  6          10 LOAD_CONST               1 (<code object __init__ at 0x0000021658CC9830, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 6>)
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+ 18          16 LOAD_CONST               2 ('frame')
+             18 LOAD_NAME                4 (np)
+             20 LOAD_ATTR                5 (ndarray)
+             30 LOAD_CONST               3 ('w')
+             32 LOAD_NAME                6 (int)
+             34 LOAD_CONST               4 ('h')
+             36 LOAD_NAME                6 (int)
+             38 LOAD_CONST               5 ('return')
+             40 LOAD_NAME                7 (list)
+             42 LOAD_NAME                8 (dict)
+             44 BINARY_SUBSCR
+             54 BUILD_TUPLE              8
+             56 LOAD_CONST               6 (<code object analyze at 0x0000021659182D00, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 18>)
+             58 MAKE_FUNCTION            4 (annotations)
+             60 STORE_NAME               9 (analyze)
+
+191          62 LOAD_CONST               2 ('frame')
+             64 LOAD_NAME                4 (np)
+             66 LOAD_ATTR                5 (ndarray)
+             76 BUILD_TUPLE              2
+             78 LOAD_CONST               7 (<code object draw_face_contours at 0x0000021658CD5170, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 191>)
+             80 MAKE_FUNCTION            4 (annotations)
+             82 STORE_NAME              10 (draw_face_contours)
+
+194          84 LOAD_CONST               8 (<code object release at 0x0000021658F32090, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 194>)
+             86 MAKE_FUNCTION            0
+             88 STORE_NAME              11 (release)
+             90 LOAD_CONST               9 (None)
+             92 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658CC9830, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 6>:
+  6           0 RESUME                   0
+
+  7           2 LOAD_GLOBAL              1 (NULL + print)
+             14 LOAD_CONST               1 ('Khoi tao YOLO Pose...')
+             16 PRECALL                  1
+             20 CALL                     1
+             30 POP_TOP
+
+  8          32 NOP
+
+  9          34 LOAD_CONST               2 (0)
+             36 LOAD_CONST               3 (('YOLO',))
+             38 IMPORT_NAME              1 (ultralytics)
+             40 IMPORT_FROM              2 (YOLO)
+             42 STORE_FAST               1 (YOLO)
+             44 POP_TOP
+
+ 10          46 PUSH_NULL
+             48 LOAD_FAST                1 (YOLO)
+             50 LOAD_CONST               4 ('yolov8n-pose.pt')
+             52 PRECALL                  1
+             56 CALL                     1
+             66 LOAD_FAST                0 (self)
+             68 STORE_ATTR               3 (model)
+
+ 11          78 LOAD_GLOBAL              9 (NULL + np)
+             90 LOAD_ATTR                5 (zeros)
+            100 LOAD_CONST               5 ((640, 640, 3))
+            102 LOAD_GLOBAL              8 (np)
+            114 LOAD_ATTR                6 (uint8)
+            124 KW_NAMES                 6
+            126 PRECALL                  2
+            130 CALL                     2
+            140 STORE_FAST               2 (dummy)
+
+ 12         142 LOAD_FAST                0 (self)
+            144 LOAD_ATTR                3 (model)
+            154 LOAD_METHOD              7 (predict)
+            176 LOAD_FAST                2 (dummy)
+            178 LOAD_CONST               7 (False)
+            180 LOAD_CONST               8 (640)
+            182 KW_NAMES                 9
+            184 PRECALL                  3
+            188 CALL                     3
+            198 POP_TOP
+
+ 13         200 LOAD_CONST              10 (True)
+            202 LOAD_FAST                0 (self)
+            204 STORE_ATTR               8 (available)
+            214 LOAD_CONST               0 (None)
+            216 RETURN_VALUE
+        >>  218 PUSH_EXC_INFO
+
+ 14         220 LOAD_GLOBAL             18 (Exception)
+            232 CHECK_EXC_MATCH
+            234 POP_JUMP_FORWARD_IF_FALSE    36 (to 308)
+            236 STORE_FAST               3 (e)
+
+ 15         238 LOAD_GLOBAL              1 (NULL + print)
+            250 LOAD_CONST              11 ('Loi load YOLO Pose: ')
+            252 LOAD_FAST                3 (e)
+            254 FORMAT_VALUE             0
+            256 BUILD_STRING             2
+            258 PRECALL                  1
+            262 CALL                     1
+            272 POP_TOP
+
+ 16         274 LOAD_CONST               7 (False)
+            276 LOAD_FAST                0 (self)
+            278 STORE_ATTR               8 (available)
+            288 POP_EXCEPT
+            290 LOAD_CONST               0 (None)
+            292 STORE_FAST               3 (e)
+            294 DELETE_FAST              3 (e)
+            296 LOAD_CONST               0 (None)
+            298 RETURN_VALUE
+        >>  300 LOAD_CONST               0 (None)
+            302 STORE_FAST               3 (e)
+            304 DELETE_FAST              3 (e)
+            306 RERAISE                  1
+
+ 14     >>  308 RERAISE                  0
+        >>  310 COPY                     3
+            312 POP_EXCEPT
+            314 RERAISE                  1
+ExceptionTable:
+  34 to 212 -> 218 [0]
+  218 to 236 -> 310 [1] lasti
+  238 to 286 -> 300 [1] lasti
+  300 to 308 -> 310 [1] lasti
+
+Disassembly of <code object analyze at 0x0000021659182D00, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 18>:
+              0 MAKE_CELL               87 (confs)
+              2 MAKE_CELL               88 (kpts)
+
+ 18           4 RESUME                   0
+
+ 19           6 BUILD_LIST               0
+              8 STORE_FAST               4 (faces)
+
+ 20          10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                0 (available)
+             22 POP_JUMP_FORWARD_IF_TRUE     2 (to 28)
+
+ 21          24 LOAD_FAST                4 (faces)
+             26 RETURN_VALUE
+
+ 22     >>   28 LOAD_FAST                0 (self)
+             30 LOAD_ATTR                1 (model)
+             40 LOAD_METHOD              2 (track)
+             62 LOAD_FAST                1 (frame)
+             64 LOAD_CONST               1 (True)
+             66 LOAD_CONST               2 ('bytetrack.yaml')
+             68 LOAD_CONST               3 (False)
+             70 LOAD_CONST               4 (960)
+             72 LOAD_CONST               5 (0.05)
+             74 LOAD_CONST               6 (0.85)
+             76 KW_NAMES                 7
+             78 PRECALL                  7
+             82 CALL                     7
+             92 STORE_FAST               5 (results)
+
+ 23          94 LOAD_FAST                5 (results)
+             96 POP_JUMP_FORWARD_IF_FALSE    13 (to 124)
+             98 LOAD_FAST                5 (results)
+            100 LOAD_CONST               8 (0)
+            102 BINARY_SUBSCR
+            112 LOAD_ATTR                3 (keypoints)
+            122 POP_JUMP_FORWARD_IF_NOT_NONE     2 (to 128)
+
+ 24     >>  124 LOAD_FAST                4 (faces)
+            126 RETURN_VALUE
+
+ 25     >>  128 LOAD_GLOBAL              9 (NULL + enumerate)
+            140 LOAD_FAST                5 (results)
+            142 LOAD_CONST               8 (0)
+            144 BINARY_SUBSCR
+            154 LOAD_ATTR                5 (boxes)
+            164 PRECALL                  1
+            168 CALL                     1
+            178 GET_ITER
+        >>  180 EXTENDED_ARG             7
+            182 FOR_ITER              2031 (to 4246)
+            184 UNPACK_SEQUENCE          2
+            188 STORE_FAST               6 (i)
+            190 STORE_FAST               7 (box)
+
+ 26         192 LOAD_FAST                7 (box)
+            194 LOAD_ATTR                6 (xyxy)
+            204 LOAD_CONST               8 (0)
+            206 BINARY_SUBSCR
+            216 LOAD_METHOD              7 (cpu)
+            238 PRECALL                  0
+            242 CALL                     0
+            252 LOAD_METHOD              8 (numpy)
+            274 PRECALL                  0
+            278 CALL                     0
+            288 UNPACK_SEQUENCE          4
+            292 STORE_FAST               8 (bx1)
+            294 STORE_FAST               9 (by1)
+            296 STORE_FAST              10 (bx2)
+            298 STORE_FAST              11 (by2)
+
+ 27         300 LOAD_CONST               9 (-1)
+            302 STORE_FAST              12 (track_id)
+
+ 28         304 LOAD_FAST                7 (box)
+            306 LOAD_ATTR                9 (id)
+            316 POP_JUMP_FORWARD_IF_NONE    44 (to 406)
+
+ 29         318 LOAD_GLOBAL             21 (NULL + int)
+            330 LOAD_FAST                7 (box)
+            332 LOAD_ATTR                9 (id)
+            342 LOAD_CONST               8 (0)
+            344 BINARY_SUBSCR
+            354 LOAD_METHOD             11 (item)
+            376 PRECALL                  0
+            380 CALL                     0
+            390 PRECALL                  1
+            394 CALL                     1
+            404 STORE_FAST              12 (track_id)
+
+ 30     >>  406 LOAD_FAST                5 (results)
+            408 LOAD_CONST               8 (0)
+            410 BINARY_SUBSCR
+            420 LOAD_ATTR                3 (keypoints)
+            430 LOAD_ATTR               12 (xy)
+            440 LOAD_FAST                6 (i)
+            442 BINARY_SUBSCR
+            452 LOAD_METHOD              7 (cpu)
+            474 PRECALL                  0
+            478 CALL                     0
+            488 LOAD_METHOD              8 (numpy)
+            510 PRECALL                  0
+            514 CALL                     0
+            524 STORE_DEREF             88 (kpts)
+
+ 31         526 LOAD_FAST                5 (results)
+            528 LOAD_CONST               8 (0)
+            530 BINARY_SUBSCR
+            540 LOAD_ATTR                3 (keypoints)
+            550 LOAD_ATTR               13 (conf)
+            560 POP_JUMP_FORWARD_IF_NONE    60 (to 682)
+            562 LOAD_FAST                5 (results)
+            564 LOAD_CONST               8 (0)
+            566 BINARY_SUBSCR
+            576 LOAD_ATTR                3 (keypoints)
+            586 LOAD_ATTR               13 (conf)
+            596 LOAD_FAST                6 (i)
+            598 BINARY_SUBSCR
+            608 LOAD_METHOD              7 (cpu)
+            630 PRECALL                  0
+            634 CALL                     0
+            644 LOAD_METHOD              8 (numpy)
+            666 PRECALL                  0
+            670 CALL                     0
+            680 JUMP_FORWARD            19 (to 720)
+        >>  682 LOAD_GLOBAL             29 (NULL + np)
+            694 LOAD_ATTR               15 (ones)
+            704 LOAD_CONST              10 (17)
+            706 PRECALL                  1
+            710 CALL                     1
+        >>  720 STORE_DEREF             87 (confs)
+
+ 32         722 LOAD_DEREF              88 (kpts)
+            724 LOAD_CONST               8 (0)
+            726 BINARY_SUBSCR
+            736 STORE_FAST              13 (nose)
+
+ 33         738 LOAD_DEREF              88 (kpts)
+            740 LOAD_CONST              11 (3)
+            742 BINARY_SUBSCR
+            752 STORE_FAST              14 (l_ear)
+
+ 34         754 LOAD_DEREF              88 (kpts)
+            756 LOAD_CONST              12 (4)
+            758 BINARY_SUBSCR
+            768 STORE_FAST              15 (r_ear)
+
+ 35         770 LOAD_DEREF              88 (kpts)
+            772 LOAD_CONST              13 (5)
+            774 BINARY_SUBSCR
+            784 STORE_FAST              16 (l_sh)
+
+ 36         786 LOAD_DEREF              88 (kpts)
+            788 LOAD_CONST              14 (6)
+            790 BINARY_SUBSCR
+            800 STORE_FAST              17 (r_sh)
+
+ 37         802 LOAD_DEREF              87 (confs)
+            804 LOAD_CONST               8 (0)
+            806 BINARY_SUBSCR
+            816 LOAD_CONST              15 (0.3)
+            818 COMPARE_OP               4 (>)
+            824 STORE_FAST              18 (nose_ok)
+
+ 38         826 LOAD_DEREF              87 (confs)
+            828 LOAD_CONST              13 (5)
+            830 BINARY_SUBSCR
+            840 LOAD_CONST              15 (0.3)
+            842 COMPARE_OP               4 (>)
+            848 STORE_FAST              19 (l_sh_ok)
+
+ 39         850 LOAD_DEREF              87 (confs)
+            852 LOAD_CONST              14 (6)
+            854 BINARY_SUBSCR
+            864 LOAD_CONST              15 (0.3)
+            866 COMPARE_OP               4 (>)
+            872 STORE_FAST              20 (r_sh_ok)
+
+ 40         874 LOAD_DEREF              87 (confs)
+            876 LOAD_CONST              11 (3)
+            878 BINARY_SUBSCR
+            888 LOAD_CONST              15 (0.3)
+            890 COMPARE_OP               4 (>)
+            896 STORE_FAST              21 (l_ear_ok)
+
+ 41         898 LOAD_DEREF              87 (confs)
+            900 LOAD_CONST              12 (4)
+            902 BINARY_SUBSCR
+            912 LOAD_CONST              15 (0.3)
+            914 COMPARE_OP               4 (>)
+            920 STORE_FAST              22 (r_ear_ok)
+
+ 42         922 LOAD_FAST               19 (l_sh_ok)
+            924 POP_JUMP_FORWARD_IF_FALSE    94 (to 1114)
+            926 LOAD_FAST               20 (r_sh_ok)
+            928 POP_JUMP_FORWARD_IF_FALSE    92 (to 1114)
+
+ 43         930 LOAD_FAST               16 (l_sh)
+            932 LOAD_CONST               8 (0)
+            934 BINARY_SUBSCR
+            944 LOAD_FAST               17 (r_sh)
+            946 LOAD_CONST               8 (0)
+            948 BINARY_SUBSCR
+            958 BINARY_OP                0 (+)
+            962 LOAD_CONST              16 (2)
+            964 BINARY_OP               11 (/)
+            968 STORE_FAST              23 (cx)
+
+ 44         970 LOAD_FAST               16 (l_sh)
+            972 LOAD_CONST              17 (1)
+            974 BINARY_SUBSCR
+            984 LOAD_FAST               17 (r_sh)
+            986 LOAD_CONST              17 (1)
+            988 BINARY_SUBSCR
+            998 BINARY_OP                0 (+)
+           1002 LOAD_CONST              16 (2)
+           1004 BINARY_OP               11 (/)
+           1008 STORE_FAST              24 (cy)
+
+ 45        1010 LOAD_GLOBAL             33 (NULL + math)
+           1022 LOAD_ATTR               17 (hypot)
+           1032 LOAD_FAST               16 (l_sh)
+           1034 LOAD_CONST               8 (0)
+           1036 BINARY_SUBSCR
+           1046 LOAD_FAST               17 (r_sh)
+           1048 LOAD_CONST               8 (0)
+           1050 BINARY_SUBSCR
+           1060 BINARY_OP               10 (-)
+           1064 LOAD_FAST               16 (l_sh)
+           1066 LOAD_CONST              17 (1)
+           1068 BINARY_SUBSCR
+           1078 LOAD_FAST               17 (r_sh)
+           1080 LOAD_CONST              17 (1)
+           1082 BINARY_SUBSCR
+           1092 BINARY_OP               10 (-)
+           1096 PRECALL                  2
+           1100 CALL                     2
+           1110 STORE_FAST              25 (fw)
+           1112 JUMP_FORWARD            40 (to 1194)
+
+ 46     >> 1114 LOAD_FAST               18 (nose_ok)
+           1116 POP_JUMP_FORWARD_IF_FALSE    14 (to 1146)
+
+ 47        1118 LOAD_FAST               13 (nose)
+           1120 UNPACK_SEQUENCE          2
+           1124 STORE_FAST              23 (cx)
+           1126 STORE_FAST              24 (cy)
+
+ 48        1128 LOAD_FAST               10 (bx2)
+           1130 LOAD_FAST                8 (bx1)
+           1132 BINARY_OP               10 (-)
+           1136 LOAD_CONST              18 (0.4)
+           1138 BINARY_OP                5 (*)
+           1142 STORE_FAST              25 (fw)
+           1144 JUMP_FORWARD            24 (to 1194)
+
+ 50     >> 1146 LOAD_FAST                8 (bx1)
+           1148 LOAD_FAST               10 (bx2)
+           1150 BINARY_OP                0 (+)
+           1154 LOAD_CONST              16 (2)
+           1156 BINARY_OP               11 (/)
+           1160 STORE_FAST              23 (cx)
+
+ 51        1162 LOAD_FAST                9 (by1)
+           1164 LOAD_FAST               11 (by2)
+           1166 BINARY_OP                0 (+)
+           1170 LOAD_CONST              16 (2)
+           1172 BINARY_OP               11 (/)
+           1176 STORE_FAST              24 (cy)
+
+ 52        1178 LOAD_FAST               10 (bx2)
+           1180 LOAD_FAST                8 (bx1)
+           1182 BINARY_OP               10 (-)
+           1186 LOAD_CONST              18 (0.4)
+           1188 BINARY_OP                5 (*)
+           1192 STORE_FAST              25 (fw)
+
+ 53     >> 1194 LOAD_CONST              19 ('Thang')
+           1196 STORE_FAST              26 (yaw_str)
+
+ 54        1198 LOAD_CONST              20 (1.0)
+           1200 STORE_FAST              27 (yaw_ratio)
+
+ 55        1202 LOAD_CONST              21 (0.0)
+           1204 STORE_FAST              28 (roll_angle)
+
+ 56        1206 LOAD_FAST               18 (nose_ok)
+           1208 POP_JUMP_FORWARD_IF_FALSE   140 (to 1490)
+           1210 LOAD_FAST               19 (l_sh_ok)
+           1212 POP_JUMP_FORWARD_IF_FALSE   138 (to 1490)
+           1214 LOAD_FAST               20 (r_sh_ok)
+           1216 POP_JUMP_FORWARD_IF_FALSE   136 (to 1490)
+
+ 57        1218 LOAD_GLOBAL             37 (NULL + abs)
+           1230 LOAD_FAST               13 (nose)
+           1232 LOAD_CONST               8 (0)
+           1234 BINARY_SUBSCR
+           1244 LOAD_FAST               16 (l_sh)
+           1246 LOAD_CONST               8 (0)
+           1248 BINARY_SUBSCR
+           1258 BINARY_OP               10 (-)
+           1262 PRECALL                  1
+           1266 CALL                     1
+           1276 STORE_FAST              29 (d_left)
+
+ 58        1278 LOAD_GLOBAL             37 (NULL + abs)
+           1290 LOAD_FAST               17 (r_sh)
+           1292 LOAD_CONST               8 (0)
+           1294 BINARY_SUBSCR
+           1304 LOAD_FAST               13 (nose)
+           1306 LOAD_CONST               8 (0)
+           1308 BINARY_SUBSCR
+           1318 BINARY_OP               10 (-)
+           1322 PRECALL                  1
+           1326 CALL                     1
+           1336 STORE_FAST              30 (d_right)
+
+ 59        1338 LOAD_GLOBAL             39 (NULL + max)
+           1350 LOAD_CONST              22 (10.0)
+           1352 LOAD_FAST               25 (fw)
+           1354 LOAD_CONST              23 (0.12)
+           1356 BINARY_OP                5 (*)
+           1360 PRECALL                  2
+           1364 CALL                     2
+           1374 STORE_FAST              31 (smooth)
+
+ 60        1376 LOAD_FAST               29 (d_left)
+           1378 LOAD_FAST               31 (smooth)
+           1380 BINARY_OP                0 (+)
+           1384 STORE_FAST              32 (d_l_s)
+
+ 61        1386 LOAD_FAST               30 (d_right)
+           1388 LOAD_FAST               31 (smooth)
+           1390 BINARY_OP                0 (+)
+           1394 STORE_FAST              33 (d_r_s)
+
+ 62        1396 LOAD_FAST               32 (d_l_s)
+           1398 LOAD_FAST               33 (d_r_s)
+           1400 COMPARE_OP               4 (>)
+           1406 POP_JUMP_FORWARD_IF_FALSE    16 (to 1440)
+
+ 63        1408 LOAD_FAST               32 (d_l_s)
+           1410 LOAD_FAST               33 (d_r_s)
+           1412 BINARY_OP               11 (/)
+           1416 STORE_FAST              27 (yaw_ratio)
+
+ 64        1418 LOAD_FAST               27 (yaw_ratio)
+           1420 LOAD_CONST              24 (1.75)
+           1422 COMPARE_OP               4 (>)
+           1428 POP_JUMP_FORWARD_IF_FALSE     2 (to 1434)
+           1430 LOAD_CONST              25 ('Quay PHAI')
+           1432 JUMP_FORWARD             1 (to 1436)
+        >> 1434 LOAD_CONST              19 ('Thang')
+        >> 1436 STORE_FAST              26 (yaw_str)
+           1438 JUMP_FORWARD            15 (to 1470)
+
+ 66     >> 1440 LOAD_FAST               33 (d_r_s)
+           1442 LOAD_FAST               32 (d_l_s)
+           1444 BINARY_OP               11 (/)
+           1448 STORE_FAST              27 (yaw_ratio)
+
+ 67        1450 LOAD_FAST               27 (yaw_ratio)
+           1452 LOAD_CONST              24 (1.75)
+           1454 COMPARE_OP               4 (>)
+           1460 POP_JUMP_FORWARD_IF_FALSE     2 (to 1466)
+           1462 LOAD_CONST              26 ('Quay TRAI')
+           1464 JUMP_FORWARD             1 (to 1468)
+        >> 1466 LOAD_CONST              19 ('Thang')
+        >> 1468 STORE_FAST              26 (yaw_str)
+
+ 68     >> 1470 LOAD_FAST               29 (d_left)
+           1472 LOAD_FAST               30 (d_right)
+           1474 COMPARE_OP               4 (>)
+           1480 POP_JUMP_FORWARD_IF_FALSE     2 (to 1486)
+           1482 LOAD_CONST              25 ('Quay PHAI')
+           1484 JUMP_FORWARD             1 (to 1488)
+        >> 1486 LOAD_CONST              26 ('Quay TRAI')
+        >> 1488 STORE_FAST              34 (yaw_dir)
+
+ 69     >> 1490 LOAD_CONST              27 ('Binh thuong')
+           1492 STORE_FAST              35 (tilt_str)
+
+ 70        1494 LOAD_CONST               3 (False)
+           1496 STORE_FAST              36 (pitch_down)
+
+ 71        1498 LOAD_FAST               19 (l_sh_ok)
+           1500 EXTENDED_ARG             1
+           1502 POP_JUMP_FORWARD_IF_FALSE   260 (to 2024)
+           1504 LOAD_FAST               20 (r_sh_ok)
+           1506 EXTENDED_ARG             1
+           1508 POP_JUMP_FORWARD_IF_FALSE   257 (to 2024)
+
+ 72        1510 LOAD_GLOBAL             37 (NULL + abs)
+           1522 LOAD_FAST               17 (r_sh)
+           1524 LOAD_CONST               8 (0)
+           1526 BINARY_SUBSCR
+           1536 LOAD_FAST               16 (l_sh)
+           1538 LOAD_CONST               8 (0)
+           1540 BINARY_SUBSCR
+           1550 BINARY_OP               10 (-)
+           1554 PRECALL                  1
+           1558 CALL                     1
+           1568 STORE_FAST              37 (dx)
+
+ 73        1570 LOAD_FAST               17 (r_sh)
+           1572 LOAD_CONST              17 (1)
+           1574 BINARY_SUBSCR
+           1584 LOAD_FAST               16 (l_sh)
+           1586 LOAD_CONST              17 (1)
+           1588 BINARY_SUBSCR
+           1598 BINARY_OP               10 (-)
+           1602 STORE_FAST              38 (dy)
+
+ 74        1604 LOAD_FAST               37 (dx)
+           1606 LOAD_CONST               8 (0)
+           1608 COMPARE_OP               4 (>)
+           1614 POP_JUMP_FORWARD_IF_FALSE    39 (to 1694)
+
+ 75        1616 LOAD_GLOBAL             33 (NULL + math)
+           1628 LOAD_ATTR               20 (degrees)
+           1638 LOAD_GLOBAL             33 (NULL + math)
+           1650 LOAD_ATTR               21 (atan2)
+           1660 LOAD_FAST               38 (dy)
+           1662 LOAD_FAST               37 (dx)
+           1664 PRECALL                  2
+           1668 CALL                     2
+           1678 PRECALL                  1
+           1682 CALL                     1
+           1692 STORE_FAST              28 (roll_angle)
+
+ 76     >> 1694 LOAD_GLOBAL             37 (NULL + abs)
+           1706 LOAD_FAST               28 (roll_angle)
+           1708 PRECALL                  1
+           1712 CALL                     1
+           1722 LOAD_CONST              28 (35.0)
+           1724 COMPARE_OP               4 (>)
+           1730 POP_JUMP_FORWARD_IF_FALSE     2 (to 1736)
+
+ 77        1732 LOAD_CONST              29 ('Nghieng')
+           1734 STORE_FAST              35 (tilt_str)
+
+ 78     >> 1736 LOAD_FAST               18 (nose_ok)
+           1738 POP_JUMP_FORWARD_IF_FALSE   142 (to 2024)
+
+ 79        1740 LOAD_FAST               16 (l_sh)
+           1742 LOAD_CONST              17 (1)
+           1744 BINARY_SUBSCR
+           1754 LOAD_FAST               17 (r_sh)
+           1756 LOAD_CONST              17 (1)
+           1758 BINARY_SUBSCR
+           1768 BINARY_OP                0 (+)
+           1772 LOAD_CONST              16 (2)
+           1774 BINARY_OP               11 (/)
+           1778 STORE_FAST              39 (avg_sh_y)
+
+ 80        1780 LOAD_FAST               16 (l_sh)
+           1782 LOAD_CONST               8 (0)
+           1784 BINARY_SUBSCR
+           1794 LOAD_FAST               17 (r_sh)
+           1796 LOAD_CONST               8 (0)
+           1798 BINARY_SUBSCR
+           1808 BINARY_OP                0 (+)
+           1812 LOAD_CONST              16 (2)
+           1814 BINARY_OP               11 (/)
+           1818 STORE_FAST              40 (sh_mid_x)
+
+ 81        1820 LOAD_FAST               39 (avg_sh_y)
+           1822 LOAD_FAST               13 (nose)
+           1824 LOAD_CONST              17 (1)
+           1826 BINARY_SUBSCR
+           1836 BINARY_OP               10 (-)
+           1840 STORE_FAST              41 (head_pitch)
+
+ 82        1842 LOAD_GLOBAL             33 (NULL + math)
+           1854 LOAD_ATTR               17 (hypot)
+           1864 LOAD_FAST               37 (dx)
+           1866 LOAD_FAST               38 (dy)
+           1868 PRECALL                  2
+           1872 CALL                     2
+           1882 STORE_FAST              42 (shoulder_dist)
+
+ 83        1884 LOAD_GLOBAL             37 (NULL + abs)
+           1896 LOAD_FAST               13 (nose)
+           1898 LOAD_CONST               8 (0)
+           1900 BINARY_SUBSCR
+           1910 LOAD_FAST               40 (sh_mid_x)
+           1912 BINARY_OP               10 (-)
+           1916 PRECALL                  1
+           1920 CALL                     1
+           1930 LOAD_GLOBAL             39 (NULL + max)
+           1942 LOAD_FAST               42 (shoulder_dist)
+           1944 LOAD_CONST              20 (1.0)
+           1946 PRECALL                  2
+           1950 CALL                     2
+           1960 BINARY_OP               11 (/)
+           1964 STORE_FAST              43 (nose_lateral_offset)
+
+ 84        1966 LOAD_FAST               42 (shoulder_dist)
+           1968 LOAD_CONST               8 (0)
+           1970 COMPARE_OP               4 (>)
+           1976 POP_JUMP_FORWARD_IF_FALSE    23 (to 2024)
+           1978 LOAD_FAST               41 (head_pitch)
+           1980 LOAD_CONST               8 (0)
+           1982 COMPARE_OP               4 (>)
+           1988 POP_JUMP_FORWARD_IF_FALSE    17 (to 2024)
+
+ 85        1990 LOAD_FAST               41 (head_pitch)
+           1992 LOAD_FAST               42 (shoulder_dist)
+           1994 BINARY_OP               11 (/)
+           1998 LOAD_CONST              30 (0.5)
+           2000 COMPARE_OP               0 (<)
+           2006 POP_JUMP_FORWARD_IF_FALSE     8 (to 2024)
+
+ 86        2008 LOAD_FAST               43 (nose_lateral_offset)
+           2010 LOAD_CONST              31 (0.55)
+           2012 COMPARE_OP               0 (<)
+           2018 POP_JUMP_FORWARD_IF_FALSE     2 (to 2024)
+
+ 87        2020 LOAD_CONST               1 (True)
+           2022 STORE_FAST              36 (pitch_down)
+
+ 88     >> 2024 LOAD_CONST               3 (False)
+           2026 STORE_FAST              44 (is_phone_posture)
+
+ 89        2028 LOAD_CONST              21 (0.0)
+           2030 STORE_FAST              45 (body_twist)
+
+ 90        2032 LOAD_CONST               8 (0)
+           2034 STORE_FAST              46 (body_twist_dir)
+
+ 91        2036 LOAD_DEREF              88 (kpts)
+           2038 LOAD_CONST              32 (11)
+           2040 BINARY_SUBSCR
+           2050 STORE_FAST              47 (l_hip)
+
+ 92        2052 LOAD_DEREF              88 (kpts)
+           2054 LOAD_CONST              33 (12)
+           2056 BINARY_SUBSCR
+           2066 STORE_FAST              48 (r_hip)
+
+ 93        2068 LOAD_GLOBAL             45 (NULL + len)
+           2080 LOAD_DEREF              87 (confs)
+           2082 PRECALL                  1
+           2086 CALL                     1
+           2096 LOAD_CONST              33 (12)
+           2098 COMPARE_OP               4 (>)
+           2104 POP_JUMP_FORWARD_IF_FALSE    12 (to 2130)
+           2106 LOAD_DEREF              87 (confs)
+           2108 LOAD_CONST              32 (11)
+           2110 BINARY_SUBSCR
+           2120 LOAD_CONST              34 (0.15)
+           2122 COMPARE_OP               4 (>)
+           2128 JUMP_FORWARD             1 (to 2132)
+        >> 2130 LOAD_CONST               3 (False)
+        >> 2132 STORE_FAST              49 (l_hip_ok)
+
+ 94        2134 LOAD_GLOBAL             45 (NULL + len)
+           2146 LOAD_DEREF              87 (confs)
+           2148 PRECALL                  1
+           2152 CALL                     1
+           2162 LOAD_CONST              33 (12)
+           2164 COMPARE_OP               4 (>)
+           2170 POP_JUMP_FORWARD_IF_FALSE    12 (to 2196)
+           2172 LOAD_DEREF              87 (confs)
+           2174 LOAD_CONST              33 (12)
+           2176 BINARY_SUBSCR
+           2186 LOAD_CONST              34 (0.15)
+           2188 COMPARE_OP               4 (>)
+           2194 JUMP_FORWARD             1 (to 2198)
+        >> 2196 LOAD_CONST               3 (False)
+        >> 2198 STORE_FAST              50 (r_hip_ok)
+
+ 95        2200 LOAD_FAST               19 (l_sh_ok)
+           2202 POP_JUMP_FORWARD_IF_FALSE   125 (to 2454)
+           2204 LOAD_FAST               20 (r_sh_ok)
+           2206 POP_JUMP_FORWARD_IF_FALSE   123 (to 2454)
+           2208 LOAD_FAST               49 (l_hip_ok)
+           2210 POP_JUMP_FORWARD_IF_FALSE   121 (to 2454)
+           2212 LOAD_FAST               50 (r_hip_ok)
+           2214 POP_JUMP_FORWARD_IF_FALSE   119 (to 2454)
+
+ 96        2216 LOAD_FAST               28 (roll_angle)
+           2218 STORE_FAST              51 (sh_angle)
+
+ 97        2220 LOAD_FAST               48 (r_hip)
+           2222 LOAD_CONST               8 (0)
+           2224 BINARY_SUBSCR
+           2234 LOAD_FAST               47 (l_hip)
+           2236 LOAD_CONST               8 (0)
+           2238 BINARY_SUBSCR
+           2248 BINARY_OP               10 (-)
+           2252 STORE_FAST              52 (hip_dx)
+
+ 98        2254 LOAD_FAST               48 (r_hip)
+           2256 LOAD_CONST              17 (1)
+           2258 BINARY_SUBSCR
+           2268 LOAD_FAST               47 (l_hip)
+           2270 LOAD_CONST              17 (1)
+           2272 BINARY_SUBSCR
+           2282 BINARY_OP               10 (-)
+           2286 STORE_FAST              53 (hip_dy)
+
+ 99        2288 LOAD_GLOBAL             37 (NULL + abs)
+           2300 LOAD_FAST               52 (hip_dx)
+           2302 PRECALL                  1
+           2306 CALL                     1
+           2316 LOAD_CONST              13 (5)
+           2318 COMPARE_OP               4 (>)
+           2324 POP_JUMP_FORWARD_IF_FALSE    40 (to 2406)
+
+100        2326 LOAD_GLOBAL             33 (NULL + math)
+           2338 LOAD_ATTR               20 (degrees)
+           2348 LOAD_GLOBAL             33 (NULL + math)
+           2360 LOAD_ATTR               21 (atan2)
+           2370 LOAD_FAST               53 (hip_dy)
+           2372 LOAD_FAST               52 (hip_dx)
+           2374 PRECALL                  2
+           2378 CALL                     2
+           2388 PRECALL                  1
+           2392 CALL                     1
+           2402 STORE_FAST              54 (hip_angle)
+           2404 JUMP_FORWARD             2 (to 2410)
+
+102     >> 2406 LOAD_CONST              21 (0.0)
+           2408 STORE_FAST              54 (hip_angle)
+
+103     >> 2410 LOAD_FAST               51 (sh_angle)
+           2412 LOAD_FAST               54 (hip_angle)
+           2414 BINARY_OP               10 (-)
+           2418 STORE_FAST              45 (body_twist)
+
+104        2420 LOAD_FAST               45 (body_twist)
+           2422 LOAD_CONST              35 (12.0)
+           2424 COMPARE_OP               4 (>)
+           2430 POP_JUMP_FORWARD_IF_FALSE     3 (to 2438)
+
+105        2432 LOAD_CONST              17 (1)
+           2434 STORE_FAST              46 (body_twist_dir)
+           2436 JUMP_FORWARD             8 (to 2454)
+
+106     >> 2438 LOAD_FAST               45 (body_twist)
+           2440 LOAD_CONST              36 (-12.0)
+           2442 COMPARE_OP               0 (<)
+           2448 POP_JUMP_FORWARD_IF_FALSE     2 (to 2454)
+
+107        2450 LOAD_CONST               9 (-1)
+           2452 STORE_FAST              46 (body_twist_dir)
+
+108     >> 2454 LOAD_CONST               8 (0)
+           2456 STORE_FAST              55 (arm_reach_side)
+
+109        2458 LOAD_CONST              21 (0.0)
+           2460 STORE_FAST              56 (arm_reach_dist)
+
+110        2462 LOAD_DEREF              88 (kpts)
+           2464 LOAD_CONST              37 (9)
+           2466 BINARY_SUBSCR
+           2476 STORE_FAST              57 (l_wrist)
+
+111        2478 LOAD_DEREF              88 (kpts)
+           2480 LOAD_CONST              38 (10)
+           2482 BINARY_SUBSCR
+           2492 STORE_FAST              58 (r_wrist)
+
+112        2494 LOAD_GLOBAL             45 (NULL + len)
+           2506 LOAD_DEREF              87 (confs)
+           2508 PRECALL                  1
+           2512 CALL                     1
+           2522 LOAD_CONST              38 (10)
+           2524 COMPARE_OP               4 (>)
+           2530 POP_JUMP_FORWARD_IF_FALSE    12 (to 2556)
+           2532 LOAD_DEREF              87 (confs)
+           2534 LOAD_CONST              37 (9)
+           2536 BINARY_SUBSCR
+           2546 LOAD_CONST              39 (0.1)
+           2548 COMPARE_OP               4 (>)
+           2554 JUMP_FORWARD             1 (to 2558)
+        >> 2556 LOAD_CONST               3 (False)
+        >> 2558 STORE_FAST              59 (l_wrist_ok)
+
+113        2560 LOAD_GLOBAL             45 (NULL + len)
+           2572 LOAD_DEREF              87 (confs)
+           2574 PRECALL                  1
+           2578 CALL                     1
+           2588 LOAD_CONST              38 (10)
+           2590 COMPARE_OP               4 (>)
+           2596 POP_JUMP_FORWARD_IF_FALSE    12 (to 2622)
+           2598 LOAD_DEREF              87 (confs)
+           2600 LOAD_CONST              38 (10)
+           2602 BINARY_SUBSCR
+           2612 LOAD_CONST              39 (0.1)
+           2614 COMPARE_OP               4 (>)
+           2620 JUMP_FORWARD             1 (to 2624)
+        >> 2622 LOAD_CONST               3 (False)
+        >> 2624 STORE_FAST              60 (r_wrist_ok)
+
+114        2626 LOAD_FAST               19 (l_sh_ok)
+           2628 POP_JUMP_FORWARD_IF_FALSE   191 (to 3012)
+           2630 LOAD_FAST               20 (r_sh_ok)
+           2632 POP_JUMP_FORWARD_IF_FALSE   189 (to 3012)
+           2634 LOAD_FAST               25 (fw)
+           2636 LOAD_CONST              38 (10)
+           2638 COMPARE_OP               4 (>)
+           2644 POP_JUMP_FORWARD_IF_FALSE   183 (to 3012)
+
+115        2646 LOAD_GLOBAL             47 (NULL + min)
+           2658 LOAD_FAST               16 (l_sh)
+           2660 LOAD_CONST               8 (0)
+           2662 BINARY_SUBSCR
+           2672 LOAD_FAST               17 (r_sh)
+           2674 LOAD_CONST               8 (0)
+           2676 BINARY_SUBSCR
+           2686 PRECALL                  2
+           2690 CALL                     2
+           2700 STORE_FAST              61 (img_left_x)
+
+116        2702 LOAD_GLOBAL             39 (NULL + max)
+           2714 LOAD_FAST               16 (l_sh)
+           2716 LOAD_CONST               8 (0)
+           2718 BINARY_SUBSCR
+           2728 LOAD_FAST               17 (r_sh)
+           2730 LOAD_CONST               8 (0)
+           2732 BINARY_SUBSCR
+           2742 PRECALL                  2
+           2746 CALL                     2
+           2756 STORE_FAST              62 (img_right_x)
+
+117        2758 LOAD_FAST               25 (fw)
+           2760 LOAD_CONST              39 (0.1)
+           2762 BINARY_OP                5 (*)
+           2766 STORE_FAST              63 (reach_thresh)
+
+118        2768 LOAD_CONST              21 (0.0)
+           2770 STORE_FAST              64 (best_right)
+
+119        2772 LOAD_CONST              21 (0.0)
+           2774 STORE_FAST              65 (best_left)
+
+120        2776 LOAD_FAST               57 (l_wrist)
+           2778 LOAD_FAST               59 (l_wrist_ok)
+           2780 BUILD_TUPLE              2
+           2782 LOAD_FAST               58 (r_wrist)
+           2784 LOAD_FAST               60 (r_wrist_ok)
+           2786 BUILD_TUPLE              2
+           2788 BUILD_TUPLE              2
+           2790 GET_ITER
+        >> 2792 FOR_ITER                76 (to 2946)
+           2794 UNPACK_SEQUENCE          2
+           2798 STORE_FAST              66 (wrist)
+           2800 STORE_FAST              67 (wrist_ok)
+
+121        2802 LOAD_FAST               67 (wrist_ok)
+           2804 POP_JUMP_FORWARD_IF_TRUE     1 (to 2808)
+
+122        2806 JUMP_BACKWARD            8 (to 2792)
+
+123     >> 2808 LOAD_FAST               66 (wrist)
+           2810 LOAD_CONST               8 (0)
+           2812 BINARY_SUBSCR
+           2822 STORE_FAST              68 (wx)
+
+124        2824 LOAD_FAST               68 (wx)
+           2826 LOAD_FAST               62 (img_right_x)
+           2828 BINARY_OP               10 (-)
+           2832 LOAD_GLOBAL             39 (NULL + max)
+           2844 LOAD_FAST               25 (fw)
+           2846 LOAD_CONST              20 (1.0)
+           2848 PRECALL                  2
+           2852 CALL                     2
+           2862 BINARY_OP               11 (/)
+           2866 STORE_FAST              69 (overshoot_r)
+
+125        2868 LOAD_FAST               61 (img_left_x)
+           2870 LOAD_FAST               68 (wx)
+           2872 BINARY_OP               10 (-)
+           2876 LOAD_GLOBAL             39 (NULL + max)
+           2888 LOAD_FAST               25 (fw)
+           2890 LOAD_CONST              20 (1.0)
+           2892 PRECALL                  2
+           2896 CALL                     2
+           2906 BINARY_OP               11 (/)
+           2910 STORE_FAST              70 (overshoot_l)
+
+126        2912 LOAD_FAST               69 (overshoot_r)
+           2914 LOAD_FAST               64 (best_right)
+           2916 COMPARE_OP               4 (>)
+           2922 POP_JUMP_FORWARD_IF_FALSE     2 (to 2928)
+
+127        2924 LOAD_FAST               69 (overshoot_r)
+           2926 STORE_FAST              64 (best_right)
+
+128     >> 2928 LOAD_FAST               70 (overshoot_l)
+           2930 LOAD_FAST               65 (best_left)
+           2932 COMPARE_OP               4 (>)
+           2938 POP_JUMP_FORWARD_IF_FALSE     2 (to 2944)
+
+129        2940 LOAD_FAST               70 (overshoot_l)
+           2942 STORE_FAST              65 (best_left)
+        >> 2944 JUMP_BACKWARD           77 (to 2792)
+
+130     >> 2946 LOAD_FAST               64 (best_right)
+           2948 LOAD_CONST              39 (0.1)
+           2950 COMPARE_OP               4 (>)
+           2956 POP_JUMP_FORWARD_IF_FALSE    11 (to 2980)
+           2958 LOAD_FAST               64 (best_right)
+           2960 LOAD_FAST               65 (best_left)
+           2962 COMPARE_OP               4 (>)
+           2968 POP_JUMP_FORWARD_IF_FALSE     5 (to 2980)
+
+131        2970 LOAD_CONST              17 (1)
+           2972 STORE_FAST              55 (arm_reach_side)
+
+132        2974 LOAD_FAST               64 (best_right)
+           2976 STORE_FAST              56 (arm_reach_dist)
+           2978 JUMP_FORWARD            16 (to 3012)
+
+133     >> 2980 LOAD_FAST               65 (best_left)
+           2982 LOAD_CONST              39 (0.1)
+           2984 COMPARE_OP               4 (>)
+           2990 POP_JUMP_FORWARD_IF_FALSE    10 (to 3012)
+           2992 LOAD_FAST               65 (best_left)
+           2994 LOAD_FAST               64 (best_right)
+           2996 COMPARE_OP               4 (>)
+           3002 POP_JUMP_FORWARD_IF_FALSE     4 (to 3012)
+
+134        3004 LOAD_CONST               9 (-1)
+           3006 STORE_FAST              55 (arm_reach_side)
+
+135        3008 LOAD_FAST               65 (best_left)
+           3010 STORE_FAST              56 (arm_reach_dist)
+
+136     >> 3012 LOAD_CONST               3 (False)
+           3014 STORE_FAST              71 (lean_forward)
+
+137        3016 LOAD_FAST               19 (l_sh_ok)
+           3018 POP_JUMP_FORWARD_IF_FALSE   136 (to 3292)
+           3020 LOAD_FAST               20 (r_sh_ok)
+           3022 POP_JUMP_FORWARD_IF_FALSE   134 (to 3292)
+           3024 LOAD_FAST               18 (nose_ok)
+           3026 POP_JUMP_FORWARD_IF_FALSE   132 (to 3292)
+
+138        3028 LOAD_FAST               16 (l_sh)
+           3030 LOAD_CONST              17 (1)
+           3032 BINARY_SUBSCR
+           3042 LOAD_FAST               17 (r_sh)
+           3044 LOAD_CONST              17 (1)
+           3046 BINARY_SUBSCR
+           3056 BINARY_OP                0 (+)
+           3060 LOAD_CONST              16 (2)
+           3062 BINARY_OP               11 (/)
+           3066 STORE_FAST              39 (avg_sh_y)
+
+139        3068 LOAD_GLOBAL             33 (NULL + math)
+           3080 LOAD_ATTR               17 (hypot)
+
+140        3090 LOAD_GLOBAL             37 (NULL + abs)
+           3102 LOAD_FAST               17 (r_sh)
+           3104 LOAD_CONST               8 (0)
+           3106 BINARY_SUBSCR
+           3116 LOAD_FAST               16 (l_sh)
+           3118 LOAD_CONST               8 (0)
+           3120 BINARY_SUBSCR
+           3130 BINARY_OP               10 (-)
+           3134 PRECALL                  1
+           3138 CALL                     1
+           3148 LOAD_FAST               17 (r_sh)
+           3150 LOAD_CONST              17 (1)
+           3152 BINARY_SUBSCR
+           3162 LOAD_FAST               16 (l_sh)
+           3164 LOAD_CONST              17 (1)
+           3166 BINARY_SUBSCR
+           3176 BINARY_OP               10 (-)
+
+139        3180 PRECALL                  2
+           3184 CALL                     2
+           3194 STORE_FAST              72 (shoulder_dist_val)
+
+142        3196 LOAD_FAST               39 (avg_sh_y)
+           3198 LOAD_FAST               13 (nose)
+           3200 LOAD_CONST              17 (1)
+           3202 BINARY_SUBSCR
+           3212 BINARY_OP               10 (-)
+           3216 LOAD_GLOBAL             39 (NULL + max)
+           3228 LOAD_FAST               72 (shoulder_dist_val)
+           3230 LOAD_CONST              20 (1.0)
+           3232 PRECALL                  2
+           3236 CALL                     2
+           3246 BINARY_OP               11 (/)
+           3250 STORE_FAST              73 (head_pitch_ratio)
+
+143        3252 LOAD_CONST              40 (0.35)
+           3254 LOAD_FAST               73 (head_pitch_ratio)
+           3256 SWAP                     2
+           3258 COPY                     2
+           3260 COMPARE_OP               1 (<=)
+           3266 POP_JUMP_FORWARD_IF_FALSE     6 (to 3280)
+           3268 LOAD_CONST              41 (0.75)
+           3270 COMPARE_OP               0 (<)
+           3276 POP_JUMP_FORWARD_IF_FALSE     7 (to 3292)
+           3278 JUMP_FORWARD             2 (to 3284)
+        >> 3280 POP_TOP
+           3282 JUMP_FORWARD             4 (to 3292)
+        >> 3284 LOAD_FAST               36 (pitch_down)
+           3286 POP_JUMP_FORWARD_IF_TRUE     2 (to 3292)
+
+144        3288 LOAD_CONST               1 (True)
+           3290 STORE_FAST              71 (lean_forward)
+
+145     >> 3292 LOAD_CLOSURE            87 (confs)
+           3294 LOAD_CLOSURE            88 (kpts)
+           3296 BUILD_TUPLE              2
+           3298 LOAD_CONST              42 (<code object <listcomp> at 0x0000021658D22F10, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 145>)
+           3300 MAKE_FUNCTION            8 (closure)
+           3302 LOAD_GLOBAL             49 (NULL + range)
+           3314 LOAD_CONST              13 (5)
+           3316 PRECALL                  1
+           3320 CALL                     1
+           3330 GET_ITER
+           3332 PRECALL                  0
+           3336 CALL                     0
+           3346 STORE_FAST              74 (head_pts)
+
+146        3348 LOAD_GLOBAL             45 (NULL + len)
+           3360 LOAD_FAST               74 (head_pts)
+           3362 PRECALL                  1
+           3366 CALL                     1
+           3376 LOAD_CONST              16 (2)
+           3378 COMPARE_OP               5 (>=)
+           3384 EXTENDED_ARG             1
+           3386 POP_JUMP_FORWARD_IF_FALSE   262 (to 3912)
+
+147        3388 LOAD_CONST              43 (<code object <listcomp> at 0x0000021658F32170, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 147>)
+           3390 MAKE_FUNCTION            0
+           3392 LOAD_FAST               74 (head_pts)
+           3394 GET_ITER
+           3396 PRECALL                  0
+           3400 CALL                     0
+           3410 STORE_FAST              75 (xs)
+
+148        3412 LOAD_CONST              44 (<code object <listcomp> at 0x0000021658F31FB0, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 148>)
+           3414 MAKE_FUNCTION            0
+           3416 LOAD_FAST               74 (head_pts)
+           3418 GET_ITER
+           3420 PRECALL                  0
+           3424 CALL                     0
+           3434 STORE_FAST              76 (ys)
+
+149        3436 LOAD_GLOBAL             47 (NULL + min)
+           3448 LOAD_FAST               75 (xs)
+           3450 PRECALL                  1
+           3454 CALL                     1
+           3464 LOAD_GLOBAL             39 (NULL + max)
+           3476 LOAD_FAST               75 (xs)
+           3478 PRECALL                  1
+           3482 CALL                     1
+           3492 STORE_FAST              78 (h_xmax)
+           3494 STORE_FAST              77 (h_xmin)
+
+150        3496 LOAD_GLOBAL             47 (NULL + min)
+           3508 LOAD_FAST               76 (ys)
+           3510 PRECALL                  1
+           3514 CALL                     1
+           3524 LOAD_GLOBAL             39 (NULL + max)
+           3536 LOAD_FAST               76 (ys)
+           3538 PRECALL                  1
+           3542 CALL                     1
+           3552 STORE_FAST              80 (h_ymax)
+           3554 STORE_FAST              79 (h_ymin)
+
+151        3556 LOAD_FAST               78 (h_xmax)
+           3558 LOAD_FAST               77 (h_xmin)
+           3560 BINARY_OP               10 (-)
+           3564 STORE_FAST              81 (head_w)
+
+152        3566 LOAD_FAST               80 (h_ymax)
+           3568 LOAD_FAST               79 (h_ymin)
+           3570 BINARY_OP               10 (-)
+           3574 STORE_FAST              82 (head_h)
+
+153        3576 LOAD_GLOBAL             39 (NULL + max)
+           3588 LOAD_CONST              33 (12)
+           3590 LOAD_FAST               81 (head_w)
+           3592 LOAD_CONST              15 (0.3)
+           3594 BINARY_OP                5 (*)
+           3598 PRECALL                  2
+           3602 CALL                     2
+           3612 STORE_FAST              83 (pad_w)
+
+154        3614 LOAD_GLOBAL             39 (NULL + max)
+           3626 LOAD_CONST              45 (15)
+           3628 LOAD_FAST               82 (head_h)
+           3630 LOAD_CONST              18 (0.4)
+           3632 BINARY_OP                5 (*)
+           3636 PRECALL                  2
+           3640 CALL                     2
+           3650 STORE_FAST              84 (pad_h)
+
+156        3652 LOAD_GLOBAL             21 (NULL + int)
+           3664 LOAD_GLOBAL             39 (NULL + max)
+           3676 LOAD_CONST               8 (0)
+           3678 LOAD_FAST               77 (h_xmin)
+           3680 LOAD_FAST               83 (pad_w)
+           3682 BINARY_OP               10 (-)
+           3686 PRECALL                  2
+           3690 CALL                     2
+           3700 PRECALL                  1
+           3704 CALL                     1
+
+157        3714 LOAD_GLOBAL             21 (NULL + int)
+           3726 LOAD_GLOBAL             39 (NULL + max)
+           3738 LOAD_CONST               8 (0)
+           3740 LOAD_FAST               79 (h_ymin)
+           3742 LOAD_FAST               84 (pad_h)
+           3744 LOAD_CONST              46 (1.5)
+           3746 BINARY_OP                5 (*)
+           3750 BINARY_OP               10 (-)
+           3754 PRECALL                  2
+           3758 CALL                     2
+           3768 PRECALL                  1
+           3772 CALL                     1
+
+158        3782 LOAD_GLOBAL             21 (NULL + int)
+           3794 LOAD_GLOBAL             47 (NULL + min)
+           3806 LOAD_FAST                2 (w)
+           3808 LOAD_FAST               78 (h_xmax)
+           3810 LOAD_FAST               83 (pad_w)
+           3812 BINARY_OP                0 (+)
+           3816 PRECALL                  2
+           3820 CALL                     2
+           3830 PRECALL                  1
+           3834 CALL                     1
+
+159        3844 LOAD_GLOBAL             21 (NULL + int)
+           3856 LOAD_GLOBAL             47 (NULL + min)
+           3868 LOAD_FAST                3 (h)
+           3870 LOAD_FAST               80 (h_ymax)
+           3872 LOAD_FAST               84 (pad_h)
+           3874 BINARY_OP                0 (+)
+           3878 PRECALL                  2
+           3882 CALL                     2
+           3892 PRECALL                  1
+           3896 CALL                     1
+
+155        3906 BUILD_TUPLE              4
+           3908 STORE_FAST              85 (face_bbox)
+           3910 JUMP_FORWARD            69 (to 4050)
+
+162     >> 3912 LOAD_FAST               11 (by2)
+           3914 LOAD_FAST                9 (by1)
+           3916 BINARY_OP               10 (-)
+           3920 STORE_FAST              86 (body_h)
+
+164        3922 LOAD_GLOBAL             21 (NULL + int)
+           3934 LOAD_FAST                8 (bx1)
+           3936 PRECALL                  1
+           3940 CALL                     1
+
+165        3950 LOAD_GLOBAL             21 (NULL + int)
+           3962 LOAD_FAST                9 (by1)
+           3964 PRECALL                  1
+           3968 CALL                     1
+
+166        3978 LOAD_GLOBAL             21 (NULL + int)
+           3990 LOAD_FAST               10 (bx2)
+           3992 PRECALL                  1
+           3996 CALL                     1
+
+167        4006 LOAD_GLOBAL             21 (NULL + int)
+           4018 LOAD_FAST                9 (by1)
+           4020 LOAD_FAST               86 (body_h)
+           4022 LOAD_CONST              47 (0.22)
+           4024 BINARY_OP                5 (*)
+           4028 BINARY_OP                0 (+)
+           4032 PRECALL                  1
+           4036 CALL                     1
+
+163        4046 BUILD_TUPLE              4
+           4048 STORE_FAST              85 (face_bbox)
+
+169     >> 4050 LOAD_FAST                4 (faces)
+           4052 LOAD_METHOD             25 (append)
+           4074 BUILD_MAP                0
+
+170        4076 LOAD_CONST              48 ('track_id')
+           4078 LOAD_FAST               12 (track_id)
+
+169        4080 MAP_ADD                  1
+
+171        4082 LOAD_CONST              49 ('landmarks')
+           4084 LOAD_CONST               0 (None)
+
+169        4086 MAP_ADD                  1
+
+172        4088 LOAD_CONST              50 ('centroid')
+           4090 LOAD_FAST               23 (cx)
+           4092 LOAD_FAST               24 (cy)
+           4094 BUILD_TUPLE              2
+
+169        4096 MAP_ADD                  1
+
+173        4098 LOAD_CONST              51 ('face_width')
+           4100 LOAD_FAST               25 (fw)
+
+169        4102 MAP_ADD                  1
+
+174        4104 LOAD_CONST              52 ('yaw_str')
+           4106 LOAD_FAST               26 (yaw_str)
+
+169        4108 MAP_ADD                  1
+
+175        4110 LOAD_CONST              53 ('tilt_str')
+           4112 LOAD_FAST               35 (tilt_str)
+
+169        4114 MAP_ADD                  1
+
+176        4116 LOAD_CONST              54 ('yaw_ratio')
+           4118 LOAD_FAST               27 (yaw_ratio)
+
+169        4120 MAP_ADD                  1
+
+177        4122 LOAD_CONST              55 ('yaw_dir')
+           4124 LOAD_CONST              55 ('yaw_dir')
+           4126 LOAD_GLOBAL             53 (NULL + locals)
+           4138 PRECALL                  0
+           4142 CALL                     0
+           4152 CONTAINS_OP              0
+           4154 POP_JUMP_FORWARD_IF_FALSE     2 (to 4160)
+           4156 LOAD_FAST               34 (yaw_dir)
+           4158 JUMP_FORWARD             1 (to 4162)
+        >> 4160 LOAD_CONST              19 ('Thang')
+
+169     >> 4162 MAP_ADD                  1
+
+178        4164 LOAD_CONST              56 ('roll_angle')
+           4166 LOAD_FAST               28 (roll_angle)
+
+169        4168 MAP_ADD                  1
+
+179        4170 LOAD_CONST              57 ('pitch_down')
+           4172 LOAD_FAST               36 (pitch_down)
+
+169        4174 MAP_ADD                  1
+
+180        4176 LOAD_CONST              58 ('bbox')
+           4178 LOAD_FAST               85 (face_bbox)
+
+169        4180 MAP_ADD                  1
+
+181        4182 LOAD_CONST              59 ('keypoints')
+           4184 LOAD_DEREF              88 (kpts)
+
+169        4186 MAP_ADD                  1
+
+182        4188 LOAD_CONST              60 ('is_phone_posture')
+           4190 LOAD_FAST               44 (is_phone_posture)
+
+169        4192 MAP_ADD                  1
+
+183        4194 LOAD_CONST              61 ('body_twist')
+           4196 LOAD_FAST               45 (body_twist)
+
+169        4198 MAP_ADD                  1
+
+184        4200 LOAD_CONST              62 ('body_twist_dir')
+           4202 LOAD_FAST               46 (body_twist_dir)
+
+169        4204 MAP_ADD                  1
+
+185        4206 LOAD_CONST              63 ('arm_reach_side')
+           4208 LOAD_FAST               55 (arm_reach_side)
+
+169        4210 MAP_ADD                  1
+
+186        4212 LOAD_CONST              64 ('arm_reach_dist')
+           4214 LOAD_FAST               56 (arm_reach_dist)
+
+169        4216 MAP_ADD                  1
+
+187        4218 LOAD_CONST              65 ('lean_forward')
+           4220 LOAD_FAST               71 (lean_forward)
+
+169        4222 BUILD_MAP                1
+           4224 DICT_UPDATE              1
+           4226 PRECALL                  1
+           4230 CALL                     1
+           4240 POP_TOP
+           4242 EXTENDED_ARG             7
+           4244 JUMP_BACKWARD         2033 (to 180)
+
+189     >> 4246 LOAD_FAST                4 (faces)
+           4248 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x0000021658D22F10, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 145>:
+              0 COPY_FREE_VARS           2
+
+145           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                22 (to 54)
+             10 STORE_FAST               1 (j)
+             12 LOAD_DEREF               2 (confs)
+             14 LOAD_FAST                1 (j)
+             16 BINARY_SUBSCR
+             26 LOAD_CONST               0 (0.35)
+             28 COMPARE_OP               4 (>)
+             34 POP_JUMP_BACKWARD_IF_FALSE    14 (to 8)
+             36 LOAD_DEREF               3 (kpts)
+             38 LOAD_FAST                1 (j)
+             40 BINARY_SUBSCR
+             50 LIST_APPEND              2
+             52 JUMP_BACKWARD           23 (to 8)
+        >>   54 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x0000021658F32170, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 147>:
+147           0 RESUME                   0
+              2 BUILD_LIST               0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                10 (to 28)
+              8 STORE_FAST               1 (pt)
+             10 LOAD_FAST                1 (pt)
+             12 LOAD_CONST               0 (0)
+             14 BINARY_SUBSCR
+             24 LIST_APPEND              2
+             26 JUMP_BACKWARD           11 (to 6)
+        >>   28 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x0000021658F31FB0, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 148>:
+148           0 RESUME                   0
+              2 BUILD_LIST               0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                10 (to 28)
+              8 STORE_FAST               1 (pt)
+             10 LOAD_FAST                1 (pt)
+             12 LOAD_CONST               0 (1)
+             14 BINARY_SUBSCR
+             24 LIST_APPEND              2
+             26 JUMP_BACKWARD           11 (to 6)
+        >>   28 RETURN_VALUE
+
+Disassembly of <code object draw_face_contours at 0x0000021658CD5170, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 191>:
+191           0 RESUME                   0
+
+192           2 LOAD_CONST               0 (None)
+              4 RETURN_VALUE
+
+Disassembly of <code object release at 0x0000021658F32090, file "D:\Exam_cheating\Test_AI_Cheating\core\face_analyzer.py", line 194>:
+194           0 RESUME                   0
+
+195           2 LOAD_CONST               0 (None)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (model)
+
+196          16 LOAD_CONST               1 (False)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (available)
+             30 LOAD_CONST               0 (None)
+             32 RETURN_VALUE

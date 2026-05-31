@@ -1,0 +1,1308 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (time)
+              8 STORE_NAME               0 (time)
+
+  2          10 LOAD_CONST               0 (0)
+             12 LOAD_CONST               1 (None)
+             14 IMPORT_NAME              1 (math)
+             16 STORE_NAME               1 (math)
+
+  3          18 LOAD_CONST               0 (0)
+             20 LOAD_CONST               1 (None)
+             22 IMPORT_NAME              2 (numpy)
+             24 STORE_NAME               3 (np)
+
+  4          26 LOAD_CONST               0 (0)
+             28 LOAD_CONST               2 (('deque',))
+             30 IMPORT_NAME              4 (collections)
+             32 IMPORT_FROM              5 (deque)
+             34 STORE_NAME               5 (deque)
+             36 POP_TOP
+
+  6          38 PUSH_NULL
+             40 LOAD_BUILD_CLASS
+             42 LOAD_CONST               3 (<code object FaceTrack at 0x0000021658D09350, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 6>)
+             44 MAKE_FUNCTION            0
+             46 LOAD_CONST               4 ('FaceTrack')
+             48 PRECALL                  2
+             52 CALL                     2
+             62 STORE_NAME               6 (FaceTrack)
+
+ 33          64 PUSH_NULL
+             66 LOAD_BUILD_CLASS
+             68 LOAD_CONST               5 (<code object SeatTracker at 0x0000021658D49B80, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 33>)
+             70 MAKE_FUNCTION            0
+             72 LOAD_CONST               6 ('SeatTracker')
+             74 PRECALL                  2
+             78 CALL                     2
+             88 STORE_NAME               7 (SeatTracker)
+
+ 75          90 PUSH_NULL
+             92 LOAD_BUILD_CLASS
+             94 LOAD_CONST               7 (<code object SustainedTimer at 0x0000021658D16230, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 75>)
+             96 MAKE_FUNCTION            0
+             98 LOAD_CONST               8 ('SustainedTimer')
+            100 PRECALL                  2
+            104 CALL                     2
+            114 STORE_NAME               8 (SustainedTimer)
+
+112         116 PUSH_NULL
+            118 LOAD_BUILD_CLASS
+            120 LOAD_CONST               9 (<code object ViolationVoter at 0x0000021658D16CD0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 112>)
+            122 MAKE_FUNCTION            0
+            124 LOAD_CONST              10 ('ViolationVoter')
+            126 PRECALL                  2
+            130 CALL                     2
+            140 STORE_NAME               9 (ViolationVoter)
+
+137         142 PUSH_NULL
+            144 LOAD_BUILD_CLASS
+            146 LOAD_CONST              11 (<code object SignalVelocityTracker at 0x0000021658D17440, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 137>)
+            148 MAKE_FUNCTION            0
+            150 LOAD_CONST              12 ('SignalVelocityTracker')
+            152 PRECALL                  2
+            156 CALL                     2
+            166 STORE_NAME              10 (SignalVelocityTracker)
+            168 LOAD_CONST               1 (None)
+            170 RETURN_VALUE
+
+Disassembly of <code object FaceTrack at 0x0000021658D09350, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 6>:
+  6           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('FaceTrack')
+              8 STORE_NAME               2 (__qualname__)
+
+  8          10 LOAD_CONST              10 ((1.0,))
+             12 LOAD_CONST               2 ('centroid')
+             14 LOAD_NAME                3 (tuple)
+             16 LOAD_NAME                4 (float)
+             18 LOAD_NAME                4 (float)
+             20 BUILD_TUPLE              2
+             22 BINARY_SUBSCR
+             32 LOAD_CONST               3 ('face_width')
+             34 LOAD_NAME                4 (float)
+             36 LOAD_CONST               4 ('yaw_ratio')
+             38 LOAD_NAME                4 (float)
+             40 BUILD_TUPLE              6
+             42 LOAD_CONST               5 (<code object __init__ at 0x0000021658CE4BB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 8>)
+             44 MAKE_FUNCTION            5 (defaults, annotations)
+             46 STORE_NAME               5 (__init__)
+
+ 19          48 NOP
+
+ 18          50 LOAD_CONST              11 ((1.0, False))
+             52 LOAD_CONST               2 ('centroid')
+             54 LOAD_NAME                3 (tuple)
+             56 LOAD_NAME                4 (float)
+             58 LOAD_NAME                4 (float)
+             60 BUILD_TUPLE              2
+             62 BINARY_SUBSCR
+             72 LOAD_CONST               3 ('face_width')
+             74 LOAD_NAME                4 (float)
+             76 LOAD_CONST               4 ('yaw_ratio')
+
+ 19          78 LOAD_NAME                4 (float)
+
+ 18          80 LOAD_CONST               7 ('is_violating')
+
+ 19          82 LOAD_NAME                6 (bool)
+
+ 18          84 BUILD_TUPLE              8
+             86 LOAD_CONST               8 (<code object update at 0x0000021658A284F0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 18>)
+             88 MAKE_FUNCTION            5 (defaults, annotations)
+             90 STORE_NAME               7 (update)
+             92 LOAD_CONST               9 (None)
+             94 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658CE4BB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 8>:
+  8           0 RESUME                   0
+
+  9           2 LOAD_FAST                1 (centroid)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (centroid)
+
+ 10          16 LOAD_FAST                2 (face_width)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (face_width)
+
+ 11          30 LOAD_FAST                1 (centroid)
+             32 LOAD_CONST               1 (0)
+             34 BINARY_SUBSCR
+             44 LOAD_FAST                0 (self)
+             46 STORE_ATTR               2 (anchor_x)
+
+ 12          56 LOAD_FAST                1 (centroid)
+             58 LOAD_CONST               1 (0)
+             60 BINARY_SUBSCR
+             70 BUILD_LIST               1
+             72 LOAD_FAST                0 (self)
+             74 STORE_ATTR               3 (history_x)
+
+ 13          84 LOAD_FAST                3 (yaw_ratio)
+             86 LOAD_FAST                0 (self)
+             88 STORE_ATTR               4 (anchor_yaw)
+
+ 14          98 LOAD_FAST                3 (yaw_ratio)
+            100 BUILD_LIST               1
+            102 LOAD_FAST                0 (self)
+            104 STORE_ATTR               5 (history_yaw)
+
+ 15         114 LOAD_GLOBAL             13 (NULL + time)
+            126 LOAD_ATTR                6 (time)
+            136 PRECALL                  0
+            140 CALL                     0
+            150 LOAD_FAST                0 (self)
+            152 STORE_ATTR               7 (last_seen)
+
+ 16         162 LOAD_CONST               2 (1)
+            164 LOAD_FAST                0 (self)
+            166 STORE_ATTR               8 (frames_active)
+            176 LOAD_CONST               0 (None)
+            178 RETURN_VALUE
+
+Disassembly of <code object update at 0x0000021658A284F0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 18>:
+ 18           0 RESUME                   0
+
+ 20           2 LOAD_FAST                1 (centroid)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (centroid)
+
+ 21          16 LOAD_FAST                2 (face_width)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (face_width)
+
+ 22          30 LOAD_GLOBAL              5 (NULL + time)
+             42 LOAD_ATTR                2 (time)
+             52 PRECALL                  0
+             56 CALL                     0
+             66 LOAD_FAST                0 (self)
+             68 STORE_ATTR               3 (last_seen)
+
+ 23          78 LOAD_FAST                0 (self)
+             80 COPY                     1
+             82 LOAD_ATTR                4 (frames_active)
+             92 LOAD_CONST               1 (1)
+             94 BINARY_OP               13 (+=)
+             98 SWAP                     2
+            100 STORE_ATTR               4 (frames_active)
+
+ 24         110 LOAD_FAST                4 (is_violating)
+            112 POP_JUMP_FORWARD_IF_TRUE   196 (to 506)
+
+ 25         114 LOAD_FAST                0 (self)
+            116 LOAD_ATTR                5 (history_x)
+            126 LOAD_METHOD              6 (append)
+            148 LOAD_FAST                1 (centroid)
+            150 LOAD_CONST               2 (0)
+            152 BINARY_SUBSCR
+            162 PRECALL                  1
+            166 CALL                     1
+            176 POP_TOP
+
+ 26         178 LOAD_FAST                0 (self)
+            180 LOAD_ATTR                7 (history_yaw)
+            190 LOAD_METHOD              6 (append)
+            212 LOAD_FAST                3 (yaw_ratio)
+            214 PRECALL                  1
+            218 CALL                     1
+            228 POP_TOP
+
+ 27         230 LOAD_GLOBAL             17 (NULL + len)
+            242 LOAD_FAST                0 (self)
+            244 LOAD_ATTR                5 (history_x)
+            254 PRECALL                  1
+            258 CALL                     1
+            268 LOAD_CONST               3 (100)
+            270 COMPARE_OP               4 (>)
+            276 POP_JUMP_FORWARD_IF_FALSE    52 (to 382)
+
+ 28         278 LOAD_FAST                0 (self)
+            280 LOAD_ATTR                5 (history_x)
+            290 LOAD_METHOD              9 (pop)
+            312 LOAD_CONST               2 (0)
+            314 PRECALL                  1
+            318 CALL                     1
+            328 POP_TOP
+
+ 29         330 LOAD_FAST                0 (self)
+            332 LOAD_ATTR                7 (history_yaw)
+            342 LOAD_METHOD              9 (pop)
+            364 LOAD_CONST               2 (0)
+            366 PRECALL                  1
+            370 CALL                     1
+            380 POP_TOP
+
+ 30     >>  382 LOAD_GLOBAL             21 (NULL + np)
+            394 LOAD_ATTR               11 (median)
+            404 LOAD_FAST                0 (self)
+            406 LOAD_ATTR                5 (history_x)
+            416 PRECALL                  1
+            420 CALL                     1
+            430 LOAD_FAST                0 (self)
+            432 STORE_ATTR              12 (anchor_x)
+
+ 31         442 LOAD_GLOBAL             21 (NULL + np)
+            454 LOAD_ATTR               11 (median)
+            464 LOAD_FAST                0 (self)
+            466 LOAD_ATTR                7 (history_yaw)
+            476 PRECALL                  1
+            480 CALL                     1
+            490 LOAD_FAST                0 (self)
+            492 STORE_ATTR              13 (anchor_yaw)
+            502 LOAD_CONST               0 (None)
+            504 RETURN_VALUE
+
+ 24     >>  506 LOAD_CONST               0 (None)
+            508 RETURN_VALUE
+
+Disassembly of <code object SeatTracker at 0x0000021658D49B80, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 33>:
+ 33           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('SeatTracker')
+              8 STORE_NAME               2 (__qualname__)
+
+ 34          10 LOAD_CONST               1 (0.15)
+             12 STORE_NAME               3 (MATCH_THRESHOLD)
+
+ 35          14 LOAD_CONST               2 (2.0)
+             16 STORE_NAME               4 (EXPIRE_SECS)
+
+ 37          18 LOAD_CONST               3 (<code object __init__ at 0x0000021658F31FB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 37>)
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               5 (__init__)
+
+ 41          24 LOAD_CONST               4 ('faces')
+             26 LOAD_NAME                6 (list)
+             28 LOAD_NAME                7 (dict)
+             30 BINARY_SUBSCR
+             40 LOAD_CONST               5 ('return')
+             42 LOAD_NAME                6 (list)
+             44 LOAD_NAME                8 (tuple)
+             46 LOAD_NAME                9 (int)
+             48 LOAD_NAME                7 (dict)
+             50 BUILD_TUPLE              2
+             52 BINARY_SUBSCR
+             62 BINARY_SUBSCR
+             72 BUILD_TUPLE              4
+             74 LOAD_CONST               6 (<code object match_faces at 0x0000021659163AB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 41>)
+             76 MAKE_FUNCTION            4 (annotations)
+             78 STORE_NAME              10 (match_faces)
+
+ 68          80 LOAD_CONST               7 ('tid')
+             82 LOAD_NAME                9 (int)
+             84 LOAD_CONST               5 ('return')
+             86 LOAD_NAME               11 (FaceTrack)
+             88 LOAD_CONST               8 (None)
+             90 BINARY_OP                7 (|)
+             94 BUILD_TUPLE              4
+             96 LOAD_CONST               9 (<code object get_track at 0x0000021658D21E30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 68>)
+             98 MAKE_FUNCTION            4 (annotations)
+            100 STORE_NAME              12 (get_track)
+
+ 71         102 LOAD_CONST              10 (<code object reset at 0x0000021658CD2D30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 71>)
+            104 MAKE_FUNCTION            0
+            106 STORE_NAME              13 (reset)
+            108 LOAD_CONST               8 (None)
+            110 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658F31FB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 37>:
+ 37           0 RESUME                   0
+
+ 38           2 BUILD_MAP                0
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (tracks)
+
+ 39          16 LOAD_CONST               1 (0)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (next_id)
+             30 LOAD_CONST               0 (None)
+             32 RETURN_VALUE
+
+Disassembly of <code object match_faces at 0x0000021659163AB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 41>:
+              0 MAKE_CELL                0 (self)
+              2 MAKE_CELL                8 (now)
+
+ 41           4 RESUME                   0
+
+ 42           6 LOAD_GLOBAL              1 (NULL + time)
+             18 LOAD_ATTR                0 (time)
+             28 PRECALL                  0
+             32 CALL                     0
+             42 STORE_DEREF              8 (now)
+
+ 43          44 LOAD_CLOSURE             8 (now)
+             46 LOAD_CLOSURE             0 (self)
+             48 BUILD_TUPLE              2
+             50 LOAD_CONST               1 (<code object <dictcomp> at 0x0000021658CD1A30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 43>)
+             52 MAKE_FUNCTION            8 (closure)
+
+ 44          54 LOAD_DEREF               0 (self)
+             56 LOAD_ATTR                1 (tracks)
+             66 LOAD_METHOD              2 (items)
+             88 PRECALL                  0
+             92 CALL                     0
+
+ 43         102 GET_ITER
+            104 PRECALL                  0
+            108 CALL                     0
+            118 LOAD_DEREF               0 (self)
+            120 STORE_ATTR               1 (tracks)
+
+ 47         130 BUILD_LIST               0
+            132 STORE_FAST               2 (matched)
+
+ 48         134 LOAD_FAST                1 (faces)
+            136 GET_ITER
+        >>  138 FOR_ITER               250 (to 640)
+            140 STORE_FAST               3 (face)
+
+ 49         142 LOAD_FAST                3 (face)
+            144 LOAD_CONST               2 ('centroid')
+            146 BINARY_SUBSCR
+            156 UNPACK_SEQUENCE          2
+            160 STORE_FAST               4 (cx)
+            162 STORE_FAST               5 (cy)
+
+ 50         164 LOAD_FAST                3 (face)
+            166 LOAD_METHOD              3 (get)
+            188 LOAD_CONST               3 ('track_id')
+            190 LOAD_CONST               4 (-1)
+            192 PRECALL                  2
+            196 CALL                     2
+            206 STORE_FAST               6 (tid)
+
+ 51         208 LOAD_FAST                6 (tid)
+            210 LOAD_CONST               4 (-1)
+            212 COMPARE_OP               3 (!=)
+            218 POP_JUMP_FORWARD_IF_FALSE   110 (to 440)
+
+ 52         220 LOAD_FAST                6 (tid)
+            222 LOAD_DEREF               0 (self)
+            224 LOAD_ATTR                1 (tracks)
+            234 CONTAINS_OP              0
+            236 POP_JUMP_FORWARD_IF_FALSE    24 (to 286)
+
+ 53         238 LOAD_FAST                2 (matched)
+            240 LOAD_METHOD              4 (append)
+            262 LOAD_FAST                6 (tid)
+            264 LOAD_FAST                3 (face)
+            266 BUILD_TUPLE              2
+            268 PRECALL                  1
+            272 CALL                     1
+            282 POP_TOP
+            284 JUMP_BACKWARD           74 (to 138)
+
+ 55     >>  286 LOAD_GLOBAL             11 (NULL + FaceTrack)
+
+ 56         298 LOAD_FAST                4 (cx)
+            300 LOAD_FAST                5 (cy)
+            302 BUILD_TUPLE              2
+            304 LOAD_FAST                3 (face)
+            306 LOAD_CONST               5 ('face_width')
+            308 BINARY_SUBSCR
+            318 LOAD_FAST                3 (face)
+            320 LOAD_METHOD              3 (get)
+            342 LOAD_CONST               6 ('yaw_ratio')
+            344 LOAD_CONST               7 (1.0)
+            346 PRECALL                  2
+            350 CALL                     2
+
+ 55         360 PRECALL                  3
+            364 CALL                     3
+            374 LOAD_DEREF               0 (self)
+            376 LOAD_ATTR                1 (tracks)
+            386 LOAD_FAST                6 (tid)
+            388 STORE_SUBSCR
+
+ 58         392 LOAD_FAST                2 (matched)
+            394 LOAD_METHOD              4 (append)
+            416 LOAD_FAST                6 (tid)
+            418 LOAD_FAST                3 (face)
+            420 BUILD_TUPLE              2
+            422 PRECALL                  1
+            426 CALL                     1
+            436 POP_TOP
+            438 JUMP_BACKWARD          151 (to 138)
+
+ 60     >>  440 LOAD_DEREF               0 (self)
+            442 LOAD_ATTR                6 (next_id)
+            452 STORE_FAST               7 (new_id)
+
+ 61         454 LOAD_DEREF               0 (self)
+            456 COPY                     1
+            458 LOAD_ATTR                6 (next_id)
+            468 LOAD_CONST               8 (1)
+            470 BINARY_OP               13 (+=)
+            474 SWAP                     2
+            476 STORE_ATTR               6 (next_id)
+
+ 62         486 LOAD_GLOBAL             11 (NULL + FaceTrack)
+
+ 63         498 LOAD_FAST                4 (cx)
+            500 LOAD_FAST                5 (cy)
+            502 BUILD_TUPLE              2
+            504 LOAD_FAST                3 (face)
+            506 LOAD_CONST               5 ('face_width')
+            508 BINARY_SUBSCR
+            518 LOAD_FAST                3 (face)
+            520 LOAD_METHOD              3 (get)
+            542 LOAD_CONST               6 ('yaw_ratio')
+            544 LOAD_CONST               7 (1.0)
+            546 PRECALL                  2
+            550 CALL                     2
+
+ 62         560 PRECALL                  3
+            564 CALL                     3
+            574 LOAD_DEREF               0 (self)
+            576 LOAD_ATTR                1 (tracks)
+            586 LOAD_FAST                7 (new_id)
+            588 STORE_SUBSCR
+
+ 65         592 LOAD_FAST                2 (matched)
+            594 LOAD_METHOD              4 (append)
+            616 LOAD_FAST                7 (new_id)
+            618 LOAD_FAST                3 (face)
+            620 BUILD_TUPLE              2
+            622 PRECALL                  1
+            626 CALL                     1
+            636 POP_TOP
+            638 JUMP_BACKWARD          251 (to 138)
+
+ 66     >>  640 LOAD_FAST                2 (matched)
+            642 RETURN_VALUE
+
+Disassembly of <code object <dictcomp> at 0x0000021658CD1A30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 43>:
+              0 COPY_FREE_VARS           2
+
+ 43           2 RESUME                   0
+              4 BUILD_MAP                0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                27 (to 64)
+
+ 44          10 UNPACK_SEQUENCE          2
+             14 STORE_FAST               1 (tid)
+             16 STORE_FAST               2 (t)
+
+ 45          18 LOAD_DEREF               3 (now)
+             20 LOAD_FAST                2 (t)
+             22 LOAD_ATTR                0 (last_seen)
+             32 BINARY_OP               10 (-)
+             36 LOAD_DEREF               4 (self)
+             38 LOAD_ATTR                1 (EXPIRE_SECS)
+             48 COMPARE_OP               0 (<)
+             54 POP_JUMP_BACKWARD_IF_FALSE    24 (to 8)
+
+ 44          56 LOAD_FAST                1 (tid)
+             58 LOAD_FAST                2 (t)
+
+ 45          60 MAP_ADD                  2
+             62 JUMP_BACKWARD           28 (to 8)
+        >>   64 RETURN_VALUE
+
+Disassembly of <code object get_track at 0x0000021658D21E30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 68>:
+ 68           0 RESUME                   0
+
+ 69           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (tracks)
+             14 LOAD_METHOD              1 (get)
+             36 LOAD_FAST                1 (tid)
+             38 PRECALL                  1
+             42 CALL                     1
+             52 RETURN_VALUE
+
+Disassembly of <code object reset at 0x0000021658CD2D30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 71>:
+ 71           0 RESUME                   0
+
+ 72           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (tracks)
+             14 LOAD_METHOD              1 (clear)
+             36 PRECALL                  0
+             40 CALL                     0
+             50 POP_TOP
+
+ 73          52 LOAD_CONST               1 (0)
+             54 LOAD_FAST                0 (self)
+             56 STORE_ATTR               2 (next_id)
+             66 LOAD_CONST               0 (None)
+             68 RETURN_VALUE
+
+Disassembly of <code object SustainedTimer at 0x0000021658D16230, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 75>:
+ 75           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('SustainedTimer')
+              8 STORE_NAME               2 (__qualname__)
+
+ 77          10 LOAD_CONST              14 ((1.0, 0.6))
+             12 LOAD_CONST               3 ('threshold_secs')
+             14 LOAD_NAME                3 (float)
+             16 LOAD_CONST               4 ('grace_secs')
+             18 LOAD_NAME                3 (float)
+             20 BUILD_TUPLE              4
+             22 LOAD_CONST               5 (<code object __init__ at 0x0000021658CD2630, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 77>)
+             24 MAKE_FUNCTION            5 (defaults, annotations)
+             26 STORE_NAME               4 (__init__)
+
+ 83          28 LOAD_CONST               6 ('key')
+             30 LOAD_NAME                5 (str)
+             32 LOAD_CONST               7 ('is_active')
+             34 LOAD_NAME                6 (bool)
+             36 LOAD_CONST               8 ('return')
+             38 LOAD_NAME                6 (bool)
+             40 BUILD_TUPLE              6
+             42 LOAD_CONST               9 (<code object check at 0x000002165917E860, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 83>)
+             44 MAKE_FUNCTION            4 (annotations)
+             46 STORE_NAME               7 (check)
+
+ 99          48 LOAD_CONST               6 ('key')
+             50 LOAD_NAME                5 (str)
+             52 BUILD_TUPLE              2
+             54 LOAD_CONST              10 (<code object reset at 0x0000021658D48E70, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 99>)
+             56 MAKE_FUNCTION            4 (annotations)
+             58 STORE_NAME               8 (reset)
+
+103          60 LOAD_CONST               6 ('key')
+             62 LOAD_NAME                5 (str)
+             64 LOAD_CONST               8 ('return')
+             66 LOAD_NAME                3 (float)
+             68 BUILD_TUPLE              4
+             70 LOAD_CONST              11 (<code object elapsed at 0x0000021658D098F0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 103>)
+             72 MAKE_FUNCTION            4 (annotations)
+             74 STORE_NAME               9 (elapsed)
+
+108          76 LOAD_CONST              12 (<code object reset_all at 0x0000021658D48D40, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 108>)
+             78 MAKE_FUNCTION            0
+             80 STORE_NAME              10 (reset_all)
+             82 LOAD_CONST              13 (None)
+             84 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658CD2630, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 77>:
+ 77           0 RESUME                   0
+
+ 78           2 LOAD_FAST                1 (threshold_secs)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (threshold)
+
+ 79          16 LOAD_FAST                2 (grace_secs)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (grace)
+
+ 80          30 BUILD_MAP                0
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               2 (_timers)
+
+ 81          44 BUILD_MAP                0
+             46 LOAD_FAST                0 (self)
+             48 STORE_ATTR               3 (_last_active)
+             58 LOAD_CONST               0 (None)
+             60 RETURN_VALUE
+
+Disassembly of <code object check at 0x000002165917E860, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 83>:
+ 83           0 RESUME                   0
+
+ 84           2 LOAD_GLOBAL              1 (NULL + time)
+             14 LOAD_ATTR                0 (time)
+             24 PRECALL                  0
+             28 CALL                     0
+             38 STORE_FAST               3 (now)
+
+ 85          40 LOAD_FAST                2 (is_active)
+             42 POP_JUMP_FORWARD_IF_FALSE    54 (to 152)
+
+ 86          44 LOAD_FAST                3 (now)
+             46 LOAD_FAST                0 (self)
+             48 LOAD_ATTR                1 (_last_active)
+             58 LOAD_FAST                1 (key)
+             60 STORE_SUBSCR
+
+ 87          64 LOAD_FAST                1 (key)
+             66 LOAD_FAST                0 (self)
+             68 LOAD_ATTR                2 (_timers)
+             78 CONTAINS_OP              1
+             80 POP_JUMP_FORWARD_IF_FALSE    10 (to 102)
+
+ 88          82 LOAD_FAST                3 (now)
+             84 LOAD_FAST                0 (self)
+             86 LOAD_ATTR                2 (_timers)
+             96 LOAD_FAST                1 (key)
+             98 STORE_SUBSCR
+
+ 89     >>  102 LOAD_FAST                3 (now)
+            104 LOAD_FAST                0 (self)
+            106 LOAD_ATTR                2 (_timers)
+            116 LOAD_FAST                1 (key)
+            118 BINARY_SUBSCR
+            128 BINARY_OP               10 (-)
+            132 LOAD_FAST                0 (self)
+            134 LOAD_ATTR                3 (threshold)
+            144 COMPARE_OP               5 (>=)
+            150 RETURN_VALUE
+
+ 91     >>  152 LOAD_FAST                0 (self)
+            154 LOAD_ATTR                1 (_last_active)
+            164 LOAD_METHOD              4 (get)
+            186 LOAD_FAST                1 (key)
+            188 LOAD_CONST               1 (0.0)
+            190 PRECALL                  2
+            194 CALL                     2
+            204 STORE_FAST               4 (last)
+
+ 92         206 LOAD_FAST                3 (now)
+            208 LOAD_FAST                4 (last)
+            210 BINARY_OP               10 (-)
+            214 LOAD_FAST                0 (self)
+            216 LOAD_ATTR                5 (grace)
+            226 COMPARE_OP               0 (<)
+            232 POP_JUMP_FORWARD_IF_FALSE    34 (to 302)
+
+ 93         234 LOAD_FAST                1 (key)
+            236 LOAD_FAST                0 (self)
+            238 LOAD_ATTR                2 (_timers)
+            248 CONTAINS_OP              0
+            250 JUMP_IF_FALSE_OR_POP    24 (to 300)
+            252 LOAD_FAST                3 (now)
+            254 LOAD_FAST                0 (self)
+            256 LOAD_ATTR                2 (_timers)
+            266 LOAD_FAST                1 (key)
+            268 BINARY_SUBSCR
+            278 BINARY_OP               10 (-)
+            282 LOAD_FAST                0 (self)
+            284 LOAD_ATTR                3 (threshold)
+            294 COMPARE_OP               5 (>=)
+        >>  300 RETURN_VALUE
+
+ 95     >>  302 LOAD_FAST                0 (self)
+            304 LOAD_ATTR                2 (_timers)
+            314 LOAD_METHOD              6 (pop)
+            336 LOAD_FAST                1 (key)
+            338 LOAD_CONST               0 (None)
+            340 PRECALL                  2
+            344 CALL                     2
+            354 POP_TOP
+
+ 96         356 LOAD_FAST                0 (self)
+            358 LOAD_ATTR                1 (_last_active)
+            368 LOAD_METHOD              6 (pop)
+            390 LOAD_FAST                1 (key)
+            392 LOAD_CONST               0 (None)
+            394 PRECALL                  2
+            398 CALL                     2
+            408 POP_TOP
+
+ 97         410 LOAD_CONST               2 (False)
+            412 RETURN_VALUE
+
+Disassembly of <code object reset at 0x0000021658D48E70, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 99>:
+ 99           0 RESUME                   0
+
+100           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_timers)
+             14 LOAD_METHOD              1 (pop)
+             36 LOAD_FAST                1 (key)
+             38 LOAD_CONST               0 (None)
+             40 PRECALL                  2
+             44 CALL                     2
+             54 POP_TOP
+
+101          56 LOAD_FAST                0 (self)
+             58 LOAD_ATTR                2 (_last_active)
+             68 LOAD_METHOD              1 (pop)
+             90 LOAD_FAST                1 (key)
+             92 LOAD_CONST               0 (None)
+             94 PRECALL                  2
+             98 CALL                     2
+            108 POP_TOP
+            110 LOAD_CONST               0 (None)
+            112 RETURN_VALUE
+
+Disassembly of <code object elapsed at 0x0000021658D098F0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 103>:
+103           0 RESUME                   0
+
+104           2 LOAD_FAST                1 (key)
+              4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (_timers)
+             16 CONTAINS_OP              0
+             18 POP_JUMP_FORWARD_IF_FALSE    33 (to 86)
+
+105          20 LOAD_GLOBAL              3 (NULL + time)
+             32 LOAD_ATTR                1 (time)
+             42 PRECALL                  0
+             46 CALL                     0
+             56 LOAD_FAST                0 (self)
+             58 LOAD_ATTR                0 (_timers)
+             68 LOAD_FAST                1 (key)
+             70 BINARY_SUBSCR
+             80 BINARY_OP               10 (-)
+             84 RETURN_VALUE
+
+106     >>   86 LOAD_CONST               1 (0.0)
+             88 RETURN_VALUE
+
+Disassembly of <code object reset_all at 0x0000021658D48D40, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 108>:
+108           0 RESUME                   0
+
+109           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_timers)
+             14 LOAD_METHOD              1 (clear)
+             36 PRECALL                  0
+             40 CALL                     0
+             50 POP_TOP
+
+110          52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                2 (_last_active)
+             64 LOAD_METHOD              1 (clear)
+             86 PRECALL                  0
+             90 CALL                     0
+            100 POP_TOP
+            102 LOAD_CONST               0 (None)
+            104 RETURN_VALUE
+
+Disassembly of <code object ViolationVoter at 0x0000021658D16CD0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 112>:
+112           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('ViolationVoter')
+              8 STORE_NAME               2 (__qualname__)
+
+114          10 NOP
+
+115          12 NOP
+
+114          14 LOAD_CONST              15 ((15, 0.55, 5))
+             16 LOAD_CONST               4 ('window')
+             18 LOAD_NAME                3 (int)
+             20 LOAD_CONST               5 ('vote_thresh')
+             22 LOAD_NAME                4 (float)
+             24 LOAD_CONST               6 ('min_frames')
+
+115          26 LOAD_NAME                3 (int)
+
+114          28 BUILD_TUPLE              6
+             30 LOAD_CONST               7 (<code object __init__ at 0x0000021658F78B30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 114>)
+             32 MAKE_FUNCTION            5 (defaults, annotations)
+             34 STORE_NAME               5 (__init__)
+
+121          36 LOAD_CONST               8 ('key')
+             38 LOAD_NAME                6 (str)
+             40 LOAD_CONST               9 ('is_bad')
+             42 LOAD_NAME                7 (bool)
+             44 LOAD_CONST              10 ('return')
+             46 LOAD_NAME                7 (bool)
+             48 BUILD_TUPLE              6
+             50 LOAD_CONST              11 (<code object vote at 0x0000021658F58BD0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 121>)
+             52 MAKE_FUNCTION            4 (annotations)
+             54 STORE_NAME               8 (vote)
+
+130          56 LOAD_CONST               8 ('key')
+             58 LOAD_NAME                6 (str)
+             60 BUILD_TUPLE              2
+             62 LOAD_CONST              12 (<code object reset at 0x0000021658D225B0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 130>)
+             64 MAKE_FUNCTION            4 (annotations)
+             66 STORE_NAME               9 (reset)
+
+134          68 LOAD_CONST              13 (<code object reset_all at 0x0000021658D22F10, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 134>)
+             70 MAKE_FUNCTION            0
+             72 STORE_NAME              10 (reset_all)
+             74 LOAD_CONST              14 (None)
+             76 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658F78B30, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 114>:
+114           0 RESUME                   0
+
+116           2 LOAD_FAST                1 (window)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (_window)
+
+117          16 LOAD_FAST                2 (vote_thresh)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (_thresh)
+
+118          30 LOAD_FAST                3 (min_frames)
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               2 (_min_frames)
+
+119          44 BUILD_MAP                0
+             46 LOAD_FAST                0 (self)
+             48 STORE_ATTR               3 (_buffers)
+             58 LOAD_CONST               0 (None)
+             60 RETURN_VALUE
+
+Disassembly of <code object vote at 0x0000021658F58BD0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 121>:
+121           0 RESUME                   0
+
+122           2 LOAD_FAST                1 (key)
+              4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (_buffers)
+             16 CONTAINS_OP              1
+             18 POP_JUMP_FORWARD_IF_FALSE    29 (to 78)
+
+123          20 LOAD_GLOBAL              3 (NULL + deque)
+             32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                2 (_window)
+             44 KW_NAMES                 1
+             46 PRECALL                  1
+             50 CALL                     1
+             60 LOAD_FAST                0 (self)
+             62 LOAD_ATTR                0 (_buffers)
+             72 LOAD_FAST                1 (key)
+             74 STORE_SUBSCR
+
+124     >>   78 LOAD_FAST                0 (self)
+             80 LOAD_ATTR                0 (_buffers)
+             90 LOAD_FAST                1 (key)
+             92 BINARY_SUBSCR
+            102 LOAD_METHOD              3 (append)
+            124 LOAD_FAST                2 (is_bad)
+            126 PRECALL                  1
+            130 CALL                     1
+            140 POP_TOP
+
+125         142 LOAD_FAST                0 (self)
+            144 LOAD_ATTR                0 (_buffers)
+            154 LOAD_FAST                1 (key)
+            156 BINARY_SUBSCR
+            166 STORE_FAST               3 (buf)
+
+126         168 LOAD_GLOBAL              9 (NULL + len)
+            180 LOAD_FAST                3 (buf)
+            182 PRECALL                  1
+            186 CALL                     1
+            196 LOAD_FAST                0 (self)
+            198 LOAD_ATTR                5 (_min_frames)
+            208 COMPARE_OP               0 (<)
+            214 POP_JUMP_FORWARD_IF_FALSE     2 (to 220)
+
+127         216 LOAD_CONST               2 (False)
+            218 RETURN_VALUE
+
+128     >>  220 LOAD_GLOBAL             13 (NULL + sum)
+            232 LOAD_FAST                3 (buf)
+            234 PRECALL                  1
+            238 CALL                     1
+            248 LOAD_GLOBAL              9 (NULL + len)
+            260 LOAD_FAST                3 (buf)
+            262 PRECALL                  1
+            266 CALL                     1
+            276 BINARY_OP               11 (/)
+            280 LOAD_FAST                0 (self)
+            282 LOAD_ATTR                7 (_thresh)
+            292 COMPARE_OP               5 (>=)
+            298 RETURN_VALUE
+
+Disassembly of <code object reset at 0x0000021658D225B0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 130>:
+130           0 RESUME                   0
+
+131           2 LOAD_FAST                1 (key)
+              4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (_buffers)
+             16 CONTAINS_OP              0
+             18 POP_JUMP_FORWARD_IF_FALSE    10 (to 40)
+
+132          20 LOAD_FAST                0 (self)
+             22 LOAD_ATTR                0 (_buffers)
+             32 LOAD_FAST                1 (key)
+             34 DELETE_SUBSCR
+             36 LOAD_CONST               0 (None)
+             38 RETURN_VALUE
+
+131     >>   40 LOAD_CONST               0 (None)
+             42 RETURN_VALUE
+
+Disassembly of <code object reset_all at 0x0000021658D22F10, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 134>:
+134           0 RESUME                   0
+
+135           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_buffers)
+             14 LOAD_METHOD              1 (clear)
+             36 PRECALL                  0
+             40 CALL                     0
+             50 POP_TOP
+             52 LOAD_CONST               0 (None)
+             54 RETURN_VALUE
+
+Disassembly of <code object SignalVelocityTracker at 0x0000021658D17440, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 137>:
+137           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('SignalVelocityTracker')
+              8 STORE_NAME               2 (__qualname__)
+
+138          10 LOAD_CONST               1 (0.35)
+             12 STORE_NAME               3 (YAW_VEL_THRESH)
+
+139          14 LOAD_CONST               2 (10.0)
+             16 STORE_NAME               4 (ROLL_VEL_THRESH)
+
+140          18 LOAD_CONST               3 (8.0)
+             20 STORE_NAME               5 (TWIST_VEL_THRESH)
+
+141          22 LOAD_CONST               4 (0.12)
+             24 STORE_NAME               6 (ARM_VEL_THRESH)
+
+142          26 LOAD_CONST               5 (25)
+             28 STORE_NAME               7 (OSC_WINDOW)
+
+143          30 LOAD_CONST               6 (5)
+             32 STORE_NAME               8 (OSC_DIR_CHANGES)
+
+145          34 LOAD_CONST               7 (<code object __init__ at 0x0000021658F31530, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 145>)
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               9 (__init__)
+
+149          40 LOAD_CONST               8 ('tid')
+             42 LOAD_NAME               10 (int)
+             44 LOAD_CONST               9 ('face_data')
+             46 LOAD_NAME               11 (dict)
+             48 LOAD_CONST              10 ('return')
+             50 LOAD_NAME               11 (dict)
+             52 BUILD_TUPLE              6
+             54 LOAD_CONST              11 (<code object update at 0x00000216591BA310, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 149>)
+             56 MAKE_FUNCTION            4 (annotations)
+             58 STORE_NAME              12 (update)
+
+201          60 LOAD_CONST               8 ('tid')
+             62 LOAD_NAME               10 (int)
+             64 BUILD_TUPLE              2
+             66 LOAD_CONST              12 (<code object remove at 0x0000021658D48C10, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 201>)
+             68 MAKE_FUNCTION            4 (annotations)
+             70 STORE_NAME              13 (remove)
+
+205          72 LOAD_CONST              13 (<code object reset at 0x0000021658D49CB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 205>)
+             74 MAKE_FUNCTION            0
+             76 STORE_NAME              14 (reset)
+             78 LOAD_CONST              14 (None)
+             80 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x0000021658F31530, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 145>:
+145           0 RESUME                   0
+
+146           2 BUILD_MAP                0
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (_prev_signals)
+
+147          16 BUILD_MAP                0
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (_yaw_dir_history)
+             30 LOAD_CONST               0 (None)
+             32 RETURN_VALUE
+
+Disassembly of <code object update at 0x00000216591BA310, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 149>:
+149           0 RESUME                   0
+
+150           2 LOAD_FAST                2 (face_data)
+              4 LOAD_METHOD              0 (get)
+             26 LOAD_CONST               1 ('yaw_ratio')
+             28 LOAD_CONST               2 (1.0)
+             30 PRECALL                  2
+             34 CALL                     2
+             44 STORE_FAST               3 (cur_yaw)
+
+151          46 LOAD_GLOBAL              3 (NULL + abs)
+             58 LOAD_FAST                2 (face_data)
+             60 LOAD_METHOD              0 (get)
+             82 LOAD_CONST               3 ('roll_angle')
+             84 LOAD_CONST               4 (0.0)
+             86 PRECALL                  2
+             90 CALL                     2
+            100 PRECALL                  1
+            104 CALL                     1
+            114 STORE_FAST               4 (cur_roll)
+
+152         116 LOAD_GLOBAL              3 (NULL + abs)
+            128 LOAD_FAST                2 (face_data)
+            130 LOAD_METHOD              0 (get)
+            152 LOAD_CONST               5 ('body_twist')
+            154 LOAD_CONST               4 (0.0)
+            156 PRECALL                  2
+            160 CALL                     2
+            170 PRECALL                  1
+            174 CALL                     1
+            184 STORE_FAST               5 (cur_twist)
+
+153         186 LOAD_FAST                2 (face_data)
+            188 LOAD_METHOD              0 (get)
+            210 LOAD_CONST               6 ('arm_reach_dist')
+            212 LOAD_CONST               4 (0.0)
+            214 PRECALL                  2
+            218 CALL                     2
+            228 STORE_FAST               6 (cur_arm)
+
+154         230 LOAD_FAST                2 (face_data)
+            232 LOAD_METHOD              0 (get)
+            254 LOAD_CONST               7 ('yaw_dir')
+            256 LOAD_CONST               8 ('Thang')
+            258 PRECALL                  2
+            262 CALL                     2
+            272 STORE_FAST               7 (cur_yaw_dir)
+
+155         274 LOAD_FAST                2 (face_data)
+            276 LOAD_METHOD              0 (get)
+            298 LOAD_CONST               9 ('pitch_down')
+            300 LOAD_CONST              10 (False)
+            302 PRECALL                  2
+            306 CALL                     2
+            316 STORE_FAST               8 (pitch_down)
+
+157         318 LOAD_CONST              10 (False)
+
+158         320 LOAD_CONST              10 (False)
+
+159         322 LOAD_CONST              10 (False)
+
+160         324 LOAD_CONST              10 (False)
+
+161         326 LOAD_CONST              10 (False)
+
+162         328 LOAD_CONST              10 (False)
+
+156         330 LOAD_CONST              11 (('rapid_yaw', 'rapid_roll', 'rapid_twist', 'rapid_arm', 'oscillating', 'velocity_bad'))
+            332 BUILD_CONST_KEY_MAP      6
+            334 STORE_FAST               9 (result)
+
+164         336 LOAD_FAST                1 (tid)
+            338 LOAD_FAST                0 (self)
+            340 LOAD_ATTR                2 (_prev_signals)
+            350 CONTAINS_OP              1
+            352 POP_JUMP_FORWARD_IF_FALSE    46 (to 446)
+
+166         354 LOAD_FAST                3 (cur_yaw)
+            356 LOAD_FAST                4 (cur_roll)
+
+167         358 LOAD_FAST                5 (cur_twist)
+            360 LOAD_FAST                6 (cur_arm)
+
+165         362 LOAD_CONST              12 (('yaw', 'roll', 'twist', 'arm'))
+            364 BUILD_CONST_KEY_MAP      4
+            366 LOAD_FAST                0 (self)
+            368 LOAD_ATTR                2 (_prev_signals)
+            378 LOAD_FAST                1 (tid)
+            380 STORE_SUBSCR
+
+169         384 LOAD_GLOBAL              7 (NULL + deque)
+            396 LOAD_FAST                0 (self)
+            398 LOAD_ATTR                4 (OSC_WINDOW)
+            408 KW_NAMES                13
+            410 PRECALL                  1
+            414 CALL                     1
+            424 LOAD_FAST                0 (self)
+            426 LOAD_ATTR                5 (_yaw_dir_history)
+            436 LOAD_FAST                1 (tid)
+            438 STORE_SUBSCR
+
+170         442 LOAD_FAST                9 (result)
+            444 RETURN_VALUE
+
+171     >>  446 LOAD_FAST                0 (self)
+            448 LOAD_ATTR                2 (_prev_signals)
+            458 LOAD_FAST                1 (tid)
+            460 BINARY_SUBSCR
+            470 STORE_FAST              10 (prev)
+
+172         472 LOAD_GLOBAL              3 (NULL + abs)
+            484 LOAD_FAST                3 (cur_yaw)
+            486 LOAD_FAST               10 (prev)
+            488 LOAD_CONST              14 ('yaw')
+            490 BINARY_SUBSCR
+            500 BINARY_OP               10 (-)
+            504 PRECALL                  1
+            508 CALL                     1
+            518 STORE_FAST              11 (d_yaw)
+
+173         520 LOAD_GLOBAL              3 (NULL + abs)
+            532 LOAD_FAST                4 (cur_roll)
+            534 LOAD_FAST               10 (prev)
+            536 LOAD_CONST              15 ('roll')
+            538 BINARY_SUBSCR
+            548 BINARY_OP               10 (-)
+            552 PRECALL                  1
+            556 CALL                     1
+            566 STORE_FAST              12 (d_roll)
+
+174         568 LOAD_GLOBAL              3 (NULL + abs)
+            580 LOAD_FAST                5 (cur_twist)
+            582 LOAD_FAST               10 (prev)
+            584 LOAD_CONST              16 ('twist')
+            586 BINARY_SUBSCR
+            596 BINARY_OP               10 (-)
+            600 PRECALL                  1
+            604 CALL                     1
+            614 STORE_FAST              13 (d_twist)
+
+175         616 LOAD_GLOBAL              3 (NULL + abs)
+            628 LOAD_FAST                6 (cur_arm)
+            630 LOAD_FAST               10 (prev)
+            632 LOAD_CONST              17 ('arm')
+            634 BINARY_SUBSCR
+            644 BINARY_OP               10 (-)
+            648 PRECALL                  1
+            652 CALL                     1
+            662 STORE_FAST              14 (d_arm)
+
+176         664 LOAD_FAST                8 (pitch_down)
+            666 POP_JUMP_FORWARD_IF_TRUE    28 (to 724)
+
+177         668 LOAD_FAST               11 (d_yaw)
+            670 LOAD_FAST                0 (self)
+            672 LOAD_ATTR                6 (YAW_VEL_THRESH)
+            682 COMPARE_OP               4 (>)
+            688 LOAD_FAST                9 (result)
+            690 LOAD_CONST              18 ('rapid_yaw')
+            692 STORE_SUBSCR
+
+178         696 LOAD_FAST               12 (d_roll)
+            698 LOAD_FAST                0 (self)
+            700 LOAD_ATTR                7 (ROLL_VEL_THRESH)
+            710 COMPARE_OP               4 (>)
+            716 LOAD_FAST                9 (result)
+            718 LOAD_CONST              19 ('rapid_roll')
+            720 STORE_SUBSCR
+
+179     >>  724 LOAD_FAST               13 (d_twist)
+            726 LOAD_FAST                0 (self)
+            728 LOAD_ATTR                8 (TWIST_VEL_THRESH)
+            738 COMPARE_OP               4 (>)
+            744 LOAD_FAST                9 (result)
+            746 LOAD_CONST              20 ('rapid_twist')
+            748 STORE_SUBSCR
+
+180         752 LOAD_FAST               14 (d_arm)
+            754 LOAD_FAST                0 (self)
+            756 LOAD_ATTR                9 (ARM_VEL_THRESH)
+            766 COMPARE_OP               4 (>)
+            772 LOAD_FAST                9 (result)
+            774 LOAD_CONST              21 ('rapid_arm')
+            776 STORE_SUBSCR
+
+181         780 LOAD_FAST                0 (self)
+            782 LOAD_ATTR                5 (_yaw_dir_history)
+            792 LOAD_FAST                1 (tid)
+            794 BINARY_SUBSCR
+            804 STORE_FAST              15 (hist)
+
+182         806 LOAD_FAST                8 (pitch_down)
+            808 POP_JUMP_FORWARD_IF_TRUE    22 (to 854)
+
+183         810 LOAD_FAST               15 (hist)
+            812 LOAD_METHOD             10 (append)
+            834 LOAD_FAST                7 (cur_yaw_dir)
+            836 PRECALL                  1
+            840 CALL                     1
+            850 POP_TOP
+            852 JUMP_FORWARD            21 (to 896)
+
+185     >>  854 LOAD_FAST               15 (hist)
+            856 LOAD_METHOD             10 (append)
+            878 LOAD_CONST               8 ('Thang')
+            880 PRECALL                  1
+            884 CALL                     1
+            894 POP_TOP
+
+186     >>  896 LOAD_CONST              22 (0)
+            898 STORE_FAST              16 (dir_changes)
+
+187         900 LOAD_CONST               0 (None)
+            902 STORE_FAST              17 (prev_dir)
+
+188         904 LOAD_FAST               15 (hist)
+            906 GET_ITER
+        >>  908 FOR_ITER                23 (to 956)
+            910 STORE_FAST              18 (d)
+
+189         912 LOAD_FAST               18 (d)
+            914 LOAD_CONST               8 ('Thang')
+            916 COMPARE_OP               3 (!=)
+            922 POP_JUMP_FORWARD_IF_FALSE    15 (to 954)
+
+190         924 LOAD_FAST               17 (prev_dir)
+            926 POP_JUMP_FORWARD_IF_NONE    11 (to 950)
+            928 LOAD_FAST               18 (d)
+            930 LOAD_FAST               17 (prev_dir)
+            932 COMPARE_OP               3 (!=)
+            938 POP_JUMP_FORWARD_IF_FALSE     5 (to 950)
+
+191         940 LOAD_FAST               16 (dir_changes)
+            942 LOAD_CONST              23 (1)
+            944 BINARY_OP               13 (+=)
+            948 STORE_FAST              16 (dir_changes)
+
+192     >>  950 LOAD_FAST               18 (d)
+            952 STORE_FAST              17 (prev_dir)
+        >>  954 JUMP_BACKWARD           24 (to 908)
+
+193     >>  956 LOAD_FAST               16 (dir_changes)
+            958 LOAD_FAST                0 (self)
+            960 LOAD_ATTR               11 (OSC_DIR_CHANGES)
+            970 COMPARE_OP               5 (>=)
+            976 LOAD_FAST                9 (result)
+            978 LOAD_CONST              24 ('oscillating')
+            980 STORE_SUBSCR
+
+194         984 LOAD_FAST                9 (result)
+            986 LOAD_CONST              24 ('oscillating')
+            988 BINARY_SUBSCR
+            998 LOAD_FAST                9 (result)
+           1000 LOAD_CONST              25 ('velocity_bad')
+           1002 STORE_SUBSCR
+
+196        1006 LOAD_FAST                3 (cur_yaw)
+           1008 LOAD_FAST                4 (cur_roll)
+
+197        1010 LOAD_FAST                5 (cur_twist)
+           1012 LOAD_FAST                6 (cur_arm)
+
+195        1014 LOAD_CONST              12 (('yaw', 'roll', 'twist', 'arm'))
+           1016 BUILD_CONST_KEY_MAP      4
+           1018 LOAD_FAST                0 (self)
+           1020 LOAD_ATTR                2 (_prev_signals)
+           1030 LOAD_FAST                1 (tid)
+           1032 STORE_SUBSCR
+
+199        1036 LOAD_FAST                9 (result)
+           1038 RETURN_VALUE
+
+Disassembly of <code object remove at 0x0000021658D48C10, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 201>:
+201           0 RESUME                   0
+
+202           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_prev_signals)
+             14 LOAD_METHOD              1 (pop)
+             36 LOAD_FAST                1 (tid)
+             38 LOAD_CONST               0 (None)
+             40 PRECALL                  2
+             44 CALL                     2
+             54 POP_TOP
+
+203          56 LOAD_FAST                0 (self)
+             58 LOAD_ATTR                2 (_yaw_dir_history)
+             68 LOAD_METHOD              1 (pop)
+             90 LOAD_FAST                1 (tid)
+             92 LOAD_CONST               0 (None)
+             94 PRECALL                  2
+             98 CALL                     2
+            108 POP_TOP
+            110 LOAD_CONST               0 (None)
+            112 RETURN_VALUE
+
+Disassembly of <code object reset at 0x0000021658D49CB0, file "D:\Exam_cheating\Test_AI_Cheating\core\tracker.py", line 205>:
+205           0 RESUME                   0
+
+206           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_prev_signals)
+             14 LOAD_METHOD              1 (clear)
+             36 PRECALL                  0
+             40 CALL                     0
+             50 POP_TOP
+
+207          52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                2 (_yaw_dir_history)
+             64 LOAD_METHOD              1 (clear)
+             86 PRECALL                  0
+             90 CALL                     0
+            100 POP_TOP
+            102 LOAD_CONST               0 (None)
+            104 RETURN_VALUE
